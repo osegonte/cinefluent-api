@@ -416,4 +416,16 @@ async def options_api(path: str):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    import os
+    
+    # Railway provides PORT environment variable
+    port = int(os.environ.get("PORT", 8000))
+    
+    print(f"🚀 Starting CineFluent API on port {port}")
+    
+    uvicorn.run(
+        app, 
+        host="0.0.0.0", 
+        port=port,  # Use Railway's PORT environment variable
+        log_level="info"
+    )

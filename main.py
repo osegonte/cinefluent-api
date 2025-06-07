@@ -603,3 +603,7 @@ if __name__ == "__main__":
         port=port,
         log_level="info"
     )
+@app.get("/api/v1/test")
+async def test_endpoint():
+    return {"message": "New code deployed!", "timestamp": datetime.utcnow().isoformat()}
+

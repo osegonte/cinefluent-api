@@ -1,33 +1,55 @@
 from fastapi import FastAPI, HTTPException, Depends, status, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.security import HTTPAuthorizationCredentials
 from pydantic import BaseModel, EmailStr
 from typing import List, Optional, Dict, Any
 import uuid
 from datetime import datetime
+import os
 
 # Import our modules
 from database import supabase, test_connection
 from auth import (
     get_current_user, get_current_user_profile, get_optional_user, 
     require_premium_user, create_user_account, sign_in_user,
+    refresh_token, sign_out_user, security,
     User, UserProfile
 )
 
-app = FastAPI(title="CineFluent API", version="0.1.0")
+app = FastAPI(
+    title="CineFluent API", 
+    version="0.1.0",
+    description="Language learning through movies",
+    docs_url="/docs" if os.getenv("ENVIRONMENT") == "development" else None,
+    redoc_url="/redoc" if os.getenv("ENVIRONMENT") == "development" else None
+)
 
-# CORS configuration
+# Enhanced CORS configuration
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:8080", 
-        "http://localhost:8081",
-        "http://localhost:3000",
-        "https://*.vercel.app",
-        # Add your production domains here
+        "http://localhost:3000",      # React development
+        "http://localhost:8080",      # Expo web
+        "http://localhost:8081",      # Expo alternative port
+        "http://localhost:19006",     # Expo web default
+        "https://*.vercel.app",       # Vercel deployments
+        "https://*.railway.app",      # Railway deployments
+        "https://cinefluent.com",     # Production domain (when ready)
+        # Add your custom domains here
     ],
     allow_credentials=True,
-    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
+    allow_headers=[
+        "Authorization",
+        "Content-Type",
+        "Accept",
+        "Origin",
+        "User-Agent",
+        "X-Requested-With",
+        "Access-Control-Request-Method",
+        "Access-Control-Request-Headers",
+    ],
+    expose_headers=["*"],
 )
 
 # Pydantic Models
@@ -61,16 +83,27 @@ class UserLogin(BaseModel):
     email: EmailStr
     password: str
 
+class TokenRefresh(BaseModel):
+    refresh_token: str
+
 class ProgressUpdate(BaseModel):
     movie_id: str
     progress_percentage: int
     time_watched: int  # seconds
     vocabulary_learned: Optional[int] = 0
 
+class ProfileUpdate(BaseModel):
+    username: Optional[str] = None
+    full_name: Optional[str] = None
+    native_language: Optional[str] = None
+    learning_languages: Optional[List[str]] = None
+    learning_goals: Optional[Dict[str, Any]] = None
+
 # Startup event
 @app.on_event("startup")
 async def startup_event():
     print("🚀 Starting CineFluent API...")
+    print(f"Environment: {os.getenv('ENVIRONMENT', 'production')}")
     if test_connection():
         print("✅ Database connection established")
     else:
@@ -82,61 +115,173 @@ async def health_check():
     return {
         "status": "healthy", 
         "service": "CineFluent API",
-        "database": "connected" if test_connection() else "disconnected"
+        "version": "0.1.0",
+        "database": "connected" if test_connection() else "disconnected",
+        "environment": os.getenv("ENVIRONMENT", "production")
     }
 
-# Authentication Endpoints
+@app.get("/api/v1/health")
+async def api_health():
+    """Detailed health check for monitoring"""
+    try:
+        # Test database connection
+        db_status = test_connection()
+        
+        # Test Supabase auth (basic check)
+        auth_status = True
+        try:
+            # This won't actually authenticate, but checks if Supabase client works
+            supabase.auth.get_session()
+        except:
+            auth_status = False
+        
+        return {
+            "status": "healthy" if db_status and auth_status else "degraded",
+            "checks": {
+                "database": "ok" if db_status else "error",
+                "auth": "ok" if auth_status else "error"
+            },
+            "timestamp": datetime.utcnow().isoformat()
+        }
+    except Exception as e:
+        raise HTTPException(status_code=503, detail=f"Service unavailable: {str(e)}")
+
+# ===== AUTHENTICATION ENDPOINTS =====
+
 @app.post("/api/v1/auth/register")
 async def register(user_data: UserRegister):
-    """Register a new user"""
-    return await create_user_account(
-        email=user_data.email,
-        password=user_data.password,
-        full_name=user_data.full_name
-    )
+    """Register a new user account"""
+    try:
+        result = await create_user_account(
+            email=user_data.email,
+            password=user_data.password,
+            full_name=user_data.full_name
+        )
+        return result
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Registration failed due to server error"
+        )
 
 @app.post("/api/v1/auth/login")
 async def login(user_data: UserLogin):
-    """Login user"""
-    return await sign_in_user(
-        email=user_data.email,
-        password=user_data.password
-    )
+    """Login user and return access token"""
+    try:
+        result = await sign_in_user(
+            email=user_data.email,
+            password=user_data.password
+        )
+        return result
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Login failed due to server error"
+        )
+
+@app.post("/api/v1/auth/refresh")
+async def refresh_access_token(token_data: TokenRefresh):
+    """Refresh access token using refresh token"""
+    try:
+        result = await refresh_token(token_data.refresh_token)
+        return result
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Token refresh failed"
+        )
+
+@app.post("/api/v1/auth/logout")
+async def logout(credentials: HTTPAuthorizationCredentials = Depends(security)):
+    """Logout user and invalidate session"""
+    try:
+        if credentials:
+            result = await sign_out_user(credentials.credentials)
+            return result
+        else:
+            return {"message": "Successfully signed out"}
+    except Exception as e:
+        # Always return success for logout
+        return {"message": "Successfully signed out"}
 
 @app.get("/api/v1/auth/me")
 async def get_me(current_user: User = Depends(get_current_user)):
-    """Get current user information"""
-    profile = await get_current_user_profile(current_user)
-    return {
-        "user": current_user,
-        "profile": profile
-    }
+    """Get current user information and profile"""
+    try:
+        profile = await get_current_user_profile(current_user)
+        return {
+            "user": current_user,
+            "profile": profile
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to retrieve user information"
+        )
 
 @app.put("/api/v1/auth/profile")
 async def update_profile(
-    profile_data: dict,
+    profile_data: ProfileUpdate,
     current_user: User = Depends(get_current_user)
 ):
     """Update user profile"""
     try:
+        # Filter out None values
+        update_data = {k: v for k, v in profile_data.dict().items() if v is not None}
+        
+        if not update_data:
+            raise HTTPException(status_code=400, detail="No data provided for update")
+        
+        # Add timestamp
+        update_data["updated_at"] = datetime.utcnow().isoformat()
+        
         response = supabase.table("profiles")\
-            .update(profile_data)\
+            .update(update_data)\
             .eq("id", current_user.id)\
             .execute()
         
         if response.data:
             return {"message": "Profile updated successfully", "profile": response.data[0]}
         else:
-            raise HTTPException(status_code=400, detail="Failed to update profile")
+            # If no rows affected, the profile might not exist
+            # Try to create it
+            profile_data_with_id = {
+                "id": current_user.id,
+                "username": current_user.email.split("@")[0],
+                **update_data
+            }
             
+            create_response = supabase.table("profiles")\
+                .insert(profile_data_with_id)\
+                .execute()
+            
+            if create_response.data:
+                return {"message": "Profile created successfully", "profile": create_response.data[0]}
+            else:
+                raise HTTPException(status_code=400, detail="Failed to update profile")
+            
+    except HTTPException:
+        raise
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Update failed: {str(e)}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, 
+            detail=f"Profile update failed: {str(e)}"
+        )
 
-# Movies API with Database Integration
+# ===== MOVIES API =====
+
 @app.get("/api/v1/movies", response_model=MovieResponse)
 async def get_movies(
-    page: int = 1,
-    limit: int = 20,
+    page: int = Query(1, ge=1),
+    limit: int = Query(20, ge=1, le=100),
     language: Optional[str] = None,
     difficulty: Optional[str] = None,
     genre: Optional[str] = None,
@@ -176,7 +321,7 @@ async def get_movies(
                 # If subscription check fails, show only free content
                 query = query.eq("is_premium", False)
         
-        # Get total count
+        # Get total count first
         count_response = query.execute()
         total = len(count_response.data) if count_response.data else 0
         
@@ -184,7 +329,7 @@ async def get_movies(
         start = (page - 1) * limit
         end = start + limit - 1
         
-        paginated_query = query.range(start, end)
+        paginated_query = query.range(start, end).order("created_at", desc=True)
         response = paginated_query.execute()
         
         movies = [Movie(**movie_data) for movie_data in response.data] if response.data else []
@@ -209,7 +354,7 @@ async def get_featured_movies(current_user: Optional[User] = Depends(get_optiona
         if not current_user:
             query = query.eq("is_premium", False)
         
-        response = query.limit(6).execute()
+        response = query.order("imdb_rating", desc=True).limit(6).execute()
         movies = [Movie(**movie_data) for movie_data in response.data] if response.data else []
         
         return {"movies": movies}
@@ -220,15 +365,16 @@ async def get_featured_movies(current_user: Optional[User] = Depends(get_optiona
 @app.get("/api/v1/movies/search")
 async def search_movies(
     q: str = Query(..., min_length=1),
-    limit: int = 10,
+    limit: int = Query(10, ge=1, le=50),
     current_user: Optional[User] = Depends(get_optional_user)
 ):
     """Search movies by title or description"""
     try:
         # Use Supabase full-text search
+        search_query = f"%{q}%"
         query = supabase.table("movies")\
             .select("*")\
-            .or_(f"title.ilike.%{q}%,description.ilike.%{q}%")
+            .or_(f"title.ilike.{search_query},description.ilike.{search_query}")
         
         # Filter premium content for non-premium users
         if not current_user:
@@ -237,7 +383,7 @@ async def search_movies(
         response = query.limit(limit).execute()
         movies = [Movie(**movie_data) for movie_data in response.data] if response.data else []
         
-        return {"movies": movies, "query": q}
+        return {"movies": movies, "query": q, "total": len(movies)}
         
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Search failed: {str(e)}")
@@ -265,14 +411,18 @@ async def get_movie(
         # If user is authenticated, include their progress
         user_progress = None
         if current_user:
-            progress_response = supabase.table("user_progress")\
-                .select("*")\
-                .eq("user_id", current_user.id)\
-                .eq("movie_id", movie_id)\
-                .execute()
-            
-            if progress_response.data:
-                user_progress = progress_response.data[0]
+            try:
+                progress_response = supabase.table("user_progress")\
+                    .select("*")\
+                    .eq("user_id", current_user.id)\
+                    .eq("movie_id", movie_id)\
+                    .execute()
+                
+                if progress_response.data:
+                    user_progress = progress_response.data[0]
+            except:
+                # Don't fail if progress lookup fails
+                pass
         
         return {
             "movie": movie,
@@ -284,7 +434,8 @@ async def get_movie(
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to fetch movie: {str(e)}")
 
-# Progress Tracking
+# ===== PROGRESS TRACKING =====
+
 @app.post("/api/v1/progress/update")
 async def update_progress(
     progress_data: ProgressUpdate,
@@ -297,13 +448,13 @@ async def update_progress(
         if not movie_response.data:
             raise HTTPException(status_code=404, detail="Movie not found")
         
-        # Upsert progress
+        # Prepare progress update
         progress_update = {
             "user_id": current_user.id,
             "movie_id": progress_data.movie_id,
-            "progress_percentage": progress_data.progress_percentage,
+            "progress_percentage": min(progress_data.progress_percentage, 100),  # Cap at 100%
             "time_watched": progress_data.time_watched,
-            "vocabulary_learned": progress_data.vocabulary_learned,
+            "vocabulary_learned": progress_data.vocabulary_learned or 0,
             "last_watched_at": datetime.utcnow().isoformat(),
         }
         
@@ -315,7 +466,7 @@ async def update_progress(
             .upsert(progress_update, on_conflict="user_id,movie_id")\
             .execute()
         
-        return {"message": "Progress updated successfully", "progress": response.data[0]}
+        return {"message": "Progress updated successfully", "progress": response.data[0] if response.data else None}
         
     except HTTPException:
         raise
@@ -340,43 +491,39 @@ async def get_progress_stats(current_user: User = Depends(get_current_user)):
         total_time_watched = sum(p.get("time_watched", 0) for p in progress_data)
         total_vocabulary = sum(p.get("vocabulary_learned", 0) for p in progress_data)
         
-        # Get streak info
-        streak_response = supabase.table("user_streaks")\
-            .select("*")\
-            .eq("user_id", current_user.id)\
-            .execute()
-        
-        streak_data = streak_response.data[0] if streak_response.data else {
-            "current_streak": 0,
-            "longest_streak": 0
-        }
+        # Calculate average progress
+        avg_progress = 0
+        if progress_data:
+            avg_progress = sum(p.get("progress_percentage", 0) for p in progress_data) / len(progress_data)
         
         return {
             "total_movies_watched": total_movies_watched,
             "completed_movies": completed_movies,
             "total_time_watched": total_time_watched,  # in seconds
             "total_vocabulary_learned": total_vocabulary,
-            "current_streak": streak_data.get("current_streak", 0),
-            "longest_streak": streak_data.get("longest_streak", 0)
+            "average_progress": round(avg_progress, 1),
+            "recent_activity": progress_data[-5:] if progress_data else []  # Last 5 activities
         }
         
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to get progress stats: {str(e)}")
 
-# Premium content endpoint
+# ===== PREMIUM CONTENT =====
+
 @app.get("/api/v1/movies/premium")
 async def get_premium_movies(current_user: User = Depends(require_premium_user)):
     """Get premium movies (requires premium subscription)"""
     try:
-        response = supabase.table("movies").select("*").eq("is_premium", True).execute()
+        response = supabase.table("movies").select("*").eq("is_premium", True).order("created_at", desc=True).execute()
         movies = [Movie(**movie_data) for movie_data in response.data] if response.data else []
         
-        return {"movies": movies}
+        return {"movies": movies, "total": len(movies)}
         
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to fetch premium movies: {str(e)}")
 
-# Categories endpoint
+# ===== METADATA ENDPOINTS =====
+
 @app.get("/api/v1/categories")
 async def get_categories():
     """Get all movie categories"""
@@ -385,9 +532,18 @@ async def get_categories():
         return {"categories": response.data if response.data else []}
         
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to fetch categories: {str(e)}")
+        # Fallback to hardcoded categories if table doesn't exist
+        fallback_categories = [
+            {"id": "action", "name": "Action", "sort_order": 1},
+            {"id": "drama", "name": "Drama", "sort_order": 2},
+            {"id": "comedy", "name": "Comedy", "sort_order": 3},
+            {"id": "thriller", "name": "Thriller", "sort_order": 4},
+            {"id": "romance", "name": "Romance", "sort_order": 5},
+            {"id": "sci-fi", "name": "Science Fiction", "sort_order": 6},
+            {"id": "documentary", "name": "Documentary", "sort_order": 7}
+        ]
+        return {"categories": fallback_categories}
 
-# Available languages endpoint
 @app.get("/api/v1/languages")
 async def get_languages():
     """Get all available languages from movies"""
@@ -400,12 +556,127 @@ async def get_languages():
                 if movie.get("languages"):
                     all_languages.update(movie["languages"])
         
+        # If no languages found, provide fallback
+        if not all_languages:
+            all_languages = {"en", "es", "fr", "de", "it", "pt", "ru", "ja", "ko", "zh"}
+        
         return {"languages": sorted(list(all_languages))}
         
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to fetch languages: {str(e)}")
+        # Fallback languages
+        fallback_languages = ["en", "es", "fr", "de", "it", "pt", "ru", "ja", "ko", "zh"]
+        return {"languages": fallback_languages}
 
-# Add explicit OPTIONS handlers for CORS
+@app.get("/api/v1/difficulties")
+async def get_difficulty_levels():
+    """Get available difficulty levels"""
+    return {
+        "difficulties": [
+            {"id": "beginner", "name": "Beginner", "description": "Simple vocabulary and slow speech"},
+            {"id": "intermediate", "name": "Intermediate", "description": "Moderate vocabulary and normal speech"},
+            {"id": "advanced", "name": "Advanced", "description": "Complex vocabulary and fast speech"},
+            {"id": "native", "name": "Native", "description": "Natural conversation with idioms and slang"}
+        ]
+    }
+
+# ===== USER MANAGEMENT =====
+
+@app.get("/api/v1/users/progress")
+async def get_user_progress(
+    current_user: User = Depends(get_current_user),
+    limit: int = Query(10, ge=1, le=50)
+):
+    """Get user's recent progress across all movies"""
+    try:
+        response = supabase.table("user_progress")\
+            .select("*, movies(title, thumbnail_url, difficulty_level)")\
+            .eq("user_id", current_user.id)\
+            .order("last_watched_at", desc=True)\
+            .limit(limit)\
+            .execute()
+        
+        return {"progress": response.data if response.data else []}
+        
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to fetch user progress: {str(e)}")
+
+@app.get("/api/v1/users/achievements")
+async def get_user_achievements(current_user: User = Depends(get_current_user)):
+    """Get user's achievements and badges"""
+    try:
+        response = supabase.table("user_achievements")\
+            .select("*, achievements(name, description, icon, category)")\
+            .eq("user_id", current_user.id)\
+            .order("earned_at", desc=True)\
+            .execute()
+        
+        achievements = response.data if response.data else []
+        
+        # Calculate achievement stats
+        total_achievements = len(achievements)
+        recent_achievements = [a for a in achievements if a.get("earned_at")][-5:]  # Last 5
+        
+        return {
+            "achievements": achievements,
+            "total_earned": total_achievements,
+            "recent": recent_achievements
+        }
+        
+    except Exception as e:
+        # Return empty achievements if table doesn't exist
+        return {"achievements": [], "total_earned": 0, "recent": []}
+
+# ===== SUBSCRIPTION MANAGEMENT =====
+
+@app.get("/api/v1/subscription/status")
+async def get_subscription_status(current_user: User = Depends(get_current_user)):
+    """Get user's current subscription status"""
+    try:
+        response = supabase.table("subscriptions")\
+            .select("*")\
+            .eq("user_id", current_user.id)\
+            .eq("status", "active")\
+            .execute()
+        
+        if response.data:
+            subscription = response.data[0]
+            return {
+                "status": "active",
+                "plan_type": subscription.get("plan_type", "free"),
+                "expires_at": subscription.get("expires_at"),
+                "features": {
+                    "premium_movies": subscription.get("plan_type") != "free",
+                    "offline_downloads": subscription.get("plan_type") == "premium",
+                    "advanced_analytics": subscription.get("plan_type") == "premium"
+                }
+            }
+        else:
+            return {
+                "status": "free",
+                "plan_type": "free",
+                "expires_at": None,
+                "features": {
+                    "premium_movies": False,
+                    "offline_downloads": False,
+                    "advanced_analytics": False
+                }
+            }
+            
+    except Exception as e:
+        # Default to free tier if check fails
+        return {
+            "status": "free",
+            "plan_type": "free",
+            "expires_at": None,
+            "features": {
+                "premium_movies": False,
+                "offline_downloads": False,
+                "advanced_analytics": False
+            }
+        }
+
+# ===== CORS PREFLIGHT HANDLERS =====
+
 @app.options("/")
 async def options_root():
     return {"message": "OK"}
@@ -414,18 +685,43 @@ async def options_root():
 async def options_api(path: str):
     return {"message": "OK"}
 
+# ===== ERROR HANDLERS =====
+
+@app.exception_handler(404)
+async def not_found_handler(request, exc):
+    return {"error": "Not found", "detail": "The requested resource was not found"}
+
+@app.exception_handler(500)
+async def internal_error_handler(request, exc):
+    return {"error": "Internal server error", "detail": "An unexpected error occurred"}
+
+# ===== DEVELOPMENT ENDPOINTS =====
+
+if os.getenv("ENVIRONMENT") == "development":
+    @app.get("/api/v1/dev/test-auth")
+    async def test_auth_endpoint():
+        """Test endpoint for authentication (development only)"""
+        return {
+            "message": "Auth test endpoint",
+            "supabase_url": os.getenv("SUPABASE_URL", "not set"),
+            "environment": os.getenv("ENVIRONMENT", "not set")
+        }
+
+# ===== APPLICATION STARTUP =====
+
 if __name__ == "__main__":
     import uvicorn
-    import os
     
     # Railway provides PORT environment variable
     port = int(os.environ.get("PORT", 8000))
     
     print(f"🚀 Starting CineFluent API on port {port}")
+    print(f"Environment: {os.getenv('ENVIRONMENT', 'production')}")
+    print(f"CORS origins configured for local development and production")
     
     uvicorn.run(
         app, 
         host="0.0.0.0", 
-        port=port,  # Use Railway's PORT environment variable
+        port=port,
         log_level="info"
     )

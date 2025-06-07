@@ -1,21 +1,21 @@
 from fastapi import HTTPException, Depends, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
-from jose import JWTError, jwt
 from pydantic import BaseModel
 from typing import Optional, Dict, Any
 import os
 from database import supabase, supabase_admin
 
 # JWT Configuration
-SUPABASE_JWT_SECRET = os.getenv("SUPABASE_JWT_SECRET", "your-jwt-secret")
+SUPABASE_JWT_SECRET = os.getenv("SUPABASE_JWT_SECRET")
 ALGORITHM = "HS256"
 
-security = HTTPBearer()
+security = HTTPBearer(auto_error=False)
 
 class User(BaseModel):
     id: str
     email: str
     role: str = "authenticated"
+    email_confirmed_at: Optional[str] = None
     
 class UserProfile(BaseModel):
     id: str
@@ -25,9 +25,17 @@ class UserProfile(BaseModel):
     native_language: str = "en"
     learning_languages: list = []
     learning_goals: dict = {}
+    created_at: Optional[str] = None
 
 async def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(security)) -> User:
     """Extract and validate user from JWT token"""
+    if not credentials:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Authentication token required",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    
     token = credentials.credentials
     
     try:
@@ -45,10 +53,14 @@ async def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(s
         return User(
             id=user.id,
             email=user.email,
-            role=user.role if hasattr(user, 'role') else "authenticated"
+            role=getattr(user, 'role', "authenticated"),
+            email_confirmed_at=getattr(user, 'email_confirmed_at', None)
         )
         
+    except HTTPException:
+        raise
     except Exception as e:
+        print(f"Auth error: {str(e)}")
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Could not validate credentials",
@@ -71,25 +83,40 @@ async def get_current_user_profile(user: User = Depends(get_current_user)) -> Us
                 "learning_goals": {}
             }
             
-            supabase.table("profiles").insert(default_profile).execute()
-            return UserProfile(**default_profile)
+            insert_response = supabase.table("profiles").insert(default_profile).execute()
+            if insert_response.data:
+                return UserProfile(**insert_response.data[0])
+            else:
+                return UserProfile(**default_profile)
         
         profile_data = profile_response.data[0]
         return UserProfile(**profile_data)
         
     except Exception as e:
+        print(f"Profile error: {str(e)}")
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Could not retrieve user profile: {str(e)}"
         )
 
-def get_optional_user(credentials: Optional[HTTPAuthorizationCredentials] = Depends(HTTPBearer(auto_error=False))) -> Optional[User]:
+def get_optional_user(credentials: Optional[HTTPAuthorizationCredentials] = Depends(security)) -> Optional[User]:
     """Get user if authenticated, but don't require authentication"""
     if not credentials:
         return None
     
     try:
-        return get_current_user(credentials)
+        token = credentials.credentials
+        user_response = supabase.auth.get_user(token)
+        
+        if user_response.user:
+            user = user_response.user
+            return User(
+                id=user.id,
+                email=user.email,
+                role=getattr(user, 'role', "authenticated"),
+                email_confirmed_at=getattr(user, 'email_confirmed_at', None)
+            )
+        return None
     except:
         return None
 
@@ -126,24 +153,52 @@ def require_premium_user(user: User = Depends(get_current_user)) -> User:
             detail="Could not verify subscription status"
         )
 
-# Auth endpoints
+# Enhanced auth functions with better error handling
 async def create_user_account(email: str, password: str, full_name: Optional[str] = None) -> Dict[str, Any]:
-    """Create new user account"""
+    """Create new user account with improved error handling"""
     try:
-        auth_response = supabase.auth.sign_up({
+        # Prepare signup data
+        signup_data = {
             "email": email,
-            "password": password,
-            "options": {
+            "password": password
+        }
+        
+        if full_name:
+            signup_data["options"] = {
                 "data": {
                     "full_name": full_name
                 }
             }
-        })
+        
+        # Create user with Supabase Auth
+        auth_response = supabase.auth.sign_up(signup_data)
         
         if auth_response.user:
+            # Create profile record
+            try:
+                profile_data = {
+                    "id": auth_response.user.id,
+                    "username": email.split("@")[0],
+                    "full_name": full_name,
+                    "native_language": "en",
+                    "learning_languages": [],
+                    "learning_goals": {}
+                }
+                
+                supabase.table("profiles").insert(profile_data).execute()
+            except Exception as profile_error:
+                print(f"Profile creation warning: {profile_error}")
+                # Don't fail registration if profile creation fails
+            
             return {
-                "user": auth_response.user,
+                "user": {
+                    "id": auth_response.user.id,
+                    "email": auth_response.user.email,
+                    "email_confirmed_at": auth_response.user.email_confirmed_at
+                },
                 "session": auth_response.session,
+                "access_token": auth_response.session.access_token if auth_response.session else None,
+                "token_type": "bearer",
                 "message": "User created successfully"
             }
         else:
@@ -152,14 +207,34 @@ async def create_user_account(email: str, password: str, full_name: Optional[str
                 detail="Failed to create user account"
             )
             
+    except HTTPException:
+        raise
     except Exception as e:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail=f"Registration failed: {str(e)}"
-        )
+        error_msg = str(e).lower()
+        if "already registered" in error_msg or "already exists" in error_msg:
+            raise HTTPException(
+                status_code=status.HTTP_409_CONFLICT,
+                detail="User with this email already exists"
+            )
+        elif "invalid email" in error_msg:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Invalid email format"
+            )
+        elif "password" in error_msg:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Password does not meet requirements (minimum 6 characters)"
+            )
+        else:
+            print(f"Registration error: {str(e)}")
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Registration failed. Please try again."
+            )
 
 async def sign_in_user(email: str, password: str) -> Dict[str, Any]:
-    """Sign in user with email and password"""
+    """Sign in user with enhanced error handling"""
     try:
         auth_response = supabase.auth.sign_in_with_password({
             "email": email,
@@ -167,11 +242,43 @@ async def sign_in_user(email: str, password: str) -> Dict[str, Any]:
         })
         
         if auth_response.user and auth_response.session:
+            # Get or create user profile
+            profile_response = supabase.table("profiles").select("*").eq("id", auth_response.user.id).execute()
+            
+            profile = None
+            if profile_response.data:
+                profile = profile_response.data[0]
+            else:
+                # Create profile if it doesn't exist
+                try:
+                    default_profile = {
+                        "id": auth_response.user.id,
+                        "username": email.split("@")[0],
+                        "full_name": None,
+                        "native_language": "en",
+                        "learning_languages": [],
+                        "learning_goals": {}
+                    }
+                    
+                    insert_response = supabase.table("profiles").insert(default_profile).execute()
+                    if insert_response.data:
+                        profile = insert_response.data[0]
+                except Exception as profile_error:
+                    print(f"Profile creation warning during login: {profile_error}")
+            
             return {
-                "user": auth_response.user,
+                "user": {
+                    "id": auth_response.user.id,
+                    "email": auth_response.user.email,
+                    "email_confirmed_at": auth_response.user.email_confirmed_at
+                },
+                "profile": profile,
                 "session": auth_response.session,
                 "access_token": auth_response.session.access_token,
-                "token_type": "bearer"
+                "refresh_token": auth_response.session.refresh_token,
+                "token_type": "bearer",
+                "expires_in": auth_response.session.expires_in,
+                "message": "Login successful"
             }
         else:
             raise HTTPException(
@@ -179,8 +286,52 @@ async def sign_in_user(email: str, password: str) -> Dict[str, Any]:
                 detail="Invalid email or password"
             )
             
+    except HTTPException:
+        raise
+    except Exception as e:
+        error_msg = str(e).lower()
+        if "invalid login credentials" in error_msg or "email not confirmed" in error_msg:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Invalid email or password"
+            )
+        else:
+            print(f"Login error: {str(e)}")
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Authentication failed"
+            )
+
+async def refresh_token(refresh_token: str) -> Dict[str, Any]:
+    """Refresh user session token"""
+    try:
+        auth_response = supabase.auth.refresh_session(refresh_token)
+        
+        if auth_response.session:
+            return {
+                "access_token": auth_response.session.access_token,
+                "refresh_token": auth_response.session.refresh_token,
+                "token_type": "bearer",
+                "expires_in": auth_response.session.expires_in
+            }
+        else:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Invalid refresh token"
+            )
+            
     except Exception as e:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Authentication failed"
+            detail="Token refresh failed"
         )
+
+async def sign_out_user(token: str) -> Dict[str, Any]:
+    """Sign out user and invalidate session"""
+    try:
+        supabase.auth.sign_out()
+        return {"message": "Successfully signed out"}
+    except Exception as e:
+        # Even if signout fails on server, we'll return success
+        # since the client will remove the token anyway
+        return {"message": "Successfully signed out"}

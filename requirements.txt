@@ -11,4 +11,4 @@ python-jose[cryptography]==3.3.0
 psycopg2-binary==2.9.7
 email-validator==2.1.0
 gotrue==2.0.0
-httpx==0.25.2
+httpx==0.25.2# Force rebuild Sat Jun  7 12:54:56 CEST 2025

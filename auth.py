@@ -3,7 +3,7 @@ from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from pydantic import BaseModel
 from typing import Optional, Dict, Any
 import os
-from database import supabase, supabase_admin
+from database import supabase
 
 # JWT Configuration
 SUPABASE_JWT_SECRET = os.getenv("SUPABASE_JWT_SECRET")
@@ -157,6 +157,8 @@ def require_premium_user(user: User = Depends(get_current_user)) -> User:
 async def create_user_account(email: str, password: str, full_name: Optional[str] = None) -> Dict[str, Any]:
     """Create new user account with improved error handling"""
     try:
+        print(f"Attempting to create user: {email}")
+        
         # Prepare signup data
         signup_data = {
             "email": email,
@@ -170,10 +172,16 @@ async def create_user_account(email: str, password: str, full_name: Optional[str
                 }
             }
         
+        print(f"Calling Supabase signup for: {email}")
+        
         # Create user with Supabase Auth
         auth_response = supabase.auth.sign_up(signup_data)
         
+        print(f"Supabase response: user={auth_response.user is not None}, session={auth_response.session is not None}")
+        
         if auth_response.user:
+            print(f"User created successfully: {auth_response.user.id}")
+            
             # Create profile record
             try:
                 profile_data = {
@@ -185,7 +193,10 @@ async def create_user_account(email: str, password: str, full_name: Optional[str
                     "learning_goals": {}
                 }
                 
-                supabase.table("profiles").insert(profile_data).execute()
+                print(f"Creating profile for user: {auth_response.user.id}")
+                profile_response = supabase.table("profiles").insert(profile_data).execute()
+                print(f"Profile created: {profile_response.data is not None}")
+                
             except Exception as profile_error:
                 print(f"Profile creation warning: {profile_error}")
                 # Don't fail registration if profile creation fails
@@ -202,6 +213,7 @@ async def create_user_account(email: str, password: str, full_name: Optional[str
                 "message": "User created successfully"
             }
         else:
+            print(f"Supabase signup failed for: {email}")
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
                 detail="Failed to create user account"
@@ -211,43 +223,51 @@ async def create_user_account(email: str, password: str, full_name: Optional[str
         raise
     except Exception as e:
         error_msg = str(e).lower()
-        if "already registered" in error_msg or "already exists" in error_msg:
+        print(f"Registration exception for {email}: {str(e)}")
+        
+        if "already registered" in error_msg or "already exists" in error_msg or "user_already_exists" in error_msg:
             raise HTTPException(
                 status_code=status.HTTP_409_CONFLICT,
                 detail="User with this email already exists"
             )
-        elif "invalid email" in error_msg:
+        elif "invalid email" in error_msg or "email" in error_msg:
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
                 detail="Invalid email format"
             )
-        elif "password" in error_msg:
+        elif "password" in error_msg and ("weak" in error_msg or "short" in error_msg):
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
                 detail="Password does not meet requirements (minimum 6 characters)"
             )
         else:
-            print(f"Registration error: {str(e)}")
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
-                detail="Registration failed. Please try again."
+                detail=f"Registration failed: {str(e)}"
             )
 
 async def sign_in_user(email: str, password: str) -> Dict[str, Any]:
     """Sign in user with enhanced error handling"""
     try:
+        print(f"Attempting login for: {email}")
+        
         auth_response = supabase.auth.sign_in_with_password({
             "email": email,
             "password": password
         })
         
+        print(f"Login response: user={auth_response.user is not None}, session={auth_response.session is not None}")
+        
         if auth_response.user and auth_response.session:
+            print(f"Login successful for: {email}")
+            
             # Get or create user profile
             profile_response = supabase.table("profiles").select("*").eq("id", auth_response.user.id).execute()
             
             profile = None
             if profile_response.data:
                 profile = profile_response.data[0]
+                print(f"Profile found for user: {auth_response.user.id}")
             else:
                 # Create profile if it doesn't exist
                 try:
@@ -263,6 +283,7 @@ async def sign_in_user(email: str, password: str) -> Dict[str, Any]:
                     insert_response = supabase.table("profiles").insert(default_profile).execute()
                     if insert_response.data:
                         profile = insert_response.data[0]
+                        print(f"Profile created during login for: {auth_response.user.id}")
                 except Exception as profile_error:
                     print(f"Profile creation warning during login: {profile_error}")
             
@@ -281,6 +302,7 @@ async def sign_in_user(email: str, password: str) -> Dict[str, Any]:
                 "message": "Login successful"
             }
         else:
+            print(f"Login failed for {email}: Invalid credentials")
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
                 detail="Invalid email or password"
@@ -290,16 +312,17 @@ async def sign_in_user(email: str, password: str) -> Dict[str, Any]:
         raise
     except Exception as e:
         error_msg = str(e).lower()
-        if "invalid login credentials" in error_msg or "email not confirmed" in error_msg:
+        print(f"Login exception for {email}: {str(e)}")
+        
+        if "invalid login credentials" in error_msg or "email not confirmed" in error_msg or "invalid_credentials" in error_msg:
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
                 detail="Invalid email or password"
             )
         else:
-            print(f"Login error: {str(e)}")
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
-                detail="Authentication failed"
+                detail=f"Authentication failed: {str(e)}"
             )
 
 async def refresh_token(refresh_token: str) -> Dict[str, Any]:

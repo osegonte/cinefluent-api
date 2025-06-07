@@ -19,9 +19,7 @@ from auth import (
 app = FastAPI(
     title="CineFluent API", 
     version="0.1.0",
-    description="Language learning through movies",
-    docs_url="/docs" if os.getenv("ENVIRONMENT") == "development" else None,
-    redoc_url="/redoc" if os.getenv("ENVIRONMENT") == "development" else None
+    description="Language learning through movies"
 )
 
 # Enhanced CORS configuration
@@ -151,36 +149,46 @@ async def api_health():
 @app.post("/api/v1/auth/register")
 async def register(user_data: UserRegister):
     """Register a new user account"""
+    print(f"Registration attempt for: {user_data.email}")
+    
     try:
         result = await create_user_account(
             email=user_data.email,
             password=user_data.password,
             full_name=user_data.full_name
         )
+        print(f"Registration successful for: {user_data.email}")
         return result
-    except HTTPException:
-        raise
+    except HTTPException as e:
+        print(f"Registration failed for {user_data.email}: {e.detail}")
+        raise e
     except Exception as e:
+        print(f"Registration error for {user_data.email}: {str(e)}")
         raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="Registration failed due to server error"
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"Registration failed: {str(e)}"
         )
 
 @app.post("/api/v1/auth/login")
 async def login(user_data: UserLogin):
     """Login user and return access token"""
+    print(f"Login attempt for: {user_data.email}")
+    
     try:
         result = await sign_in_user(
             email=user_data.email,
             password=user_data.password
         )
+        print(f"Login successful for: {user_data.email}")
         return result
-    except HTTPException:
-        raise
+    except HTTPException as e:
+        print(f"Login failed for {user_data.email}: {e.detail}")
+        raise e
     except Exception as e:
+        print(f"Login error for {user_data.email}: {str(e)}")
         raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="Login failed due to server error"
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail=f"Authentication failed: {str(e)}"
         )
 
 @app.post("/api/v1/auth/refresh")
@@ -567,114 +575,6 @@ async def get_languages():
         fallback_languages = ["en", "es", "fr", "de", "it", "pt", "ru", "ja", "ko", "zh"]
         return {"languages": fallback_languages}
 
-@app.get("/api/v1/difficulties")
-async def get_difficulty_levels():
-    """Get available difficulty levels"""
-    return {
-        "difficulties": [
-            {"id": "beginner", "name": "Beginner", "description": "Simple vocabulary and slow speech"},
-            {"id": "intermediate", "name": "Intermediate", "description": "Moderate vocabulary and normal speech"},
-            {"id": "advanced", "name": "Advanced", "description": "Complex vocabulary and fast speech"},
-            {"id": "native", "name": "Native", "description": "Natural conversation with idioms and slang"}
-        ]
-    }
-
-# ===== USER MANAGEMENT =====
-
-@app.get("/api/v1/users/progress")
-async def get_user_progress(
-    current_user: User = Depends(get_current_user),
-    limit: int = Query(10, ge=1, le=50)
-):
-    """Get user's recent progress across all movies"""
-    try:
-        response = supabase.table("user_progress")\
-            .select("*, movies(title, thumbnail_url, difficulty_level)")\
-            .eq("user_id", current_user.id)\
-            .order("last_watched_at", desc=True)\
-            .limit(limit)\
-            .execute()
-        
-        return {"progress": response.data if response.data else []}
-        
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to fetch user progress: {str(e)}")
-
-@app.get("/api/v1/users/achievements")
-async def get_user_achievements(current_user: User = Depends(get_current_user)):
-    """Get user's achievements and badges"""
-    try:
-        response = supabase.table("user_achievements")\
-            .select("*, achievements(name, description, icon, category)")\
-            .eq("user_id", current_user.id)\
-            .order("earned_at", desc=True)\
-            .execute()
-        
-        achievements = response.data if response.data else []
-        
-        # Calculate achievement stats
-        total_achievements = len(achievements)
-        recent_achievements = [a for a in achievements if a.get("earned_at")][-5:]  # Last 5
-        
-        return {
-            "achievements": achievements,
-            "total_earned": total_achievements,
-            "recent": recent_achievements
-        }
-        
-    except Exception as e:
-        # Return empty achievements if table doesn't exist
-        return {"achievements": [], "total_earned": 0, "recent": []}
-
-# ===== SUBSCRIPTION MANAGEMENT =====
-
-@app.get("/api/v1/subscription/status")
-async def get_subscription_status(current_user: User = Depends(get_current_user)):
-    """Get user's current subscription status"""
-    try:
-        response = supabase.table("subscriptions")\
-            .select("*")\
-            .eq("user_id", current_user.id)\
-            .eq("status", "active")\
-            .execute()
-        
-        if response.data:
-            subscription = response.data[0]
-            return {
-                "status": "active",
-                "plan_type": subscription.get("plan_type", "free"),
-                "expires_at": subscription.get("expires_at"),
-                "features": {
-                    "premium_movies": subscription.get("plan_type") != "free",
-                    "offline_downloads": subscription.get("plan_type") == "premium",
-                    "advanced_analytics": subscription.get("plan_type") == "premium"
-                }
-            }
-        else:
-            return {
-                "status": "free",
-                "plan_type": "free",
-                "expires_at": None,
-                "features": {
-                    "premium_movies": False,
-                    "offline_downloads": False,
-                    "advanced_analytics": False
-                }
-            }
-            
-    except Exception as e:
-        # Default to free tier if check fails
-        return {
-            "status": "free",
-            "plan_type": "free",
-            "expires_at": None,
-            "features": {
-                "premium_movies": False,
-                "offline_downloads": False,
-                "advanced_analytics": False
-            }
-        }
-
 # ===== CORS PREFLIGHT HANDLERS =====
 
 @app.options("/")
@@ -684,28 +584,6 @@ async def options_root():
 @app.options("/api/v1/{path:path}")
 async def options_api(path: str):
     return {"message": "OK"}
-
-# ===== ERROR HANDLERS =====
-
-@app.exception_handler(404)
-async def not_found_handler(request, exc):
-    return {"error": "Not found", "detail": "The requested resource was not found"}
-
-@app.exception_handler(500)
-async def internal_error_handler(request, exc):
-    return {"error": "Internal server error", "detail": "An unexpected error occurred"}
-
-# ===== DEVELOPMENT ENDPOINTS =====
-
-if os.getenv("ENVIRONMENT") == "development":
-    @app.get("/api/v1/dev/test-auth")
-    async def test_auth_endpoint():
-        """Test endpoint for authentication (development only)"""
-        return {
-            "message": "Auth test endpoint",
-            "supabase_url": os.getenv("SUPABASE_URL", "not set"),
-            "environment": os.getenv("ENVIRONMENT", "not set")
-        }
 
 # ===== APPLICATION STARTUP =====
 

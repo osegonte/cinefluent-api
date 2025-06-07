@@ -111,7 +111,7 @@ async def startup_event():
 @app.get("/")
 async def health_check():
     return {
-        "status": "healthy", 
+        "status": "healthy-NEW-CODE", 
         "service": "CineFluent API",
         "version": "0.1.0",
         "database": "connected" if test_connection() else "disconnected",
@@ -134,7 +134,7 @@ async def api_health():
             auth_status = False
         
         return {
-            "status": "healthy" if db_status and auth_status else "degraded",
+            "status": "healthy-NEW-CODE" if db_status and auth_status else "degraded",
             "checks": {
                 "database": "ok" if db_status else "error",
                 "auth": "ok" if auth_status else "error"

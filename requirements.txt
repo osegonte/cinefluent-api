@@ -4,3 +4,4 @@ pydantic[email]==2.4.2
 python-multipart==0.0.6
 supabase==2.0.0
 python-dotenv==1.0.0
+sqlalchemy==2.0.23

@@ -1,7 +1,8 @@
 from fastapi import HTTPException, Depends, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
-from pydantic import BaseModel
-from typing import Optional, Dict, Any
+from pydantic import BaseModel, field_validator
+from typing import Optional, Dict, Any, Union
+from datetime import datetime
 import os
 from database import supabase
 
@@ -16,6 +17,16 @@ class User(BaseModel):
     email: str
     role: str = "authenticated"
     email_confirmed_at: Optional[str] = None
+    
+    @field_validator('email_confirmed_at', mode='before')
+    @classmethod
+    def validate_email_confirmed_at(cls, v):
+        """Convert datetime objects to ISO string format"""
+        if v is None:
+            return None
+        if isinstance(v, datetime):
+            return v.isoformat()
+        return str(v)
     
 class UserProfile(BaseModel):
     id: str
@@ -50,11 +61,20 @@ async def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(s
             )
         
         user = user_response.user
+        
+        # Convert datetime fields properly
+        email_confirmed_at = None
+        if hasattr(user, 'email_confirmed_at') and user.email_confirmed_at:
+            if isinstance(user.email_confirmed_at, datetime):
+                email_confirmed_at = user.email_confirmed_at.isoformat()
+            else:
+                email_confirmed_at = str(user.email_confirmed_at)
+        
         return User(
             id=user.id,
             email=user.email,
             role=getattr(user, 'role', "authenticated"),
-            email_confirmed_at=getattr(user, 'email_confirmed_at', None)
+            email_confirmed_at=email_confirmed_at
         )
         
     except HTTPException:
@@ -110,11 +130,20 @@ def get_optional_user(credentials: Optional[HTTPAuthorizationCredentials] = Depe
         
         if user_response.user:
             user = user_response.user
+            
+            # Convert datetime fields properly
+            email_confirmed_at = None
+            if hasattr(user, 'email_confirmed_at') and user.email_confirmed_at:
+                if isinstance(user.email_confirmed_at, datetime):
+                    email_confirmed_at = user.email_confirmed_at.isoformat()
+                else:
+                    email_confirmed_at = str(user.email_confirmed_at)
+            
             return User(
                 id=user.id,
                 email=user.email,
                 role=getattr(user, 'role', "authenticated"),
-                email_confirmed_at=getattr(user, 'email_confirmed_at', None)
+                email_confirmed_at=email_confirmed_at
             )
         return None
     except:
@@ -205,7 +234,7 @@ async def create_user_account(email: str, password: str, full_name: Optional[str
                 "user": {
                     "id": auth_response.user.id,
                     "email": auth_response.user.email,
-                    "email_confirmed_at": auth_response.user.email_confirmed_at
+                    "email_confirmed_at": auth_response.user.email_confirmed_at.isoformat() if auth_response.user.email_confirmed_at else None
                 },
                 "session": auth_response.session,
                 "access_token": auth_response.session.access_token if auth_response.session else None,
@@ -291,7 +320,7 @@ async def sign_in_user(email: str, password: str) -> Dict[str, Any]:
                 "user": {
                     "id": auth_response.user.id,
                     "email": auth_response.user.email,
-                    "email_confirmed_at": auth_response.user.email_confirmed_at
+                    "email_confirmed_at": auth_response.user.email_confirmed_at.isoformat() if auth_response.user.email_confirmed_at else None
                 },
                 "profile": profile,
                 "session": auth_response.session,

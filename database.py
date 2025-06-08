@@ -8,31 +8,25 @@ load_dotenv()
 print(f"Current directory: {os.getcwd()}")
 print(f".env file exists: {os.path.exists('.env')}")
 
-# Supabase configuration
-SUPABASE_URL = os.getenv("SUPABASE_URL")
-SUPABASE_ANON_KEY = os.getenv("SUPABASE_ANON_KEY")
-SUPABASE_SERVICE_KEY = os.getenv("SUPABASE_SERVICE_KEY")
-DATABASE_URL = os.getenv("DATABASE_URL")
+# Supabase configuration - CLEAN UP WHITESPACE AND NEWLINES
+SUPABASE_URL = os.getenv("SUPABASE_URL", "").strip()
+SUPABASE_ANON_KEY = os.getenv("SUPABASE_ANON_KEY", "").strip()
+SUPABASE_SERVICE_KEY = os.getenv("SUPABASE_SERVICE_KEY", "").strip()
+SUPABASE_JWT_SECRET = os.getenv("SUPABASE_JWT_SECRET", "").strip()
+DATABASE_URL = os.getenv("DATABASE_URL", "").strip()
 
 # Debug: Print what we found (without showing secrets)
-print(f"SUPABASE_URL loaded: {SUPABASE_URL is not None}")
-print(f"SUPABASE_ANON_KEY loaded: {SUPABASE_ANON_KEY is not None}")
-print(f"DATABASE_URL loaded: {DATABASE_URL is not None}")
+print(f"SUPABASE_URL loaded: {SUPABASE_URL is not None and len(SUPABASE_URL) > 0}")
+print(f"SUPABASE_ANON_KEY loaded: {SUPABASE_ANON_KEY is not None and len(SUPABASE_ANON_KEY) > 0}")
+print(f"SUPABASE_SERVICE_KEY loaded: {SUPABASE_SERVICE_KEY is not None and len(SUPABASE_SERVICE_KEY) > 0}")
 
-if not SUPABASE_URL:
-    print("❌ SUPABASE_URL is missing")
-if not SUPABASE_ANON_KEY:
-    print("❌ SUPABASE_ANON_KEY is missing")
-if not DATABASE_URL:
-    print("❌ DATABASE_URL is missing")
+# Additional debug: Check for hidden characters
+if SUPABASE_SERVICE_KEY:
+    print(f"🔧 Service key cleaned - length: {len(SUPABASE_SERVICE_KEY)}")
 
-if not all([SUPABASE_URL, SUPABASE_ANON_KEY]):
-    print("\n📝 Please check your .env file contains:")
-    print("SUPABASE_URL=https://your-project-id.supabase.co")
-    print("SUPABASE_ANON_KEY=eyJ...")
-    print("SUPABASE_SERVICE_KEY=eyJ...")
-    print("DATABASE_URL=postgresql://...")
-    raise ValueError("Missing required environment variables. Check your .env file.")
+if not all([SUPABASE_URL, SUPABASE_ANON_KEY, SUPABASE_SERVICE_KEY]):
+    print("❌ Missing required environment variables")
+    raise ValueError("Missing required environment variables")
 
 # Only import supabase after we confirm env vars are loaded
 try:
@@ -47,15 +41,17 @@ except ImportError as e:
     print(f"❌ Failed to import libraries: {e}")
     raise
 
-# Create Supabase client
+# Create Supabase client with cleaned keys
+print(f"🔧 Creating Supabase clients with cleaned credentials...")
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_ANON_KEY)
 
-# Create service role client for admin operations (only if service key exists)
+# Create service role client for admin operations
 supabase_admin: Client = None
 if SUPABASE_SERVICE_KEY:
     supabase_admin = create_client(SUPABASE_URL, SUPABASE_SERVICE_KEY)
+    print("✅ Admin client created successfully")
 
-# SQLAlchemy setup for direct database queries (only if DATABASE_URL exists)
+# SQLAlchemy setup
 engine = None
 SessionLocal = None
 Base = declarative_base()

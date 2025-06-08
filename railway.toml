@@ -1,7 +1,15 @@
 [build]
-buildCommand = "pip install -r requirements.txt"
+buildCommand = "pip install --upgrade pip && pip install -r requirements.txt"
 
 [deploy]
 startCommand = "python main.py"
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 10
+
+[environments.production]
+buildCommand = "pip install --upgrade pip && pip install -r requirements.txt"
+startCommand = "python main.py"
+
+[environments.development]
+buildCommand = "pip install --upgrade pip && pip install -r requirements.txt"
+startCommand = "python main.py"

@@ -6,6 +6,7 @@ from typing import List, Optional, Dict, Any
 import uuid
 from datetime import datetime
 import os
+import json
 
 # Import our modules
 from database import supabase, test_connection
@@ -19,10 +20,10 @@ from auth import (
 app = FastAPI(
     title="CineFluent API", 
     version="0.1.0",
-    description="Language learning through movies"
+    description="Language learning through movies - Railway Deployment"
 )
 
-# Enhanced CORS configuration
+# Enhanced CORS configuration for Railway
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -32,14 +33,16 @@ app.add_middleware(
         "http://localhost:19006",     # Expo web default
         "https://*.vercel.app",       # Vercel deployments
         "https://*.railway.app",      # Railway deployments
-        "https://cinefluent.com",     # Production domain (when ready)
-        # Add your custom domains here
+        "https://*.up.railway.app",   # Railway custom domains
+        "https://cinefluent.com",     # Production domain
+        "https://www.cinefluent.com", # Production domain with www
+        "*"  # Allow all for now - restrict in production
     ],
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
     allow_headers=[
         "Authorization",
-        "Content-Type",
+        "Content-Type", 
         "Accept",
         "Origin",
         "User-Agent",
@@ -58,8 +61,8 @@ class Movie(BaseModel):
     duration: int  # minutes
     release_year: int
     difficulty_level: str
-    languages: List[str]
-    genres: List[str]
+    languages: List[str]  # Will be converted from JSONB
+    genres: List[str]     # Will be converted from JSONB
     thumbnail_url: str
     video_url: Optional[str] = None
     is_premium: bool = False
@@ -97,52 +100,102 @@ class ProfileUpdate(BaseModel):
     learning_languages: Optional[List[str]] = None
     learning_goals: Optional[Dict[str, Any]] = None
 
+# Helper function to convert JSONB to Python lists
+def convert_movie_data(movie_data: Dict) -> Dict:
+    """Convert JSONB fields to Python lists for Movie model"""
+    # Convert languages and genres from JSONB to lists
+    if isinstance(movie_data.get('languages'), str):
+        try:
+            movie_data['languages'] = json.loads(movie_data['languages'])
+        except:
+            movie_data['languages'] = []
+    elif movie_data.get('languages') is None:
+        movie_data['languages'] = []
+    
+    if isinstance(movie_data.get('genres'), str):
+        try:
+            movie_data['genres'] = json.loads(movie_data['genres'])
+        except:
+            movie_data['genres'] = []
+    elif movie_data.get('genres') is None:
+        movie_data['genres'] = []
+    
+    return movie_data
+
 # Startup event
 @app.on_event("startup")
 async def startup_event():
-    print("🚀 Starting CineFluent API...")
-    print(f"Environment: {os.getenv('ENVIRONMENT', 'production')}")
+    print("🚀 Starting CineFluent API on Railway...")
+    print(f"Environment: {os.getenv('RAILWAY_ENVIRONMENT', 'development')}")
+    print(f"Service: {os.getenv('RAILWAY_SERVICE_NAME', 'cinefluent-api')}")
+    
     if test_connection():
         print("✅ Database connection established")
     else:
-        print("❌ Database connection failed")
+        print("❌ Database connection failed - check environment variables")
 
 # Health Check
 @app.get("/")
-async def health_check():
+async def root():
     return {
-        "status": "healthy-NEW-CODE", 
+        "status": "healthy", 
         "service": "CineFluent API",
         "version": "0.1.0",
+        "environment": os.getenv('RAILWAY_ENVIRONMENT', 'development'),
         "database": "connected" if test_connection() else "disconnected",
-        "environment": os.getenv("ENVIRONMENT", "production")
+        "deployment": "railway"
     }
 
 @app.get("/api/v1/health")
-async def api_health():
+async def health_check():
     """Detailed health check for monitoring"""
     try:
         # Test database connection
         db_status = test_connection()
         
-        # Test Supabase auth (basic check)
+        # Test Supabase auth
         auth_status = True
         try:
-            # This won't actually authenticate, but checks if Supabase client works
             supabase.auth.get_session()
-        except:
+        except Exception as e:
+            print(f"Auth test failed: {e}")
             auth_status = False
         
         return {
-            "status": "healthy-NEW-CODE" if db_status and auth_status else "degraded",
+            "status": "healthy" if db_status and auth_status else "degraded",
+            "service": "CineFluent API",
+            "version": "0.1.0",
             "checks": {
                 "database": "ok" if db_status else "error",
                 "auth": "ok" if auth_status else "error"
             },
+            "environment": {
+                "railway_env": os.getenv('RAILWAY_ENVIRONMENT'),
+                "service_name": os.getenv('RAILWAY_SERVICE_NAME'),
+                "git_commit": os.getenv('RAILWAY_GIT_COMMIT_SHA', 'unknown')[:8]
+            },
             "timestamp": datetime.utcnow().isoformat()
         }
     except Exception as e:
+        print(f"Health check error: {e}")
         raise HTTPException(status_code=503, detail=f"Service unavailable: {str(e)}")
+
+# Debug endpoint for Railway deployment
+@app.get("/debug")
+async def debug_info():
+    """Debug endpoint to check Railway deployment"""
+    return {
+        "files": os.listdir("."),
+        "current_time": datetime.utcnow().isoformat(),
+        "environment_vars": {
+            "RAILWAY_ENVIRONMENT": os.environ.get("RAILWAY_ENVIRONMENT"),
+            "RAILWAY_SERVICE_NAME": os.environ.get("RAILWAY_SERVICE_NAME"),
+            "RAILWAY_GIT_COMMIT_SHA": os.environ.get("RAILWAY_GIT_COMMIT_SHA", "unknown")[:8],
+            "PORT": os.environ.get("PORT"),
+            "SUPABASE_URL_SET": bool(os.environ.get("SUPABASE_URL")),
+            "DATABASE_URL_SET": bool(os.environ.get("DATABASE_URL"))
+        }
+    }
 
 # ===== AUTHENTICATION ENDPOINTS =====
 
@@ -215,7 +268,6 @@ async def logout(credentials: HTTPAuthorizationCredentials = Depends(security)):
         else:
             return {"message": "Successfully signed out"}
     except Exception as e:
-        # Always return success for logout
         return {"message": "Successfully signed out"}
 
 @app.get("/api/v1/auth/me")
@@ -248,6 +300,14 @@ async def update_profile(
         if not update_data:
             raise HTTPException(status_code=400, detail="No data provided for update")
         
+        # Convert learning_languages to JSONB if provided
+        if 'learning_languages' in update_data:
+            update_data['learning_languages'] = json.dumps(update_data['learning_languages'])
+        
+        # Convert learning_goals to JSONB if provided
+        if 'learning_goals' in update_data:
+            update_data['learning_goals'] = json.dumps(update_data['learning_goals'])
+        
         # Add timestamp
         update_data["updated_at"] = datetime.utcnow().isoformat()
         
@@ -259,8 +319,7 @@ async def update_profile(
         if response.data:
             return {"message": "Profile updated successfully", "profile": response.data[0]}
         else:
-            # If no rows affected, the profile might not exist
-            # Try to create it
+            # If no rows affected, create profile
             profile_data_with_id = {
                 "id": current_user.id,
                 "username": current_user.email.split("@")[0],
@@ -300,12 +359,14 @@ async def get_movies(
         # Build query
         query = supabase.table("movies").select("*")
         
-        # Apply filters
+        # Apply filters using JSONB operators
         if language:
+            # Use JSONB contains operator for language filtering
             query = query.contains("languages", [language])
         if difficulty:
             query = query.eq("difficulty_level", difficulty)
         if genre:
+            # Use JSONB contains operator for genre filtering
             query = query.contains("genres", [genre])
         
         # Handle premium content based on user subscription
@@ -340,7 +401,11 @@ async def get_movies(
         paginated_query = query.range(start, end).order("created_at", desc=True)
         response = paginated_query.execute()
         
-        movies = [Movie(**movie_data) for movie_data in response.data] if response.data else []
+        # Convert JSONB fields to lists for Movie model
+        movies = []
+        for movie_data in response.data or []:
+            converted_data = convert_movie_data(movie_data)
+            movies.append(Movie(**converted_data))
         
         return MovieResponse(
             movies=movies,
@@ -363,7 +428,12 @@ async def get_featured_movies(current_user: Optional[User] = Depends(get_optiona
             query = query.eq("is_premium", False)
         
         response = query.order("imdb_rating", desc=True).limit(6).execute()
-        movies = [Movie(**movie_data) for movie_data in response.data] if response.data else []
+        
+        # Convert JSONB fields to lists
+        movies = []
+        for movie_data in response.data or []:
+            converted_data = convert_movie_data(movie_data)
+            movies.append(Movie(**converted_data))
         
         return {"movies": movies}
         
@@ -382,14 +452,19 @@ async def search_movies(
         search_query = f"%{q}%"
         query = supabase.table("movies")\
             .select("*")\
-            .or_(f"title.ilike.{search_query},description.ilike.{search_query}")
+            .or_(f"title.ilike.%{q}%,description.ilike.%{q}%")
         
         # Filter premium content for non-premium users
         if not current_user:
             query = query.eq("is_premium", False)
         
         response = query.limit(limit).execute()
-        movies = [Movie(**movie_data) for movie_data in response.data] if response.data else []
+        
+        # Convert JSONB fields to lists
+        movies = []
+        for movie_data in response.data or []:
+            converted_data = convert_movie_data(movie_data)
+            movies.append(Movie(**converted_data))
         
         return {"movies": movies, "query": q, "total": len(movies)}
         
@@ -408,7 +483,7 @@ async def get_movie(
         if not response.data:
             raise HTTPException(status_code=404, detail="Movie not found")
         
-        movie_data = response.data[0]
+        movie_data = convert_movie_data(response.data[0])
         
         # Check if user can access premium content
         if movie_data["is_premium"] and not current_user:
@@ -429,7 +504,6 @@ async def get_movie(
                 if progress_response.data:
                     user_progress = progress_response.data[0]
             except:
-                # Don't fail if progress lookup fails
                 pass
         
         return {
@@ -460,7 +534,7 @@ async def update_progress(
         progress_update = {
             "user_id": current_user.id,
             "movie_id": progress_data.movie_id,
-            "progress_percentage": min(progress_data.progress_percentage, 100),  # Cap at 100%
+            "progress_percentage": min(progress_data.progress_percentage, 100),
             "time_watched": progress_data.time_watched,
             "vocabulary_learned": progress_data.vocabulary_learned or 0,
             "last_watched_at": datetime.utcnow().isoformat(),
@@ -507,28 +581,14 @@ async def get_progress_stats(current_user: User = Depends(get_current_user)):
         return {
             "total_movies_watched": total_movies_watched,
             "completed_movies": completed_movies,
-            "total_time_watched": total_time_watched,  # in seconds
+            "total_time_watched": total_time_watched,
             "total_vocabulary_learned": total_vocabulary,
             "average_progress": round(avg_progress, 1),
-            "recent_activity": progress_data[-5:] if progress_data else []  # Last 5 activities
+            "recent_activity": progress_data[-5:] if progress_data else []
         }
         
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to get progress stats: {str(e)}")
-
-# ===== PREMIUM CONTENT =====
-
-@app.get("/api/v1/movies/premium")
-async def get_premium_movies(current_user: User = Depends(require_premium_user)):
-    """Get premium movies (requires premium subscription)"""
-    try:
-        response = supabase.table("movies").select("*").eq("is_premium", True).order("created_at", desc=True).execute()
-        movies = [Movie(**movie_data) for movie_data in response.data] if response.data else []
-        
-        return {"movies": movies, "total": len(movies)}
-        
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to fetch premium movies: {str(e)}")
 
 # ===== METADATA ENDPOINTS =====
 
@@ -540,7 +600,7 @@ async def get_categories():
         return {"categories": response.data if response.data else []}
         
     except Exception as e:
-        # Fallback to hardcoded categories if table doesn't exist
+        # Fallback to hardcoded categories
         fallback_categories = [
             {"id": "action", "name": "Action", "sort_order": 1},
             {"id": "drama", "name": "Drama", "sort_order": 2},
@@ -561,8 +621,16 @@ async def get_languages():
         all_languages = set()
         if response.data:
             for movie in response.data:
-                if movie.get("languages"):
-                    all_languages.update(movie["languages"])
+                languages = movie.get("languages")
+                if languages:
+                    # Handle both JSONB and string formats
+                    if isinstance(languages, str):
+                        try:
+                            languages = json.loads(languages)
+                        except:
+                            continue
+                    if isinstance(languages, list):
+                        all_languages.update(languages)
         
         # If no languages found, provide fallback
         if not all_languages:
@@ -585,6 +653,55 @@ async def options_root():
 async def options_api(path: str):
     return {"message": "OK"}
 
+# ===== TEST ENDPOINTS FOR DEVELOPMENT =====
+
+@app.get("/api/v1/test")
+async def test_endpoint():
+    """Test endpoint to verify deployment"""
+    return {
+        "message": "CineFluent API is working!",
+        "timestamp": datetime.utcnow().isoformat(),
+        "version": "0.1.0",
+        "environment": os.getenv('RAILWAY_ENVIRONMENT', 'development')
+    }
+
+@app.get("/api/v1/test/database")
+async def test_database():
+    """Test database connectivity"""
+    try:
+        # Test basic query
+        response = supabase.table("movies").select("id").limit(1).execute()
+        
+        return {
+            "database": "connected",
+            "tables_accessible": True,
+            "sample_data": len(response.data) > 0 if response.data else False,
+            "message": "Database is working correctly"
+        }
+    except Exception as e:
+        return {
+            "database": "error",
+            "tables_accessible": False,
+            "error": str(e),
+            "message": "Database connection failed"
+        }
+
+@app.get("/api/v1/test/auth")
+async def test_auth(current_user: Optional[User] = Depends(get_optional_user)):
+    """Test authentication without requiring login"""
+    if current_user:
+        return {
+            "authenticated": True,
+            "user_id": current_user.id,
+            "email": current_user.email,
+            "message": "Authentication is working"
+        }
+    else:
+        return {
+            "authenticated": False,
+            "message": "No authentication provided (this is expected for this test)"
+        }
+
 # ===== APPLICATION STARTUP =====
 
 if __name__ == "__main__":
@@ -592,18 +709,16 @@ if __name__ == "__main__":
     
     # Railway provides PORT environment variable
     port = int(os.environ.get("PORT", 8000))
+    host = "0.0.0.0"
     
-    print(f"🚀 Starting CineFluent API on port {port}")
-    print(f"Environment: {os.getenv('ENVIRONMENT', 'production')}")
-    print(f"CORS origins configured for local development and production")
+    print(f"🚀 Starting CineFluent API")
+    print(f"📍 Host: {host}:{port}")
+    print(f"🌍 Environment: {os.getenv('RAILWAY_ENVIRONMENT', 'development')}")
+    print(f"🔧 Service: {os.getenv('RAILWAY_SERVICE_NAME', 'cinefluent-api')}")
     
     uvicorn.run(
         app, 
-        host="0.0.0.0", 
+        host=host, 
         port=port,
         log_level="info"
     )
-@app.get("/api/v1/test")
-async def test_endpoint():
-    return {"message": "New code deployed!", "timestamp": datetime.utcnow().isoformat()}
-

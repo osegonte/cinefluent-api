@@ -16,17 +16,44 @@ SUPABASE_JWT_SECRET = os.getenv("SUPABASE_JWT_SECRET", "").strip()
 DATABASE_URL = os.getenv("DATABASE_URL", "").strip()
 
 # Debug: Print what we found (without showing secrets)
-print(f"SUPABASE_URL loaded: {SUPABASE_URL is not None and len(SUPABASE_URL) > 0}")
-print(f"SUPABASE_ANON_KEY loaded: {SUPABASE_ANON_KEY is not None and len(SUPABASE_ANON_KEY) > 0}")
-print(f"SUPABASE_SERVICE_KEY loaded: {SUPABASE_SERVICE_KEY is not None and len(SUPABASE_SERVICE_KEY) > 0}")
+print(f"SUPABASE_URL loaded: {bool(SUPABASE_URL)}")
+print(f"SUPABASE_ANON_KEY loaded: {bool(SUPABASE_ANON_KEY)}")
+print(f"SUPABASE_SERVICE_KEY loaded: {bool(SUPABASE_SERVICE_KEY)}")
 
 # Additional debug: Check for hidden characters
 if SUPABASE_SERVICE_KEY:
     print(f"🔧 Service key cleaned - length: {len(SUPABASE_SERVICE_KEY)}")
 
+# Only check required vars if we're not in Railway (which sets them differently)
 if not all([SUPABASE_URL, SUPABASE_ANON_KEY, SUPABASE_SERVICE_KEY]):
-    print("❌ Missing required environment variables")
-    raise ValueError("Missing required environment variables")
+    # In Railway, environment variables might be set differently
+    # Let's try alternative loading methods
+    import subprocess
+    railway_env = os.getenv('RAILWAY_ENVIRONMENT')
+    
+    if railway_env:
+        print("🚀 Running in Railway environment")
+        # Railway should have set these directly
+        if not SUPABASE_URL:
+            SUPABASE_URL = os.environ.get("SUPABASE_URL", "")
+        if not SUPABASE_ANON_KEY:
+            SUPABASE_ANON_KEY = os.environ.get("SUPABASE_ANON_KEY", "")
+        if not SUPABASE_SERVICE_KEY:
+            SUPABASE_SERVICE_KEY = os.environ.get("SUPABASE_SERVICE_KEY", "")
+        if not SUPABASE_JWT_SECRET:
+            SUPABASE_JWT_SECRET = os.environ.get("SUPABASE_JWT_SECRET", "")
+        if not DATABASE_URL:
+            DATABASE_URL = os.environ.get("DATABASE_URL", "")
+            
+        print(f"After Railway env check:")
+        print(f"SUPABASE_URL: {bool(SUPABASE_URL)}")
+        print(f"SUPABASE_ANON_KEY: {bool(SUPABASE_ANON_KEY)}")
+        print(f"SUPABASE_SERVICE_KEY: {bool(SUPABASE_SERVICE_KEY)}")
+    
+    if not all([SUPABASE_URL, SUPABASE_ANON_KEY, SUPABASE_SERVICE_KEY]):
+        print("❌ Missing required environment variables")
+        print("Available env vars:", [k for k in os.environ.keys() if 'SUPABASE' in k or 'DATABASE' in k])
+        raise ValueError("Missing required environment variables")
 
 # Only import supabase after we confirm env vars are loaded
 try:

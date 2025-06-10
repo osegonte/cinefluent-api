@@ -1,0 +1,1653 @@
+{
+  "movie_id": "9939506e-dc1a-4d74-a12f-0790a40acda9",
+  "total_cues": 7,
+  "total_segments": 1,
+  "avg_difficulty": 3.0,
+  "duration": 28.0,
+  "cues": [
+    {
+      "id": "37e5f9cd-16a2-40ae-9eaf-831e52a86c69",
+      "start_time": 2.0,
+      "end_time": 4.0,
+      "text": "My family was attacked by a demon while I was away.",
+      "words": [
+        {
+          "word": "family",
+          "lemma": "family",
+          "pos_tag": "NOUN",
+          "definition": "A noun: family",
+          "translations": {
+            "es": "family_es",
+            "fr": "family_fr",
+            "de": "family_de",
+            "it": "family_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My family was attacked by a demon while I was away.",
+          "audio_url": null
+        },
+        {
+          "word": "attacked",
+          "lemma": "attack",
+          "pos_tag": "VERB",
+          "definition": "A verb: attacked",
+          "translations": {
+            "es": "attacked_es",
+            "fr": "attacked_fr",
+            "de": "attacked_de",
+            "it": "attacked_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My family was attacked by a demon while I was away.",
+          "audio_url": null
+        },
+        {
+          "word": "demon",
+          "lemma": "demon",
+          "pos_tag": "NOUN",
+          "definition": "A noun: demon",
+          "translations": {
+            "es": "demon_es",
+            "fr": "demon_fr",
+            "de": "demon_de",
+            "it": "demon_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My family was attacked by a demon while I was away.",
+          "audio_url": null
+        },
+        {
+          "word": "away",
+          "lemma": "away",
+          "pos_tag": "ADV",
+          "definition": "An adverb: away",
+          "translations": {
+            "es": "away_es",
+            "fr": "away_fr",
+            "de": "away_de",
+            "it": "away_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My family was attacked by a demon while I was away.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "cf690497-74e4-4a71-868a-bf50ca3a9393",
+      "start_time": 4.5,
+      "end_time": 8.0,
+      "text": "My name is Tanjiro Kamado, and I became a demon slayer.",
+      "words": [
+        {
+          "word": "tanjiro",
+          "lemma": "tanjiro",
+          "pos_tag": "PROPN",
+          "definition": "A word: tanjiro",
+          "translations": {
+            "es": "tanjiro_es",
+            "fr": "tanjiro_fr",
+            "de": "tanjiro_de",
+            "it": "tanjiro_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Tanjiro Kamado, and I became a demon slayer.",
+          "audio_url": null
+        },
+        {
+          "word": "kamado",
+          "lemma": "kamado",
+          "pos_tag": "PROPN",
+          "definition": "A word: kamado",
+          "translations": {
+            "es": "kamado_es",
+            "fr": "kamado_fr",
+            "de": "kamado_de",
+            "it": "kamado_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Tanjiro Kamado, and I became a demon slayer.",
+          "audio_url": null
+        },
+        {
+          "word": "demon",
+          "lemma": "demon",
+          "pos_tag": "NOUN",
+          "definition": "A noun: demon",
+          "translations": {
+            "es": "demon_es",
+            "fr": "demon_fr",
+            "de": "demon_de",
+            "it": "demon_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Tanjiro Kamado, and I became a demon slayer.",
+          "audio_url": null
+        },
+        {
+          "word": "slayer",
+          "lemma": "slayer",
+          "pos_tag": "NOUN",
+          "definition": "A noun: slayer",
+          "translations": {
+            "es": "slayer_es",
+            "fr": "slayer_fr",
+            "de": "slayer_de",
+            "it": "slayer_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Tanjiro Kamado, and I became a demon slayer.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "3a9e620c-0425-499e-b397-4153802a611d",
+      "start_time": 8.5,
+      "end_time": 12.0,
+      "text": "My sister Nezuko was turned into a demon, but she retained her humanity.",
+      "words": [
+        {
+          "word": "sister",
+          "lemma": "sister",
+          "pos_tag": "NOUN",
+          "definition": "A noun: sister",
+          "translations": {
+            "es": "sister_es",
+            "fr": "sister_fr",
+            "de": "sister_de",
+            "it": "sister_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My sister Nezuko was turned into a demon, but she retained her humanity.",
+          "audio_url": null
+        },
+        {
+          "word": "nezuko",
+          "lemma": "nezuko",
+          "pos_tag": "PROPN",
+          "definition": "A word: nezuko",
+          "translations": {
+            "es": "nezuko_es",
+            "fr": "nezuko_fr",
+            "de": "nezuko_de",
+            "it": "nezuko_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My sister Nezuko was turned into a demon, but she retained her humanity.",
+          "audio_url": null
+        },
+        {
+          "word": "turned",
+          "lemma": "turn",
+          "pos_tag": "VERB",
+          "definition": "A verb: turned",
+          "translations": {
+            "es": "turned_es",
+            "fr": "turned_fr",
+            "de": "turned_de",
+            "it": "turned_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My sister Nezuko was turned into a demon, but she retained her humanity.",
+          "audio_url": null
+        },
+        {
+          "word": "demon",
+          "lemma": "demon",
+          "pos_tag": "NOUN",
+          "definition": "A noun: demon",
+          "translations": {
+            "es": "demon_es",
+            "fr": "demon_fr",
+            "de": "demon_de",
+            "it": "demon_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My sister Nezuko was turned into a demon, but she retained her humanity.",
+          "audio_url": null
+        },
+        {
+          "word": "retained",
+          "lemma": "retain",
+          "pos_tag": "VERB",
+          "definition": "A verb: retained",
+          "translations": {
+            "es": "retained_es",
+            "fr": "retained_fr",
+            "de": "retained_de",
+            "it": "retained_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My sister Nezuko was turned into a demon, but she retained her humanity.",
+          "audio_url": null
+        },
+        {
+          "word": "humanity",
+          "lemma": "humanity",
+          "pos_tag": "NOUN",
+          "definition": "A noun: humanity",
+          "translations": {
+            "es": "humanity_es",
+            "fr": "humanity_fr",
+            "de": "humanity_de",
+            "it": "humanity_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My sister Nezuko was turned into a demon, but she retained her humanity.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "3484a814-a48e-422b-a3d7-7171eef48427",
+      "start_time": 12.5,
+      "end_time": 16.0,
+      "text": "I trained under Sakonji Urokodaki to master Water Breathing techniques.",
+      "words": [
+        {
+          "word": "trained",
+          "lemma": "train",
+          "pos_tag": "VERB",
+          "definition": "A verb: trained",
+          "translations": {
+            "es": "trained_es",
+            "fr": "trained_fr",
+            "de": "trained_de",
+            "it": "trained_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "I trained under Sakonji Urokodaki to master Water Breathing techniques.",
+          "audio_url": null
+        },
+        {
+          "word": "sakonji",
+          "lemma": "sakonji",
+          "pos_tag": "PROPN",
+          "definition": "A word: sakonji",
+          "translations": {
+            "es": "sakonji_es",
+            "fr": "sakonji_fr",
+            "de": "sakonji_de",
+            "it": "sakonji_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "I trained under Sakonji Urokodaki to master Water Breathing techniques.",
+          "audio_url": null
+        },
+        {
+          "word": "urokodaki",
+          "lemma": "urokodaki",
+          "pos_tag": "PROPN",
+          "definition": "A word: urokodaki",
+          "translations": {
+            "es": "urokodaki_es",
+            "fr": "urokodaki_fr",
+            "de": "urokodaki_de",
+            "it": "urokodaki_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "I trained under Sakonji Urokodaki to master Water Breathing techniques.",
+          "audio_url": null
+        },
+        {
+          "word": "master",
+          "lemma": "master",
+          "pos_tag": "VERB",
+          "definition": "A verb: master",
+          "translations": {
+            "es": "master_es",
+            "fr": "master_fr",
+            "de": "master_de",
+            "it": "master_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "I trained under Sakonji Urokodaki to master Water Breathing techniques.",
+          "audio_url": null
+        },
+        {
+          "word": "water",
+          "lemma": "water",
+          "pos_tag": "PROPN",
+          "definition": "A word: water",
+          "translations": {
+            "es": "water_es",
+            "fr": "water_fr",
+            "de": "water_de",
+            "it": "water_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "I trained under Sakonji Urokodaki to master Water Breathing techniques.",
+          "audio_url": null
+        },
+        {
+          "word": "breathing",
+          "lemma": "breathing",
+          "pos_tag": "PROPN",
+          "definition": "A word: breathing",
+          "translations": {
+            "es": "breathing_es",
+            "fr": "breathing_fr",
+            "de": "breathing_de",
+            "it": "breathing_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "I trained under Sakonji Urokodaki to master Water Breathing techniques.",
+          "audio_url": null
+        },
+        {
+          "word": "techniques",
+          "lemma": "technique",
+          "pos_tag": "NOUN",
+          "definition": "A noun: techniques",
+          "translations": {
+            "es": "techniques_es",
+            "fr": "techniques_fr",
+            "de": "techniques_de",
+            "it": "techniques_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "I trained under Sakonji Urokodaki to master Water Breathing techniques.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "325082cb-6d9b-442a-b0f6-67e69586f384",
+      "start_time": 16.5,
+      "end_time": 20.0,
+      "text": "The Demon Slayer Corps fights to protect humanity from demons.",
+      "words": [
+        {
+          "word": "demon",
+          "lemma": "demon",
+          "pos_tag": "PROPN",
+          "definition": "A word: demon",
+          "translations": {
+            "es": "demon_es",
+            "fr": "demon_fr",
+            "de": "demon_de",
+            "it": "demon_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "The Demon Slayer Corps fights to protect humanity from demons.",
+          "audio_url": null
+        },
+        {
+          "word": "slayer",
+          "lemma": "slayer",
+          "pos_tag": "PROPN",
+          "definition": "A word: slayer",
+          "translations": {
+            "es": "slayer_es",
+            "fr": "slayer_fr",
+            "de": "slayer_de",
+            "it": "slayer_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "The Demon Slayer Corps fights to protect humanity from demons.",
+          "audio_url": null
+        },
+        {
+          "word": "corps",
+          "lemma": "corps",
+          "pos_tag": "PROPN",
+          "definition": "A word: corps",
+          "translations": {
+            "es": "corps_es",
+            "fr": "corps_fr",
+            "de": "corps_de",
+            "it": "corps_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "The Demon Slayer Corps fights to protect humanity from demons.",
+          "audio_url": null
+        },
+        {
+          "word": "fights",
+          "lemma": "fight",
+          "pos_tag": "VERB",
+          "definition": "A verb: fights",
+          "translations": {
+            "es": "fights_es",
+            "fr": "fights_fr",
+            "de": "fights_de",
+            "it": "fights_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "The Demon Slayer Corps fights to protect humanity from demons.",
+          "audio_url": null
+        },
+        {
+          "word": "protect",
+          "lemma": "protect",
+          "pos_tag": "VERB",
+          "definition": "A verb: protect",
+          "translations": {
+            "es": "protect_es",
+            "fr": "protect_fr",
+            "de": "protect_de",
+            "it": "protect_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "The Demon Slayer Corps fights to protect humanity from demons.",
+          "audio_url": null
+        },
+        {
+          "word": "humanity",
+          "lemma": "humanity",
+          "pos_tag": "NOUN",
+          "definition": "A noun: humanity",
+          "translations": {
+            "es": "humanity_es",
+            "fr": "humanity_fr",
+            "de": "humanity_de",
+            "it": "humanity_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "The Demon Slayer Corps fights to protect humanity from demons.",
+          "audio_url": null
+        },
+        {
+          "word": "demons",
+          "lemma": "demon",
+          "pos_tag": "NOUN",
+          "definition": "A noun: demons",
+          "translations": {
+            "es": "demons_es",
+            "fr": "demons_fr",
+            "de": "demons_de",
+            "it": "demons_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "The Demon Slayer Corps fights to protect humanity from demons.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "fe40b7aa-679b-4fde-b852-b6e85830cf28",
+      "start_time": 20.5,
+      "end_time": 24.0,
+      "text": "My enhanced sense of smell helps me track demons effectively.",
+      "words": [
+        {
+          "word": "enhanced",
+          "lemma": "enhanced",
+          "pos_tag": "ADJ",
+          "definition": "An adjective: enhanced",
+          "translations": {
+            "es": "enhanced_es",
+            "fr": "enhanced_fr",
+            "de": "enhanced_de",
+            "it": "enhanced_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My enhanced sense of smell helps me track demons effectively.",
+          "audio_url": null
+        },
+        {
+          "word": "sense",
+          "lemma": "sense",
+          "pos_tag": "NOUN",
+          "definition": "A noun: sense",
+          "translations": {
+            "es": "sense_es",
+            "fr": "sense_fr",
+            "de": "sense_de",
+            "it": "sense_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My enhanced sense of smell helps me track demons effectively.",
+          "audio_url": null
+        },
+        {
+          "word": "smell",
+          "lemma": "smell",
+          "pos_tag": "NOUN",
+          "definition": "A noun: smell",
+          "translations": {
+            "es": "smell_es",
+            "fr": "smell_fr",
+            "de": "smell_de",
+            "it": "smell_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My enhanced sense of smell helps me track demons effectively.",
+          "audio_url": null
+        },
+        {
+          "word": "helps",
+          "lemma": "help",
+          "pos_tag": "VERB",
+          "definition": "A verb: helps",
+          "translations": {
+            "es": "helps_es",
+            "fr": "helps_fr",
+            "de": "helps_de",
+            "it": "helps_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My enhanced sense of smell helps me track demons effectively.",
+          "audio_url": null
+        },
+        {
+          "word": "track",
+          "lemma": "track",
+          "pos_tag": "VERB",
+          "definition": "A verb: track",
+          "translations": {
+            "es": "track_es",
+            "fr": "track_fr",
+            "de": "track_de",
+            "it": "track_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My enhanced sense of smell helps me track demons effectively.",
+          "audio_url": null
+        },
+        {
+          "word": "demons",
+          "lemma": "demon",
+          "pos_tag": "NOUN",
+          "definition": "A noun: demons",
+          "translations": {
+            "es": "demons_es",
+            "fr": "demons_fr",
+            "de": "demons_de",
+            "it": "demons_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My enhanced sense of smell helps me track demons effectively.",
+          "audio_url": null
+        },
+        {
+          "word": "effectively",
+          "lemma": "effectively",
+          "pos_tag": "ADV",
+          "definition": "An adverb: effectively",
+          "translations": {
+            "es": "effectively_es",
+            "fr": "effectively_fr",
+            "de": "effectively_de",
+            "it": "effectively_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My enhanced sense of smell helps me track demons effectively.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "184473b0-4ae3-4ad0-95a9-6204ae88e3fe",
+      "start_time": 24.5,
+      "end_time": 28.0,
+      "text": "I seek to find a cure for Nezuko and defeat Muzan Kibutsuji.",
+      "words": [
+        {
+          "word": "seek",
+          "lemma": "seek",
+          "pos_tag": "VERB",
+          "definition": "A verb: seek",
+          "translations": {
+            "es": "seek_es",
+            "fr": "seek_fr",
+            "de": "seek_de",
+            "it": "seek_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "I seek to find a cure for Nezuko and defeat Muzan Kibutsuji.",
+          "audio_url": null
+        },
+        {
+          "word": "find",
+          "lemma": "find",
+          "pos_tag": "VERB",
+          "definition": "A verb: find",
+          "translations": {
+            "es": "find_es",
+            "fr": "find_fr",
+            "de": "find_de",
+            "it": "find_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "I seek to find a cure for Nezuko and defeat Muzan Kibutsuji.",
+          "audio_url": null
+        },
+        {
+          "word": "cure",
+          "lemma": "cure",
+          "pos_tag": "NOUN",
+          "definition": "A noun: cure",
+          "translations": {
+            "es": "cure_es",
+            "fr": "cure_fr",
+            "de": "cure_de",
+            "it": "cure_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "I seek to find a cure for Nezuko and defeat Muzan Kibutsuji.",
+          "audio_url": null
+        },
+        {
+          "word": "nezuko",
+          "lemma": "nezuko",
+          "pos_tag": "PROPN",
+          "definition": "A word: nezuko",
+          "translations": {
+            "es": "nezuko_es",
+            "fr": "nezuko_fr",
+            "de": "nezuko_de",
+            "it": "nezuko_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "I seek to find a cure for Nezuko and defeat Muzan Kibutsuji.",
+          "audio_url": null
+        },
+        {
+          "word": "defeat",
+          "lemma": "defeat",
+          "pos_tag": "VERB",
+          "definition": "A verb: defeat",
+          "translations": {
+            "es": "defeat_es",
+            "fr": "defeat_fr",
+            "de": "defeat_de",
+            "it": "defeat_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "I seek to find a cure for Nezuko and defeat Muzan Kibutsuji.",
+          "audio_url": null
+        },
+        {
+          "word": "muzan",
+          "lemma": "muzan",
+          "pos_tag": "PROPN",
+          "definition": "A word: muzan",
+          "translations": {
+            "es": "muzan_es",
+            "fr": "muzan_fr",
+            "de": "muzan_de",
+            "it": "muzan_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "I seek to find a cure for Nezuko and defeat Muzan Kibutsuji.",
+          "audio_url": null
+        },
+        {
+          "word": "kibutsuji",
+          "lemma": "kibutsuji",
+          "pos_tag": "PROPN",
+          "definition": "A word: kibutsuji",
+          "translations": {
+            "es": "kibutsuji_es",
+            "fr": "kibutsuji_fr",
+            "de": "kibutsuji_de",
+            "it": "kibutsuji_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "I seek to find a cure for Nezuko and defeat Muzan Kibutsuji.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    }
+  ],
+  "segments": [
+    {
+      "id": "de04a4c9-87fe-4ff2-9da1-3c70c640881e",
+      "start_time": 2.0,
+      "end_time": 28.0,
+      "cues": [
+        {
+          "id": "37e5f9cd-16a2-40ae-9eaf-831e52a86c69",
+          "start_time": 2.0,
+          "end_time": 4.0,
+          "text": "My family was attacked by a demon while I was away.",
+          "words": [
+            {
+              "word": "family",
+              "lemma": "family",
+              "pos_tag": "NOUN",
+              "definition": "A noun: family",
+              "translations": {
+                "es": "family_es",
+                "fr": "family_fr",
+                "de": "family_de",
+                "it": "family_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My family was attacked by a demon while I was away.",
+              "audio_url": null
+            },
+            {
+              "word": "attacked",
+              "lemma": "attack",
+              "pos_tag": "VERB",
+              "definition": "A verb: attacked",
+              "translations": {
+                "es": "attacked_es",
+                "fr": "attacked_fr",
+                "de": "attacked_de",
+                "it": "attacked_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My family was attacked by a demon while I was away.",
+              "audio_url": null
+            },
+            {
+              "word": "demon",
+              "lemma": "demon",
+              "pos_tag": "NOUN",
+              "definition": "A noun: demon",
+              "translations": {
+                "es": "demon_es",
+                "fr": "demon_fr",
+                "de": "demon_de",
+                "it": "demon_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My family was attacked by a demon while I was away.",
+              "audio_url": null
+            },
+            {
+              "word": "away",
+              "lemma": "away",
+              "pos_tag": "ADV",
+              "definition": "An adverb: away",
+              "translations": {
+                "es": "away_es",
+                "fr": "away_fr",
+                "de": "away_de",
+                "it": "away_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My family was attacked by a demon while I was away.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "cf690497-74e4-4a71-868a-bf50ca3a9393",
+          "start_time": 4.5,
+          "end_time": 8.0,
+          "text": "My name is Tanjiro Kamado, and I became a demon slayer.",
+          "words": [
+            {
+              "word": "tanjiro",
+              "lemma": "tanjiro",
+              "pos_tag": "PROPN",
+              "definition": "A word: tanjiro",
+              "translations": {
+                "es": "tanjiro_es",
+                "fr": "tanjiro_fr",
+                "de": "tanjiro_de",
+                "it": "tanjiro_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My name is Tanjiro Kamado, and I became a demon slayer.",
+              "audio_url": null
+            },
+            {
+              "word": "kamado",
+              "lemma": "kamado",
+              "pos_tag": "PROPN",
+              "definition": "A word: kamado",
+              "translations": {
+                "es": "kamado_es",
+                "fr": "kamado_fr",
+                "de": "kamado_de",
+                "it": "kamado_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My name is Tanjiro Kamado, and I became a demon slayer.",
+              "audio_url": null
+            },
+            {
+              "word": "demon",
+              "lemma": "demon",
+              "pos_tag": "NOUN",
+              "definition": "A noun: demon",
+              "translations": {
+                "es": "demon_es",
+                "fr": "demon_fr",
+                "de": "demon_de",
+                "it": "demon_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My name is Tanjiro Kamado, and I became a demon slayer.",
+              "audio_url": null
+            },
+            {
+              "word": "slayer",
+              "lemma": "slayer",
+              "pos_tag": "NOUN",
+              "definition": "A noun: slayer",
+              "translations": {
+                "es": "slayer_es",
+                "fr": "slayer_fr",
+                "de": "slayer_de",
+                "it": "slayer_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My name is Tanjiro Kamado, and I became a demon slayer.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "3a9e620c-0425-499e-b397-4153802a611d",
+          "start_time": 8.5,
+          "end_time": 12.0,
+          "text": "My sister Nezuko was turned into a demon, but she retained her humanity.",
+          "words": [
+            {
+              "word": "sister",
+              "lemma": "sister",
+              "pos_tag": "NOUN",
+              "definition": "A noun: sister",
+              "translations": {
+                "es": "sister_es",
+                "fr": "sister_fr",
+                "de": "sister_de",
+                "it": "sister_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My sister Nezuko was turned into a demon, but she retained her humanity.",
+              "audio_url": null
+            },
+            {
+              "word": "nezuko",
+              "lemma": "nezuko",
+              "pos_tag": "PROPN",
+              "definition": "A word: nezuko",
+              "translations": {
+                "es": "nezuko_es",
+                "fr": "nezuko_fr",
+                "de": "nezuko_de",
+                "it": "nezuko_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My sister Nezuko was turned into a demon, but she retained her humanity.",
+              "audio_url": null
+            },
+            {
+              "word": "turned",
+              "lemma": "turn",
+              "pos_tag": "VERB",
+              "definition": "A verb: turned",
+              "translations": {
+                "es": "turned_es",
+                "fr": "turned_fr",
+                "de": "turned_de",
+                "it": "turned_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My sister Nezuko was turned into a demon, but she retained her humanity.",
+              "audio_url": null
+            },
+            {
+              "word": "demon",
+              "lemma": "demon",
+              "pos_tag": "NOUN",
+              "definition": "A noun: demon",
+              "translations": {
+                "es": "demon_es",
+                "fr": "demon_fr",
+                "de": "demon_de",
+                "it": "demon_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My sister Nezuko was turned into a demon, but she retained her humanity.",
+              "audio_url": null
+            },
+            {
+              "word": "retained",
+              "lemma": "retain",
+              "pos_tag": "VERB",
+              "definition": "A verb: retained",
+              "translations": {
+                "es": "retained_es",
+                "fr": "retained_fr",
+                "de": "retained_de",
+                "it": "retained_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My sister Nezuko was turned into a demon, but she retained her humanity.",
+              "audio_url": null
+            },
+            {
+              "word": "humanity",
+              "lemma": "humanity",
+              "pos_tag": "NOUN",
+              "definition": "A noun: humanity",
+              "translations": {
+                "es": "humanity_es",
+                "fr": "humanity_fr",
+                "de": "humanity_de",
+                "it": "humanity_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My sister Nezuko was turned into a demon, but she retained her humanity.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "3484a814-a48e-422b-a3d7-7171eef48427",
+          "start_time": 12.5,
+          "end_time": 16.0,
+          "text": "I trained under Sakonji Urokodaki to master Water Breathing techniques.",
+          "words": [
+            {
+              "word": "trained",
+              "lemma": "train",
+              "pos_tag": "VERB",
+              "definition": "A verb: trained",
+              "translations": {
+                "es": "trained_es",
+                "fr": "trained_fr",
+                "de": "trained_de",
+                "it": "trained_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "I trained under Sakonji Urokodaki to master Water Breathing techniques.",
+              "audio_url": null
+            },
+            {
+              "word": "sakonji",
+              "lemma": "sakonji",
+              "pos_tag": "PROPN",
+              "definition": "A word: sakonji",
+              "translations": {
+                "es": "sakonji_es",
+                "fr": "sakonji_fr",
+                "de": "sakonji_de",
+                "it": "sakonji_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "I trained under Sakonji Urokodaki to master Water Breathing techniques.",
+              "audio_url": null
+            },
+            {
+              "word": "urokodaki",
+              "lemma": "urokodaki",
+              "pos_tag": "PROPN",
+              "definition": "A word: urokodaki",
+              "translations": {
+                "es": "urokodaki_es",
+                "fr": "urokodaki_fr",
+                "de": "urokodaki_de",
+                "it": "urokodaki_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "I trained under Sakonji Urokodaki to master Water Breathing techniques.",
+              "audio_url": null
+            },
+            {
+              "word": "master",
+              "lemma": "master",
+              "pos_tag": "VERB",
+              "definition": "A verb: master",
+              "translations": {
+                "es": "master_es",
+                "fr": "master_fr",
+                "de": "master_de",
+                "it": "master_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "I trained under Sakonji Urokodaki to master Water Breathing techniques.",
+              "audio_url": null
+            },
+            {
+              "word": "water",
+              "lemma": "water",
+              "pos_tag": "PROPN",
+              "definition": "A word: water",
+              "translations": {
+                "es": "water_es",
+                "fr": "water_fr",
+                "de": "water_de",
+                "it": "water_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "I trained under Sakonji Urokodaki to master Water Breathing techniques.",
+              "audio_url": null
+            },
+            {
+              "word": "breathing",
+              "lemma": "breathing",
+              "pos_tag": "PROPN",
+              "definition": "A word: breathing",
+              "translations": {
+                "es": "breathing_es",
+                "fr": "breathing_fr",
+                "de": "breathing_de",
+                "it": "breathing_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "I trained under Sakonji Urokodaki to master Water Breathing techniques.",
+              "audio_url": null
+            },
+            {
+              "word": "techniques",
+              "lemma": "technique",
+              "pos_tag": "NOUN",
+              "definition": "A noun: techniques",
+              "translations": {
+                "es": "techniques_es",
+                "fr": "techniques_fr",
+                "de": "techniques_de",
+                "it": "techniques_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "I trained under Sakonji Urokodaki to master Water Breathing techniques.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "325082cb-6d9b-442a-b0f6-67e69586f384",
+          "start_time": 16.5,
+          "end_time": 20.0,
+          "text": "The Demon Slayer Corps fights to protect humanity from demons.",
+          "words": [
+            {
+              "word": "demon",
+              "lemma": "demon",
+              "pos_tag": "PROPN",
+              "definition": "A word: demon",
+              "translations": {
+                "es": "demon_es",
+                "fr": "demon_fr",
+                "de": "demon_de",
+                "it": "demon_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "The Demon Slayer Corps fights to protect humanity from demons.",
+              "audio_url": null
+            },
+            {
+              "word": "slayer",
+              "lemma": "slayer",
+              "pos_tag": "PROPN",
+              "definition": "A word: slayer",
+              "translations": {
+                "es": "slayer_es",
+                "fr": "slayer_fr",
+                "de": "slayer_de",
+                "it": "slayer_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "The Demon Slayer Corps fights to protect humanity from demons.",
+              "audio_url": null
+            },
+            {
+              "word": "corps",
+              "lemma": "corps",
+              "pos_tag": "PROPN",
+              "definition": "A word: corps",
+              "translations": {
+                "es": "corps_es",
+                "fr": "corps_fr",
+                "de": "corps_de",
+                "it": "corps_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "The Demon Slayer Corps fights to protect humanity from demons.",
+              "audio_url": null
+            },
+            {
+              "word": "fights",
+              "lemma": "fight",
+              "pos_tag": "VERB",
+              "definition": "A verb: fights",
+              "translations": {
+                "es": "fights_es",
+                "fr": "fights_fr",
+                "de": "fights_de",
+                "it": "fights_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "The Demon Slayer Corps fights to protect humanity from demons.",
+              "audio_url": null
+            },
+            {
+              "word": "protect",
+              "lemma": "protect",
+              "pos_tag": "VERB",
+              "definition": "A verb: protect",
+              "translations": {
+                "es": "protect_es",
+                "fr": "protect_fr",
+                "de": "protect_de",
+                "it": "protect_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "The Demon Slayer Corps fights to protect humanity from demons.",
+              "audio_url": null
+            },
+            {
+              "word": "humanity",
+              "lemma": "humanity",
+              "pos_tag": "NOUN",
+              "definition": "A noun: humanity",
+              "translations": {
+                "es": "humanity_es",
+                "fr": "humanity_fr",
+                "de": "humanity_de",
+                "it": "humanity_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "The Demon Slayer Corps fights to protect humanity from demons.",
+              "audio_url": null
+            },
+            {
+              "word": "demons",
+              "lemma": "demon",
+              "pos_tag": "NOUN",
+              "definition": "A noun: demons",
+              "translations": {
+                "es": "demons_es",
+                "fr": "demons_fr",
+                "de": "demons_de",
+                "it": "demons_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "The Demon Slayer Corps fights to protect humanity from demons.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "fe40b7aa-679b-4fde-b852-b6e85830cf28",
+          "start_time": 20.5,
+          "end_time": 24.0,
+          "text": "My enhanced sense of smell helps me track demons effectively.",
+          "words": [
+            {
+              "word": "enhanced",
+              "lemma": "enhanced",
+              "pos_tag": "ADJ",
+              "definition": "An adjective: enhanced",
+              "translations": {
+                "es": "enhanced_es",
+                "fr": "enhanced_fr",
+                "de": "enhanced_de",
+                "it": "enhanced_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My enhanced sense of smell helps me track demons effectively.",
+              "audio_url": null
+            },
+            {
+              "word": "sense",
+              "lemma": "sense",
+              "pos_tag": "NOUN",
+              "definition": "A noun: sense",
+              "translations": {
+                "es": "sense_es",
+                "fr": "sense_fr",
+                "de": "sense_de",
+                "it": "sense_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My enhanced sense of smell helps me track demons effectively.",
+              "audio_url": null
+            },
+            {
+              "word": "smell",
+              "lemma": "smell",
+              "pos_tag": "NOUN",
+              "definition": "A noun: smell",
+              "translations": {
+                "es": "smell_es",
+                "fr": "smell_fr",
+                "de": "smell_de",
+                "it": "smell_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My enhanced sense of smell helps me track demons effectively.",
+              "audio_url": null
+            },
+            {
+              "word": "helps",
+              "lemma": "help",
+              "pos_tag": "VERB",
+              "definition": "A verb: helps",
+              "translations": {
+                "es": "helps_es",
+                "fr": "helps_fr",
+                "de": "helps_de",
+                "it": "helps_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My enhanced sense of smell helps me track demons effectively.",
+              "audio_url": null
+            },
+            {
+              "word": "track",
+              "lemma": "track",
+              "pos_tag": "VERB",
+              "definition": "A verb: track",
+              "translations": {
+                "es": "track_es",
+                "fr": "track_fr",
+                "de": "track_de",
+                "it": "track_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My enhanced sense of smell helps me track demons effectively.",
+              "audio_url": null
+            },
+            {
+              "word": "demons",
+              "lemma": "demon",
+              "pos_tag": "NOUN",
+              "definition": "A noun: demons",
+              "translations": {
+                "es": "demons_es",
+                "fr": "demons_fr",
+                "de": "demons_de",
+                "it": "demons_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My enhanced sense of smell helps me track demons effectively.",
+              "audio_url": null
+            },
+            {
+              "word": "effectively",
+              "lemma": "effectively",
+              "pos_tag": "ADV",
+              "definition": "An adverb: effectively",
+              "translations": {
+                "es": "effectively_es",
+                "fr": "effectively_fr",
+                "de": "effectively_de",
+                "it": "effectively_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My enhanced sense of smell helps me track demons effectively.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "184473b0-4ae3-4ad0-95a9-6204ae88e3fe",
+          "start_time": 24.5,
+          "end_time": 28.0,
+          "text": "I seek to find a cure for Nezuko and defeat Muzan Kibutsuji.",
+          "words": [
+            {
+              "word": "seek",
+              "lemma": "seek",
+              "pos_tag": "VERB",
+              "definition": "A verb: seek",
+              "translations": {
+                "es": "seek_es",
+                "fr": "seek_fr",
+                "de": "seek_de",
+                "it": "seek_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "I seek to find a cure for Nezuko and defeat Muzan Kibutsuji.",
+              "audio_url": null
+            },
+            {
+              "word": "find",
+              "lemma": "find",
+              "pos_tag": "VERB",
+              "definition": "A verb: find",
+              "translations": {
+                "es": "find_es",
+                "fr": "find_fr",
+                "de": "find_de",
+                "it": "find_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "I seek to find a cure for Nezuko and defeat Muzan Kibutsuji.",
+              "audio_url": null
+            },
+            {
+              "word": "cure",
+              "lemma": "cure",
+              "pos_tag": "NOUN",
+              "definition": "A noun: cure",
+              "translations": {
+                "es": "cure_es",
+                "fr": "cure_fr",
+                "de": "cure_de",
+                "it": "cure_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "I seek to find a cure for Nezuko and defeat Muzan Kibutsuji.",
+              "audio_url": null
+            },
+            {
+              "word": "nezuko",
+              "lemma": "nezuko",
+              "pos_tag": "PROPN",
+              "definition": "A word: nezuko",
+              "translations": {
+                "es": "nezuko_es",
+                "fr": "nezuko_fr",
+                "de": "nezuko_de",
+                "it": "nezuko_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "I seek to find a cure for Nezuko and defeat Muzan Kibutsuji.",
+              "audio_url": null
+            },
+            {
+              "word": "defeat",
+              "lemma": "defeat",
+              "pos_tag": "VERB",
+              "definition": "A verb: defeat",
+              "translations": {
+                "es": "defeat_es",
+                "fr": "defeat_fr",
+                "de": "defeat_de",
+                "it": "defeat_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "I seek to find a cure for Nezuko and defeat Muzan Kibutsuji.",
+              "audio_url": null
+            },
+            {
+              "word": "muzan",
+              "lemma": "muzan",
+              "pos_tag": "PROPN",
+              "definition": "A word: muzan",
+              "translations": {
+                "es": "muzan_es",
+                "fr": "muzan_fr",
+                "de": "muzan_de",
+                "it": "muzan_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "I seek to find a cure for Nezuko and defeat Muzan Kibutsuji.",
+              "audio_url": null
+            },
+            {
+              "word": "kibutsuji",
+              "lemma": "kibutsuji",
+              "pos_tag": "PROPN",
+              "definition": "A word: kibutsuji",
+              "translations": {
+                "es": "kibutsuji_es",
+                "fr": "kibutsuji_fr",
+                "de": "kibutsuji_de",
+                "it": "kibutsuji_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "I seek to find a cure for Nezuko and defeat Muzan Kibutsuji.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        }
+      ],
+      "vocabulary_words": [
+        {
+          "word": "family",
+          "lemma": "family",
+          "pos_tag": "NOUN",
+          "definition": "A noun: family",
+          "translations": {
+            "es": "family_es",
+            "fr": "family_fr",
+            "de": "family_de",
+            "it": "family_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My family was attacked by a demon while I was away.",
+          "audio_url": null
+        },
+        {
+          "word": "attacked",
+          "lemma": "attack",
+          "pos_tag": "VERB",
+          "definition": "A verb: attacked",
+          "translations": {
+            "es": "attacked_es",
+            "fr": "attacked_fr",
+            "de": "attacked_de",
+            "it": "attacked_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My family was attacked by a demon while I was away.",
+          "audio_url": null
+        },
+        {
+          "word": "demon",
+          "lemma": "demon",
+          "pos_tag": "NOUN",
+          "definition": "A noun: demon",
+          "translations": {
+            "es": "demon_es",
+            "fr": "demon_fr",
+            "de": "demon_de",
+            "it": "demon_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My family was attacked by a demon while I was away.",
+          "audio_url": null
+        },
+        {
+          "word": "away",
+          "lemma": "away",
+          "pos_tag": "ADV",
+          "definition": "An adverb: away",
+          "translations": {
+            "es": "away_es",
+            "fr": "away_fr",
+            "de": "away_de",
+            "it": "away_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My family was attacked by a demon while I was away.",
+          "audio_url": null
+        },
+        {
+          "word": "tanjiro",
+          "lemma": "tanjiro",
+          "pos_tag": "PROPN",
+          "definition": "A word: tanjiro",
+          "translations": {
+            "es": "tanjiro_es",
+            "fr": "tanjiro_fr",
+            "de": "tanjiro_de",
+            "it": "tanjiro_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Tanjiro Kamado, and I became a demon slayer.",
+          "audio_url": null
+        },
+        {
+          "word": "kamado",
+          "lemma": "kamado",
+          "pos_tag": "PROPN",
+          "definition": "A word: kamado",
+          "translations": {
+            "es": "kamado_es",
+            "fr": "kamado_fr",
+            "de": "kamado_de",
+            "it": "kamado_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Tanjiro Kamado, and I became a demon slayer.",
+          "audio_url": null
+        },
+        {
+          "word": "slayer",
+          "lemma": "slayer",
+          "pos_tag": "NOUN",
+          "definition": "A noun: slayer",
+          "translations": {
+            "es": "slayer_es",
+            "fr": "slayer_fr",
+            "de": "slayer_de",
+            "it": "slayer_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Tanjiro Kamado, and I became a demon slayer.",
+          "audio_url": null
+        },
+        {
+          "word": "sister",
+          "lemma": "sister",
+          "pos_tag": "NOUN",
+          "definition": "A noun: sister",
+          "translations": {
+            "es": "sister_es",
+            "fr": "sister_fr",
+            "de": "sister_de",
+            "it": "sister_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My sister Nezuko was turned into a demon, but she retained her humanity.",
+          "audio_url": null
+        },
+        {
+          "word": "nezuko",
+          "lemma": "nezuko",
+          "pos_tag": "PROPN",
+          "definition": "A word: nezuko",
+          "translations": {
+            "es": "nezuko_es",
+            "fr": "nezuko_fr",
+            "de": "nezuko_de",
+            "it": "nezuko_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My sister Nezuko was turned into a demon, but she retained her humanity.",
+          "audio_url": null
+        },
+        {
+          "word": "turned",
+          "lemma": "turn",
+          "pos_tag": "VERB",
+          "definition": "A verb: turned",
+          "translations": {
+            "es": "turned_es",
+            "fr": "turned_fr",
+            "de": "turned_de",
+            "it": "turned_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My sister Nezuko was turned into a demon, but she retained her humanity.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    }
+  ],
+  "vocabulary_count": 10,
+  "created_at": "2025-06-10T17:52:32.206602"
+}

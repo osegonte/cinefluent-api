@@ -1,0 +1,27 @@
+1
+00:00:02,000 --> 00:00:04,000
+Welcome to U.A. High School, the most prestigious hero academy.
+
+2
+00:00:04,500 --> 00:00:08,000
+My name is Izuku Midoriya, and this is my story.
+
+3
+00:00:08,500 --> 00:00:12,000
+I want to become the greatest hero, just like All Might.
+
+4
+00:00:12,500 --> 00:00:16,000
+But there's one problem - I was born without a quirk.
+
+5
+00:00:16,500 --> 00:00:20,000
+In a world where eighty percent of people have superpowers, I'm ordinary.
+
+6
+00:00:20,500 --> 00:00:24,000
+Despite this setback, I never gave up on my dream.
+
+7
+00:00:24,500 --> 00:00:28,000
+Today marks the beginning of my journey to become a hero.

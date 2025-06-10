@@ -1,0 +1,1333 @@
+{
+  "movie_id": "2f305f7e-8754-4578-9fc7-10d9ce35e9a0",
+  "total_cues": 7,
+  "total_segments": 1,
+  "avg_difficulty": 2.9285714285714284,
+  "duration": 28.0,
+  "cues": [
+    {
+      "id": "a15c99d0-2357-4182-ba51-0f5a26e6d9fb",
+      "start_time": 2.0,
+      "end_time": 4.0,
+      "text": "Welcome to U.A. High School, the most prestigious hero academy.",
+      "words": [
+        {
+          "word": "welcome",
+          "lemma": "welcome",
+          "pos_tag": "VERB",
+          "definition": "A verb: welcome",
+          "translations": {
+            "es": "welcome_es",
+            "fr": "welcome_fr",
+            "de": "welcome_de",
+            "it": "welcome_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Welcome to U.A. High School, the most prestigious hero academy.",
+          "audio_url": null
+        },
+        {
+          "word": "u.a.",
+          "lemma": "u.a.",
+          "pos_tag": "PROPN",
+          "definition": "A word: u.a.",
+          "translations": {
+            "es": "u.a._es",
+            "fr": "u.a._fr",
+            "de": "u.a._de",
+            "it": "u.a._it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Welcome to U.A. High School, the most prestigious hero academy.",
+          "audio_url": null
+        },
+        {
+          "word": "high",
+          "lemma": "high",
+          "pos_tag": "PROPN",
+          "definition": "A word: high",
+          "translations": {
+            "es": "high_es",
+            "fr": "high_fr",
+            "de": "high_de",
+            "it": "high_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Welcome to U.A. High School, the most prestigious hero academy.",
+          "audio_url": null
+        },
+        {
+          "word": "school",
+          "lemma": "school",
+          "pos_tag": "PROPN",
+          "definition": "A word: school",
+          "translations": {
+            "es": "school_es",
+            "fr": "school_fr",
+            "de": "school_de",
+            "it": "school_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Welcome to U.A. High School, the most prestigious hero academy.",
+          "audio_url": null
+        },
+        {
+          "word": "prestigious",
+          "lemma": "prestigious",
+          "pos_tag": "ADJ",
+          "definition": "An adjective: prestigious",
+          "translations": {
+            "es": "prestigious_es",
+            "fr": "prestigious_fr",
+            "de": "prestigious_de",
+            "it": "prestigious_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Welcome to U.A. High School, the most prestigious hero academy.",
+          "audio_url": null
+        },
+        {
+          "word": "hero",
+          "lemma": "hero",
+          "pos_tag": "NOUN",
+          "definition": "A noun: hero",
+          "translations": {
+            "es": "hero_es",
+            "fr": "hero_fr",
+            "de": "hero_de",
+            "it": "hero_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Welcome to U.A. High School, the most prestigious hero academy.",
+          "audio_url": null
+        },
+        {
+          "word": "academy",
+          "lemma": "academy",
+          "pos_tag": "NOUN",
+          "definition": "A noun: academy",
+          "translations": {
+            "es": "academy_es",
+            "fr": "academy_fr",
+            "de": "academy_de",
+            "it": "academy_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Welcome to U.A. High School, the most prestigious hero academy.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "bb3a14b1-56d4-4544-b0ac-bbfe23e245ad",
+      "start_time": 4.5,
+      "end_time": 8.0,
+      "text": "My name is Izuku Midoriya, and this is my story.",
+      "words": [
+        {
+          "word": "izuku",
+          "lemma": "izuku",
+          "pos_tag": "PROPN",
+          "definition": "A word: izuku",
+          "translations": {
+            "es": "izuku_es",
+            "fr": "izuku_fr",
+            "de": "izuku_de",
+            "it": "izuku_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Izuku Midoriya, and this is my story.",
+          "audio_url": null
+        },
+        {
+          "word": "midoriya",
+          "lemma": "midoriya",
+          "pos_tag": "PROPN",
+          "definition": "A word: midoriya",
+          "translations": {
+            "es": "midoriya_es",
+            "fr": "midoriya_fr",
+            "de": "midoriya_de",
+            "it": "midoriya_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Izuku Midoriya, and this is my story.",
+          "audio_url": null
+        },
+        {
+          "word": "story",
+          "lemma": "story",
+          "pos_tag": "NOUN",
+          "definition": "A noun: story",
+          "translations": {
+            "es": "story_es",
+            "fr": "story_fr",
+            "de": "story_de",
+            "it": "story_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Izuku Midoriya, and this is my story.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "e0fdcb40-e1e2-4e50-999a-6e856e63426e",
+      "start_time": 8.5,
+      "end_time": 12.0,
+      "text": "I want to become the greatest hero, just like All Might.",
+      "words": [
+        {
+          "word": "want",
+          "lemma": "want",
+          "pos_tag": "VERB",
+          "definition": "A verb: want",
+          "translations": {
+            "es": "want_es",
+            "fr": "want_fr",
+            "de": "want_de",
+            "it": "want_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "I want to become the greatest hero, just like All Might.",
+          "audio_url": null
+        },
+        {
+          "word": "greatest",
+          "lemma": "great",
+          "pos_tag": "ADJ",
+          "definition": "An adjective: greatest",
+          "translations": {
+            "es": "greatest_es",
+            "fr": "greatest_fr",
+            "de": "greatest_de",
+            "it": "greatest_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "I want to become the greatest hero, just like All Might.",
+          "audio_url": null
+        },
+        {
+          "word": "hero",
+          "lemma": "hero",
+          "pos_tag": "NOUN",
+          "definition": "A noun: hero",
+          "translations": {
+            "es": "hero_es",
+            "fr": "hero_fr",
+            "de": "hero_de",
+            "it": "hero_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "I want to become the greatest hero, just like All Might.",
+          "audio_url": null
+        },
+        {
+          "word": "like",
+          "lemma": "like",
+          "pos_tag": "ADP",
+          "definition": "A word: like",
+          "translations": {
+            "es": "like_es",
+            "fr": "like_fr",
+            "de": "like_de",
+            "it": "like_it"
+          },
+          "difficulty_level": "beginner",
+          "frequency_rank": 63,
+          "context": "I want to become the greatest hero, just like All Might.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 2.5
+    },
+    {
+      "id": "5d27323e-9872-4302-866b-e1a5dba9ab52",
+      "start_time": 12.5,
+      "end_time": 16.0,
+      "text": "But there's one problem - I was born without a quirk.",
+      "words": [
+        {
+          "word": "problem",
+          "lemma": "problem",
+          "pos_tag": "NOUN",
+          "definition": "A noun: problem",
+          "translations": {
+            "es": "problem_es",
+            "fr": "problem_fr",
+            "de": "problem_de",
+            "it": "problem_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "But there's one problem - I was born without a quirk.",
+          "audio_url": null
+        },
+        {
+          "word": "born",
+          "lemma": "bear",
+          "pos_tag": "VERB",
+          "definition": "A verb: born",
+          "translations": {
+            "es": "born_es",
+            "fr": "born_fr",
+            "de": "born_de",
+            "it": "born_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "But there's one problem - I was born without a quirk.",
+          "audio_url": null
+        },
+        {
+          "word": "quirk",
+          "lemma": "quirk",
+          "pos_tag": "NOUN",
+          "definition": "A noun: quirk",
+          "translations": {
+            "es": "quirk_es",
+            "fr": "quirk_fr",
+            "de": "quirk_de",
+            "it": "quirk_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "But there's one problem - I was born without a quirk.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "2566a973-b5f6-410b-85f4-69316abf5826",
+      "start_time": 16.5,
+      "end_time": 20.0,
+      "text": "In a world where eighty percent of people have superpowers, I'm ordinary.",
+      "words": [
+        {
+          "word": "world",
+          "lemma": "world",
+          "pos_tag": "NOUN",
+          "definition": "A noun: world",
+          "translations": {
+            "es": "world_es",
+            "fr": "world_fr",
+            "de": "world_de",
+            "it": "world_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "In a world where eighty percent of people have superpowers, I'm ordinary.",
+          "audio_url": null
+        },
+        {
+          "word": "eighty",
+          "lemma": "eighty",
+          "pos_tag": "NUM",
+          "definition": "A word: eighty",
+          "translations": {
+            "es": "eighty_es",
+            "fr": "eighty_fr",
+            "de": "eighty_de",
+            "it": "eighty_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "In a world where eighty percent of people have superpowers, I'm ordinary.",
+          "audio_url": null
+        },
+        {
+          "word": "percent",
+          "lemma": "percent",
+          "pos_tag": "NOUN",
+          "definition": "A noun: percent",
+          "translations": {
+            "es": "percent_es",
+            "fr": "percent_fr",
+            "de": "percent_de",
+            "it": "percent_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "In a world where eighty percent of people have superpowers, I'm ordinary.",
+          "audio_url": null
+        },
+        {
+          "word": "people",
+          "lemma": "people",
+          "pos_tag": "NOUN",
+          "definition": "A noun: people",
+          "translations": {
+            "es": "people_es",
+            "fr": "people_fr",
+            "de": "people_de",
+            "it": "people_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "In a world where eighty percent of people have superpowers, I'm ordinary.",
+          "audio_url": null
+        },
+        {
+          "word": "superpowers",
+          "lemma": "superpower",
+          "pos_tag": "NOUN",
+          "definition": "A noun: superpowers",
+          "translations": {
+            "es": "superpowers_es",
+            "fr": "superpowers_fr",
+            "de": "superpowers_de",
+            "it": "superpowers_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "In a world where eighty percent of people have superpowers, I'm ordinary.",
+          "audio_url": null
+        },
+        {
+          "word": "ordinary",
+          "lemma": "ordinary",
+          "pos_tag": "ADJ",
+          "definition": "An adjective: ordinary",
+          "translations": {
+            "es": "ordinary_es",
+            "fr": "ordinary_fr",
+            "de": "ordinary_de",
+            "it": "ordinary_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "In a world where eighty percent of people have superpowers, I'm ordinary.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "c0778701-0475-42cf-a67f-a822a32911de",
+      "start_time": 20.5,
+      "end_time": 24.0,
+      "text": "Despite this setback, I never gave up on my dream.",
+      "words": [
+        {
+          "word": "despite",
+          "lemma": "despite",
+          "pos_tag": "SCONJ",
+          "definition": "A word: despite",
+          "translations": {
+            "es": "despite_es",
+            "fr": "despite_fr",
+            "de": "despite_de",
+            "it": "despite_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Despite this setback, I never gave up on my dream.",
+          "audio_url": null
+        },
+        {
+          "word": "setback",
+          "lemma": "setback",
+          "pos_tag": "NOUN",
+          "definition": "A noun: setback",
+          "translations": {
+            "es": "setback_es",
+            "fr": "setback_fr",
+            "de": "setback_de",
+            "it": "setback_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Despite this setback, I never gave up on my dream.",
+          "audio_url": null
+        },
+        {
+          "word": "gave",
+          "lemma": "give",
+          "pos_tag": "VERB",
+          "definition": "A verb: gave",
+          "translations": {
+            "es": "gave_es",
+            "fr": "gave_fr",
+            "de": "gave_de",
+            "it": "gave_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Despite this setback, I never gave up on my dream.",
+          "audio_url": null
+        },
+        {
+          "word": "dream",
+          "lemma": "dream",
+          "pos_tag": "NOUN",
+          "definition": "A noun: dream",
+          "translations": {
+            "es": "dream_es",
+            "fr": "dream_fr",
+            "de": "dream_de",
+            "it": "dream_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Despite this setback, I never gave up on my dream.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "6875c6ca-8fae-488e-b3c3-f581f91dda66",
+      "start_time": 24.5,
+      "end_time": 28.0,
+      "text": "Today marks the beginning of my journey to become a hero.",
+      "words": [
+        {
+          "word": "today",
+          "lemma": "today",
+          "pos_tag": "NOUN",
+          "definition": "A noun: today",
+          "translations": {
+            "es": "today_es",
+            "fr": "today_fr",
+            "de": "today_de",
+            "it": "today_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Today marks the beginning of my journey to become a hero.",
+          "audio_url": null
+        },
+        {
+          "word": "marks",
+          "lemma": "mark",
+          "pos_tag": "VERB",
+          "definition": "A verb: marks",
+          "translations": {
+            "es": "marks_es",
+            "fr": "marks_fr",
+            "de": "marks_de",
+            "it": "marks_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Today marks the beginning of my journey to become a hero.",
+          "audio_url": null
+        },
+        {
+          "word": "beginning",
+          "lemma": "beginning",
+          "pos_tag": "NOUN",
+          "definition": "A noun: beginning",
+          "translations": {
+            "es": "beginning_es",
+            "fr": "beginning_fr",
+            "de": "beginning_de",
+            "it": "beginning_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Today marks the beginning of my journey to become a hero.",
+          "audio_url": null
+        },
+        {
+          "word": "journey",
+          "lemma": "journey",
+          "pos_tag": "NOUN",
+          "definition": "A noun: journey",
+          "translations": {
+            "es": "journey_es",
+            "fr": "journey_fr",
+            "de": "journey_de",
+            "it": "journey_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Today marks the beginning of my journey to become a hero.",
+          "audio_url": null
+        },
+        {
+          "word": "hero",
+          "lemma": "hero",
+          "pos_tag": "NOUN",
+          "definition": "A noun: hero",
+          "translations": {
+            "es": "hero_es",
+            "fr": "hero_fr",
+            "de": "hero_de",
+            "it": "hero_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Today marks the beginning of my journey to become a hero.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    }
+  ],
+  "segments": [
+    {
+      "id": "5cb21d38-b5a4-409e-8ddc-847f7927a65b",
+      "start_time": 2.0,
+      "end_time": 28.0,
+      "cues": [
+        {
+          "id": "a15c99d0-2357-4182-ba51-0f5a26e6d9fb",
+          "start_time": 2.0,
+          "end_time": 4.0,
+          "text": "Welcome to U.A. High School, the most prestigious hero academy.",
+          "words": [
+            {
+              "word": "welcome",
+              "lemma": "welcome",
+              "pos_tag": "VERB",
+              "definition": "A verb: welcome",
+              "translations": {
+                "es": "welcome_es",
+                "fr": "welcome_fr",
+                "de": "welcome_de",
+                "it": "welcome_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Welcome to U.A. High School, the most prestigious hero academy.",
+              "audio_url": null
+            },
+            {
+              "word": "u.a.",
+              "lemma": "u.a.",
+              "pos_tag": "PROPN",
+              "definition": "A word: u.a.",
+              "translations": {
+                "es": "u.a._es",
+                "fr": "u.a._fr",
+                "de": "u.a._de",
+                "it": "u.a._it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Welcome to U.A. High School, the most prestigious hero academy.",
+              "audio_url": null
+            },
+            {
+              "word": "high",
+              "lemma": "high",
+              "pos_tag": "PROPN",
+              "definition": "A word: high",
+              "translations": {
+                "es": "high_es",
+                "fr": "high_fr",
+                "de": "high_de",
+                "it": "high_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Welcome to U.A. High School, the most prestigious hero academy.",
+              "audio_url": null
+            },
+            {
+              "word": "school",
+              "lemma": "school",
+              "pos_tag": "PROPN",
+              "definition": "A word: school",
+              "translations": {
+                "es": "school_es",
+                "fr": "school_fr",
+                "de": "school_de",
+                "it": "school_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Welcome to U.A. High School, the most prestigious hero academy.",
+              "audio_url": null
+            },
+            {
+              "word": "prestigious",
+              "lemma": "prestigious",
+              "pos_tag": "ADJ",
+              "definition": "An adjective: prestigious",
+              "translations": {
+                "es": "prestigious_es",
+                "fr": "prestigious_fr",
+                "de": "prestigious_de",
+                "it": "prestigious_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Welcome to U.A. High School, the most prestigious hero academy.",
+              "audio_url": null
+            },
+            {
+              "word": "hero",
+              "lemma": "hero",
+              "pos_tag": "NOUN",
+              "definition": "A noun: hero",
+              "translations": {
+                "es": "hero_es",
+                "fr": "hero_fr",
+                "de": "hero_de",
+                "it": "hero_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Welcome to U.A. High School, the most prestigious hero academy.",
+              "audio_url": null
+            },
+            {
+              "word": "academy",
+              "lemma": "academy",
+              "pos_tag": "NOUN",
+              "definition": "A noun: academy",
+              "translations": {
+                "es": "academy_es",
+                "fr": "academy_fr",
+                "de": "academy_de",
+                "it": "academy_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Welcome to U.A. High School, the most prestigious hero academy.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "bb3a14b1-56d4-4544-b0ac-bbfe23e245ad",
+          "start_time": 4.5,
+          "end_time": 8.0,
+          "text": "My name is Izuku Midoriya, and this is my story.",
+          "words": [
+            {
+              "word": "izuku",
+              "lemma": "izuku",
+              "pos_tag": "PROPN",
+              "definition": "A word: izuku",
+              "translations": {
+                "es": "izuku_es",
+                "fr": "izuku_fr",
+                "de": "izuku_de",
+                "it": "izuku_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My name is Izuku Midoriya, and this is my story.",
+              "audio_url": null
+            },
+            {
+              "word": "midoriya",
+              "lemma": "midoriya",
+              "pos_tag": "PROPN",
+              "definition": "A word: midoriya",
+              "translations": {
+                "es": "midoriya_es",
+                "fr": "midoriya_fr",
+                "de": "midoriya_de",
+                "it": "midoriya_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My name is Izuku Midoriya, and this is my story.",
+              "audio_url": null
+            },
+            {
+              "word": "story",
+              "lemma": "story",
+              "pos_tag": "NOUN",
+              "definition": "A noun: story",
+              "translations": {
+                "es": "story_es",
+                "fr": "story_fr",
+                "de": "story_de",
+                "it": "story_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My name is Izuku Midoriya, and this is my story.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "e0fdcb40-e1e2-4e50-999a-6e856e63426e",
+          "start_time": 8.5,
+          "end_time": 12.0,
+          "text": "I want to become the greatest hero, just like All Might.",
+          "words": [
+            {
+              "word": "want",
+              "lemma": "want",
+              "pos_tag": "VERB",
+              "definition": "A verb: want",
+              "translations": {
+                "es": "want_es",
+                "fr": "want_fr",
+                "de": "want_de",
+                "it": "want_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "I want to become the greatest hero, just like All Might.",
+              "audio_url": null
+            },
+            {
+              "word": "greatest",
+              "lemma": "great",
+              "pos_tag": "ADJ",
+              "definition": "An adjective: greatest",
+              "translations": {
+                "es": "greatest_es",
+                "fr": "greatest_fr",
+                "de": "greatest_de",
+                "it": "greatest_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "I want to become the greatest hero, just like All Might.",
+              "audio_url": null
+            },
+            {
+              "word": "hero",
+              "lemma": "hero",
+              "pos_tag": "NOUN",
+              "definition": "A noun: hero",
+              "translations": {
+                "es": "hero_es",
+                "fr": "hero_fr",
+                "de": "hero_de",
+                "it": "hero_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "I want to become the greatest hero, just like All Might.",
+              "audio_url": null
+            },
+            {
+              "word": "like",
+              "lemma": "like",
+              "pos_tag": "ADP",
+              "definition": "A word: like",
+              "translations": {
+                "es": "like_es",
+                "fr": "like_fr",
+                "de": "like_de",
+                "it": "like_it"
+              },
+              "difficulty_level": "beginner",
+              "frequency_rank": 63,
+              "context": "I want to become the greatest hero, just like All Might.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 2.5
+        },
+        {
+          "id": "5d27323e-9872-4302-866b-e1a5dba9ab52",
+          "start_time": 12.5,
+          "end_time": 16.0,
+          "text": "But there's one problem - I was born without a quirk.",
+          "words": [
+            {
+              "word": "problem",
+              "lemma": "problem",
+              "pos_tag": "NOUN",
+              "definition": "A noun: problem",
+              "translations": {
+                "es": "problem_es",
+                "fr": "problem_fr",
+                "de": "problem_de",
+                "it": "problem_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "But there's one problem - I was born without a quirk.",
+              "audio_url": null
+            },
+            {
+              "word": "born",
+              "lemma": "bear",
+              "pos_tag": "VERB",
+              "definition": "A verb: born",
+              "translations": {
+                "es": "born_es",
+                "fr": "born_fr",
+                "de": "born_de",
+                "it": "born_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "But there's one problem - I was born without a quirk.",
+              "audio_url": null
+            },
+            {
+              "word": "quirk",
+              "lemma": "quirk",
+              "pos_tag": "NOUN",
+              "definition": "A noun: quirk",
+              "translations": {
+                "es": "quirk_es",
+                "fr": "quirk_fr",
+                "de": "quirk_de",
+                "it": "quirk_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "But there's one problem - I was born without a quirk.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "2566a973-b5f6-410b-85f4-69316abf5826",
+          "start_time": 16.5,
+          "end_time": 20.0,
+          "text": "In a world where eighty percent of people have superpowers, I'm ordinary.",
+          "words": [
+            {
+              "word": "world",
+              "lemma": "world",
+              "pos_tag": "NOUN",
+              "definition": "A noun: world",
+              "translations": {
+                "es": "world_es",
+                "fr": "world_fr",
+                "de": "world_de",
+                "it": "world_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "In a world where eighty percent of people have superpowers, I'm ordinary.",
+              "audio_url": null
+            },
+            {
+              "word": "eighty",
+              "lemma": "eighty",
+              "pos_tag": "NUM",
+              "definition": "A word: eighty",
+              "translations": {
+                "es": "eighty_es",
+                "fr": "eighty_fr",
+                "de": "eighty_de",
+                "it": "eighty_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "In a world where eighty percent of people have superpowers, I'm ordinary.",
+              "audio_url": null
+            },
+            {
+              "word": "percent",
+              "lemma": "percent",
+              "pos_tag": "NOUN",
+              "definition": "A noun: percent",
+              "translations": {
+                "es": "percent_es",
+                "fr": "percent_fr",
+                "de": "percent_de",
+                "it": "percent_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "In a world where eighty percent of people have superpowers, I'm ordinary.",
+              "audio_url": null
+            },
+            {
+              "word": "people",
+              "lemma": "people",
+              "pos_tag": "NOUN",
+              "definition": "A noun: people",
+              "translations": {
+                "es": "people_es",
+                "fr": "people_fr",
+                "de": "people_de",
+                "it": "people_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "In a world where eighty percent of people have superpowers, I'm ordinary.",
+              "audio_url": null
+            },
+            {
+              "word": "superpowers",
+              "lemma": "superpower",
+              "pos_tag": "NOUN",
+              "definition": "A noun: superpowers",
+              "translations": {
+                "es": "superpowers_es",
+                "fr": "superpowers_fr",
+                "de": "superpowers_de",
+                "it": "superpowers_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "In a world where eighty percent of people have superpowers, I'm ordinary.",
+              "audio_url": null
+            },
+            {
+              "word": "ordinary",
+              "lemma": "ordinary",
+              "pos_tag": "ADJ",
+              "definition": "An adjective: ordinary",
+              "translations": {
+                "es": "ordinary_es",
+                "fr": "ordinary_fr",
+                "de": "ordinary_de",
+                "it": "ordinary_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "In a world where eighty percent of people have superpowers, I'm ordinary.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "c0778701-0475-42cf-a67f-a822a32911de",
+          "start_time": 20.5,
+          "end_time": 24.0,
+          "text": "Despite this setback, I never gave up on my dream.",
+          "words": [
+            {
+              "word": "despite",
+              "lemma": "despite",
+              "pos_tag": "SCONJ",
+              "definition": "A word: despite",
+              "translations": {
+                "es": "despite_es",
+                "fr": "despite_fr",
+                "de": "despite_de",
+                "it": "despite_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Despite this setback, I never gave up on my dream.",
+              "audio_url": null
+            },
+            {
+              "word": "setback",
+              "lemma": "setback",
+              "pos_tag": "NOUN",
+              "definition": "A noun: setback",
+              "translations": {
+                "es": "setback_es",
+                "fr": "setback_fr",
+                "de": "setback_de",
+                "it": "setback_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Despite this setback, I never gave up on my dream.",
+              "audio_url": null
+            },
+            {
+              "word": "gave",
+              "lemma": "give",
+              "pos_tag": "VERB",
+              "definition": "A verb: gave",
+              "translations": {
+                "es": "gave_es",
+                "fr": "gave_fr",
+                "de": "gave_de",
+                "it": "gave_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Despite this setback, I never gave up on my dream.",
+              "audio_url": null
+            },
+            {
+              "word": "dream",
+              "lemma": "dream",
+              "pos_tag": "NOUN",
+              "definition": "A noun: dream",
+              "translations": {
+                "es": "dream_es",
+                "fr": "dream_fr",
+                "de": "dream_de",
+                "it": "dream_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Despite this setback, I never gave up on my dream.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "6875c6ca-8fae-488e-b3c3-f581f91dda66",
+          "start_time": 24.5,
+          "end_time": 28.0,
+          "text": "Today marks the beginning of my journey to become a hero.",
+          "words": [
+            {
+              "word": "today",
+              "lemma": "today",
+              "pos_tag": "NOUN",
+              "definition": "A noun: today",
+              "translations": {
+                "es": "today_es",
+                "fr": "today_fr",
+                "de": "today_de",
+                "it": "today_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Today marks the beginning of my journey to become a hero.",
+              "audio_url": null
+            },
+            {
+              "word": "marks",
+              "lemma": "mark",
+              "pos_tag": "VERB",
+              "definition": "A verb: marks",
+              "translations": {
+                "es": "marks_es",
+                "fr": "marks_fr",
+                "de": "marks_de",
+                "it": "marks_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Today marks the beginning of my journey to become a hero.",
+              "audio_url": null
+            },
+            {
+              "word": "beginning",
+              "lemma": "beginning",
+              "pos_tag": "NOUN",
+              "definition": "A noun: beginning",
+              "translations": {
+                "es": "beginning_es",
+                "fr": "beginning_fr",
+                "de": "beginning_de",
+                "it": "beginning_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Today marks the beginning of my journey to become a hero.",
+              "audio_url": null
+            },
+            {
+              "word": "journey",
+              "lemma": "journey",
+              "pos_tag": "NOUN",
+              "definition": "A noun: journey",
+              "translations": {
+                "es": "journey_es",
+                "fr": "journey_fr",
+                "de": "journey_de",
+                "it": "journey_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Today marks the beginning of my journey to become a hero.",
+              "audio_url": null
+            },
+            {
+              "word": "hero",
+              "lemma": "hero",
+              "pos_tag": "NOUN",
+              "definition": "A noun: hero",
+              "translations": {
+                "es": "hero_es",
+                "fr": "hero_fr",
+                "de": "hero_de",
+                "it": "hero_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Today marks the beginning of my journey to become a hero.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        }
+      ],
+      "vocabulary_words": [
+        {
+          "word": "welcome",
+          "lemma": "welcome",
+          "pos_tag": "VERB",
+          "definition": "A verb: welcome",
+          "translations": {
+            "es": "welcome_es",
+            "fr": "welcome_fr",
+            "de": "welcome_de",
+            "it": "welcome_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Welcome to U.A. High School, the most prestigious hero academy.",
+          "audio_url": null
+        },
+        {
+          "word": "u.a.",
+          "lemma": "u.a.",
+          "pos_tag": "PROPN",
+          "definition": "A word: u.a.",
+          "translations": {
+            "es": "u.a._es",
+            "fr": "u.a._fr",
+            "de": "u.a._de",
+            "it": "u.a._it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Welcome to U.A. High School, the most prestigious hero academy.",
+          "audio_url": null
+        },
+        {
+          "word": "high",
+          "lemma": "high",
+          "pos_tag": "PROPN",
+          "definition": "A word: high",
+          "translations": {
+            "es": "high_es",
+            "fr": "high_fr",
+            "de": "high_de",
+            "it": "high_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Welcome to U.A. High School, the most prestigious hero academy.",
+          "audio_url": null
+        },
+        {
+          "word": "school",
+          "lemma": "school",
+          "pos_tag": "PROPN",
+          "definition": "A word: school",
+          "translations": {
+            "es": "school_es",
+            "fr": "school_fr",
+            "de": "school_de",
+            "it": "school_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Welcome to U.A. High School, the most prestigious hero academy.",
+          "audio_url": null
+        },
+        {
+          "word": "prestigious",
+          "lemma": "prestigious",
+          "pos_tag": "ADJ",
+          "definition": "An adjective: prestigious",
+          "translations": {
+            "es": "prestigious_es",
+            "fr": "prestigious_fr",
+            "de": "prestigious_de",
+            "it": "prestigious_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Welcome to U.A. High School, the most prestigious hero academy.",
+          "audio_url": null
+        },
+        {
+          "word": "hero",
+          "lemma": "hero",
+          "pos_tag": "NOUN",
+          "definition": "A noun: hero",
+          "translations": {
+            "es": "hero_es",
+            "fr": "hero_fr",
+            "de": "hero_de",
+            "it": "hero_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Welcome to U.A. High School, the most prestigious hero academy.",
+          "audio_url": null
+        },
+        {
+          "word": "academy",
+          "lemma": "academy",
+          "pos_tag": "NOUN",
+          "definition": "A noun: academy",
+          "translations": {
+            "es": "academy_es",
+            "fr": "academy_fr",
+            "de": "academy_de",
+            "it": "academy_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Welcome to U.A. High School, the most prestigious hero academy.",
+          "audio_url": null
+        },
+        {
+          "word": "izuku",
+          "lemma": "izuku",
+          "pos_tag": "PROPN",
+          "definition": "A word: izuku",
+          "translations": {
+            "es": "izuku_es",
+            "fr": "izuku_fr",
+            "de": "izuku_de",
+            "it": "izuku_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Izuku Midoriya, and this is my story.",
+          "audio_url": null
+        },
+        {
+          "word": "midoriya",
+          "lemma": "midoriya",
+          "pos_tag": "PROPN",
+          "definition": "A word: midoriya",
+          "translations": {
+            "es": "midoriya_es",
+            "fr": "midoriya_fr",
+            "de": "midoriya_de",
+            "it": "midoriya_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Izuku Midoriya, and this is my story.",
+          "audio_url": null
+        },
+        {
+          "word": "story",
+          "lemma": "story",
+          "pos_tag": "NOUN",
+          "definition": "A noun: story",
+          "translations": {
+            "es": "story_es",
+            "fr": "story_fr",
+            "de": "story_de",
+            "it": "story_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Izuku Midoriya, and this is my story.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 2.9285714285714284
+    }
+  ],
+  "vocabulary_count": 10,
+  "created_at": "2025-06-10T17:52:30.492483"
+}

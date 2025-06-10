@@ -1,0 +1,1429 @@
+{
+  "movie_id": "88e70801-0172-42fb-905e-b8fdd41c4687",
+  "total_cues": 7,
+  "total_segments": 1,
+  "avg_difficulty": 3.0,
+  "duration": 28.0,
+  "cues": [
+    {
+      "id": "8e3b4c46-9018-4887-8123-553ba9ec2ee6",
+      "start_time": 2.0,
+      "end_time": 4.0,
+      "text": "Curses are born from human negative emotions.",
+      "words": [
+        {
+          "word": "curses",
+          "lemma": "curse",
+          "pos_tag": "NOUN",
+          "definition": "A noun: curses",
+          "translations": {
+            "es": "curses_es",
+            "fr": "curses_fr",
+            "de": "curses_de",
+            "it": "curses_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Curses are born from human negative emotions.",
+          "audio_url": null
+        },
+        {
+          "word": "born",
+          "lemma": "bear",
+          "pos_tag": "VERB",
+          "definition": "A verb: born",
+          "translations": {
+            "es": "born_es",
+            "fr": "born_fr",
+            "de": "born_de",
+            "it": "born_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Curses are born from human negative emotions.",
+          "audio_url": null
+        },
+        {
+          "word": "human",
+          "lemma": "human",
+          "pos_tag": "ADJ",
+          "definition": "An adjective: human",
+          "translations": {
+            "es": "human_es",
+            "fr": "human_fr",
+            "de": "human_de",
+            "it": "human_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Curses are born from human negative emotions.",
+          "audio_url": null
+        },
+        {
+          "word": "negative",
+          "lemma": "negative",
+          "pos_tag": "ADJ",
+          "definition": "An adjective: negative",
+          "translations": {
+            "es": "negative_es",
+            "fr": "negative_fr",
+            "de": "negative_de",
+            "it": "negative_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Curses are born from human negative emotions.",
+          "audio_url": null
+        },
+        {
+          "word": "emotions",
+          "lemma": "emotion",
+          "pos_tag": "NOUN",
+          "definition": "A noun: emotions",
+          "translations": {
+            "es": "emotions_es",
+            "fr": "emotions_fr",
+            "de": "emotions_de",
+            "it": "emotions_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Curses are born from human negative emotions.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "2a20f05f-68fc-46b0-a4f0-7155d2610108",
+      "start_time": 4.5,
+      "end_time": 8.0,
+      "text": "My name is Yuji Itadori, and I accidentally swallowed a cursed finger.",
+      "words": [
+        {
+          "word": "yuji",
+          "lemma": "yuji",
+          "pos_tag": "PROPN",
+          "definition": "A word: yuji",
+          "translations": {
+            "es": "yuji_es",
+            "fr": "yuji_fr",
+            "de": "yuji_de",
+            "it": "yuji_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Yuji Itadori, and I accidentally swallowed a cursed finger.",
+          "audio_url": null
+        },
+        {
+          "word": "itadori",
+          "lemma": "itadori",
+          "pos_tag": "PROPN",
+          "definition": "A word: itadori",
+          "translations": {
+            "es": "itadori_es",
+            "fr": "itadori_fr",
+            "de": "itadori_de",
+            "it": "itadori_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Yuji Itadori, and I accidentally swallowed a cursed finger.",
+          "audio_url": null
+        },
+        {
+          "word": "accidentally",
+          "lemma": "accidentally",
+          "pos_tag": "ADV",
+          "definition": "An adverb: accidentally",
+          "translations": {
+            "es": "accidentally_es",
+            "fr": "accidentally_fr",
+            "de": "accidentally_de",
+            "it": "accidentally_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Yuji Itadori, and I accidentally swallowed a cursed finger.",
+          "audio_url": null
+        },
+        {
+          "word": "swallowed",
+          "lemma": "swallow",
+          "pos_tag": "VERB",
+          "definition": "A verb: swallowed",
+          "translations": {
+            "es": "swallowed_es",
+            "fr": "swallowed_fr",
+            "de": "swallowed_de",
+            "it": "swallowed_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Yuji Itadori, and I accidentally swallowed a cursed finger.",
+          "audio_url": null
+        },
+        {
+          "word": "cursed",
+          "lemma": "cursed",
+          "pos_tag": "ADJ",
+          "definition": "An adjective: cursed",
+          "translations": {
+            "es": "cursed_es",
+            "fr": "cursed_fr",
+            "de": "cursed_de",
+            "it": "cursed_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Yuji Itadori, and I accidentally swallowed a cursed finger.",
+          "audio_url": null
+        },
+        {
+          "word": "finger",
+          "lemma": "finger",
+          "pos_tag": "NOUN",
+          "definition": "A noun: finger",
+          "translations": {
+            "es": "finger_es",
+            "fr": "finger_fr",
+            "de": "finger_de",
+            "it": "finger_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Yuji Itadori, and I accidentally swallowed a cursed finger.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "c593d390-1ecc-4a1f-ade4-4b004c1f8e7b",
+      "start_time": 8.5,
+      "end_time": 12.0,
+      "text": "Now I'm enrolled at Tokyo Jujutsu High School.",
+      "words": [
+        {
+          "word": "enrolled",
+          "lemma": "enrol",
+          "pos_tag": "VERB",
+          "definition": "A verb: enrolled",
+          "translations": {
+            "es": "enrolled_es",
+            "fr": "enrolled_fr",
+            "de": "enrolled_de",
+            "it": "enrolled_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Now I'm enrolled at Tokyo Jujutsu High School.",
+          "audio_url": null
+        },
+        {
+          "word": "tokyo",
+          "lemma": "tokyo",
+          "pos_tag": "PROPN",
+          "definition": "A word: tokyo",
+          "translations": {
+            "es": "tokyo_es",
+            "fr": "tokyo_fr",
+            "de": "tokyo_de",
+            "it": "tokyo_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Now I'm enrolled at Tokyo Jujutsu High School.",
+          "audio_url": null
+        },
+        {
+          "word": "jujutsu",
+          "lemma": "jujutsu",
+          "pos_tag": "PROPN",
+          "definition": "A word: jujutsu",
+          "translations": {
+            "es": "jujutsu_es",
+            "fr": "jujutsu_fr",
+            "de": "jujutsu_de",
+            "it": "jujutsu_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Now I'm enrolled at Tokyo Jujutsu High School.",
+          "audio_url": null
+        },
+        {
+          "word": "high",
+          "lemma": "high",
+          "pos_tag": "PROPN",
+          "definition": "A word: high",
+          "translations": {
+            "es": "high_es",
+            "fr": "high_fr",
+            "de": "high_de",
+            "it": "high_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Now I'm enrolled at Tokyo Jujutsu High School.",
+          "audio_url": null
+        },
+        {
+          "word": "school",
+          "lemma": "school",
+          "pos_tag": "PROPN",
+          "definition": "A word: school",
+          "translations": {
+            "es": "school_es",
+            "fr": "school_fr",
+            "de": "school_de",
+            "it": "school_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Now I'm enrolled at Tokyo Jujutsu High School.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "f61c7e97-422b-4554-bb7b-c27b02b6dbbc",
+      "start_time": 12.5,
+      "end_time": 16.0,
+      "text": "Under the guidance of Satoru Gojo, the strongest sorcerer.",
+      "words": [
+        {
+          "word": "guidance",
+          "lemma": "guidance",
+          "pos_tag": "NOUN",
+          "definition": "A noun: guidance",
+          "translations": {
+            "es": "guidance_es",
+            "fr": "guidance_fr",
+            "de": "guidance_de",
+            "it": "guidance_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Under the guidance of Satoru Gojo, the strongest sorcerer.",
+          "audio_url": null
+        },
+        {
+          "word": "satoru",
+          "lemma": "satoru",
+          "pos_tag": "PROPN",
+          "definition": "A word: satoru",
+          "translations": {
+            "es": "satoru_es",
+            "fr": "satoru_fr",
+            "de": "satoru_de",
+            "it": "satoru_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Under the guidance of Satoru Gojo, the strongest sorcerer.",
+          "audio_url": null
+        },
+        {
+          "word": "gojo",
+          "lemma": "gojo",
+          "pos_tag": "PROPN",
+          "definition": "A word: gojo",
+          "translations": {
+            "es": "gojo_es",
+            "fr": "gojo_fr",
+            "de": "gojo_de",
+            "it": "gojo_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Under the guidance of Satoru Gojo, the strongest sorcerer.",
+          "audio_url": null
+        },
+        {
+          "word": "strongest",
+          "lemma": "strong",
+          "pos_tag": "ADJ",
+          "definition": "An adjective: strongest",
+          "translations": {
+            "es": "strongest_es",
+            "fr": "strongest_fr",
+            "de": "strongest_de",
+            "it": "strongest_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Under the guidance of Satoru Gojo, the strongest sorcerer.",
+          "audio_url": null
+        },
+        {
+          "word": "sorcerer",
+          "lemma": "sorcerer",
+          "pos_tag": "NOUN",
+          "definition": "A noun: sorcerer",
+          "translations": {
+            "es": "sorcerer_es",
+            "fr": "sorcerer_fr",
+            "de": "sorcerer_de",
+            "it": "sorcerer_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Under the guidance of Satoru Gojo, the strongest sorcerer.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "10a44736-e428-48ef-ab45-f5a90de49436",
+      "start_time": 16.5,
+      "end_time": 20.0,
+      "text": "I must learn to control the powerful curse within me.",
+      "words": [
+        {
+          "word": "learn",
+          "lemma": "learn",
+          "pos_tag": "VERB",
+          "definition": "A verb: learn",
+          "translations": {
+            "es": "learn_es",
+            "fr": "learn_fr",
+            "de": "learn_de",
+            "it": "learn_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "I must learn to control the powerful curse within me.",
+          "audio_url": null
+        },
+        {
+          "word": "control",
+          "lemma": "control",
+          "pos_tag": "VERB",
+          "definition": "A verb: control",
+          "translations": {
+            "es": "control_es",
+            "fr": "control_fr",
+            "de": "control_de",
+            "it": "control_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "I must learn to control the powerful curse within me.",
+          "audio_url": null
+        },
+        {
+          "word": "powerful",
+          "lemma": "powerful",
+          "pos_tag": "ADJ",
+          "definition": "An adjective: powerful",
+          "translations": {
+            "es": "powerful_es",
+            "fr": "powerful_fr",
+            "de": "powerful_de",
+            "it": "powerful_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "I must learn to control the powerful curse within me.",
+          "audio_url": null
+        },
+        {
+          "word": "curse",
+          "lemma": "curse",
+          "pos_tag": "NOUN",
+          "definition": "A noun: curse",
+          "translations": {
+            "es": "curse_es",
+            "fr": "curse_fr",
+            "de": "curse_de",
+            "it": "curse_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "I must learn to control the powerful curse within me.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "75443405-a7e3-40f3-b26f-77ae261e9da7",
+      "start_time": 20.5,
+      "end_time": 24.0,
+      "text": "The King of Curses, Ryomen Sukuna, resides in my body.",
+      "words": [
+        {
+          "word": "king",
+          "lemma": "king",
+          "pos_tag": "PROPN",
+          "definition": "A word: king",
+          "translations": {
+            "es": "king_es",
+            "fr": "king_fr",
+            "de": "king_de",
+            "it": "king_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "The King of Curses, Ryomen Sukuna, resides in my body.",
+          "audio_url": null
+        },
+        {
+          "word": "curses",
+          "lemma": "curses",
+          "pos_tag": "PROPN",
+          "definition": "A word: curses",
+          "translations": {
+            "es": "curses_es",
+            "fr": "curses_fr",
+            "de": "curses_de",
+            "it": "curses_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "The King of Curses, Ryomen Sukuna, resides in my body.",
+          "audio_url": null
+        },
+        {
+          "word": "ryomen",
+          "lemma": "ryomen",
+          "pos_tag": "PROPN",
+          "definition": "A word: ryomen",
+          "translations": {
+            "es": "ryomen_es",
+            "fr": "ryomen_fr",
+            "de": "ryomen_de",
+            "it": "ryomen_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "The King of Curses, Ryomen Sukuna, resides in my body.",
+          "audio_url": null
+        },
+        {
+          "word": "sukuna",
+          "lemma": "sukuna",
+          "pos_tag": "PROPN",
+          "definition": "A word: sukuna",
+          "translations": {
+            "es": "sukuna_es",
+            "fr": "sukuna_fr",
+            "de": "sukuna_de",
+            "it": "sukuna_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "The King of Curses, Ryomen Sukuna, resides in my body.",
+          "audio_url": null
+        },
+        {
+          "word": "resides",
+          "lemma": "reside",
+          "pos_tag": "VERB",
+          "definition": "A verb: resides",
+          "translations": {
+            "es": "resides_es",
+            "fr": "resides_fr",
+            "de": "resides_de",
+            "it": "resides_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "The King of Curses, Ryomen Sukuna, resides in my body.",
+          "audio_url": null
+        },
+        {
+          "word": "body",
+          "lemma": "body",
+          "pos_tag": "NOUN",
+          "definition": "A noun: body",
+          "translations": {
+            "es": "body_es",
+            "fr": "body_fr",
+            "de": "body_de",
+            "it": "body_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "The King of Curses, Ryomen Sukuna, resides in my body.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "b6d7447b-507b-463e-aeb1-55acd4434118",
+      "start_time": 24.5,
+      "end_time": 28.0,
+      "text": "My mission is to collect all twenty fingers and exorcise him.",
+      "words": [
+        {
+          "word": "mission",
+          "lemma": "mission",
+          "pos_tag": "NOUN",
+          "definition": "A noun: mission",
+          "translations": {
+            "es": "mission_es",
+            "fr": "mission_fr",
+            "de": "mission_de",
+            "it": "mission_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My mission is to collect all twenty fingers and exorcise him.",
+          "audio_url": null
+        },
+        {
+          "word": "collect",
+          "lemma": "collect",
+          "pos_tag": "VERB",
+          "definition": "A verb: collect",
+          "translations": {
+            "es": "collect_es",
+            "fr": "collect_fr",
+            "de": "collect_de",
+            "it": "collect_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My mission is to collect all twenty fingers and exorcise him.",
+          "audio_url": null
+        },
+        {
+          "word": "fingers",
+          "lemma": "finger",
+          "pos_tag": "NOUN",
+          "definition": "A noun: fingers",
+          "translations": {
+            "es": "fingers_es",
+            "fr": "fingers_fr",
+            "de": "fingers_de",
+            "it": "fingers_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My mission is to collect all twenty fingers and exorcise him.",
+          "audio_url": null
+        },
+        {
+          "word": "exorcise",
+          "lemma": "exorcise",
+          "pos_tag": "VERB",
+          "definition": "A verb: exorcise",
+          "translations": {
+            "es": "exorcise_es",
+            "fr": "exorcise_fr",
+            "de": "exorcise_de",
+            "it": "exorcise_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My mission is to collect all twenty fingers and exorcise him.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    }
+  ],
+  "segments": [
+    {
+      "id": "db981bc3-78f2-4cc1-bd64-a391792e3c9d",
+      "start_time": 2.0,
+      "end_time": 28.0,
+      "cues": [
+        {
+          "id": "8e3b4c46-9018-4887-8123-553ba9ec2ee6",
+          "start_time": 2.0,
+          "end_time": 4.0,
+          "text": "Curses are born from human negative emotions.",
+          "words": [
+            {
+              "word": "curses",
+              "lemma": "curse",
+              "pos_tag": "NOUN",
+              "definition": "A noun: curses",
+              "translations": {
+                "es": "curses_es",
+                "fr": "curses_fr",
+                "de": "curses_de",
+                "it": "curses_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Curses are born from human negative emotions.",
+              "audio_url": null
+            },
+            {
+              "word": "born",
+              "lemma": "bear",
+              "pos_tag": "VERB",
+              "definition": "A verb: born",
+              "translations": {
+                "es": "born_es",
+                "fr": "born_fr",
+                "de": "born_de",
+                "it": "born_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Curses are born from human negative emotions.",
+              "audio_url": null
+            },
+            {
+              "word": "human",
+              "lemma": "human",
+              "pos_tag": "ADJ",
+              "definition": "An adjective: human",
+              "translations": {
+                "es": "human_es",
+                "fr": "human_fr",
+                "de": "human_de",
+                "it": "human_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Curses are born from human negative emotions.",
+              "audio_url": null
+            },
+            {
+              "word": "negative",
+              "lemma": "negative",
+              "pos_tag": "ADJ",
+              "definition": "An adjective: negative",
+              "translations": {
+                "es": "negative_es",
+                "fr": "negative_fr",
+                "de": "negative_de",
+                "it": "negative_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Curses are born from human negative emotions.",
+              "audio_url": null
+            },
+            {
+              "word": "emotions",
+              "lemma": "emotion",
+              "pos_tag": "NOUN",
+              "definition": "A noun: emotions",
+              "translations": {
+                "es": "emotions_es",
+                "fr": "emotions_fr",
+                "de": "emotions_de",
+                "it": "emotions_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Curses are born from human negative emotions.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "2a20f05f-68fc-46b0-a4f0-7155d2610108",
+          "start_time": 4.5,
+          "end_time": 8.0,
+          "text": "My name is Yuji Itadori, and I accidentally swallowed a cursed finger.",
+          "words": [
+            {
+              "word": "yuji",
+              "lemma": "yuji",
+              "pos_tag": "PROPN",
+              "definition": "A word: yuji",
+              "translations": {
+                "es": "yuji_es",
+                "fr": "yuji_fr",
+                "de": "yuji_de",
+                "it": "yuji_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My name is Yuji Itadori, and I accidentally swallowed a cursed finger.",
+              "audio_url": null
+            },
+            {
+              "word": "itadori",
+              "lemma": "itadori",
+              "pos_tag": "PROPN",
+              "definition": "A word: itadori",
+              "translations": {
+                "es": "itadori_es",
+                "fr": "itadori_fr",
+                "de": "itadori_de",
+                "it": "itadori_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My name is Yuji Itadori, and I accidentally swallowed a cursed finger.",
+              "audio_url": null
+            },
+            {
+              "word": "accidentally",
+              "lemma": "accidentally",
+              "pos_tag": "ADV",
+              "definition": "An adverb: accidentally",
+              "translations": {
+                "es": "accidentally_es",
+                "fr": "accidentally_fr",
+                "de": "accidentally_de",
+                "it": "accidentally_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My name is Yuji Itadori, and I accidentally swallowed a cursed finger.",
+              "audio_url": null
+            },
+            {
+              "word": "swallowed",
+              "lemma": "swallow",
+              "pos_tag": "VERB",
+              "definition": "A verb: swallowed",
+              "translations": {
+                "es": "swallowed_es",
+                "fr": "swallowed_fr",
+                "de": "swallowed_de",
+                "it": "swallowed_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My name is Yuji Itadori, and I accidentally swallowed a cursed finger.",
+              "audio_url": null
+            },
+            {
+              "word": "cursed",
+              "lemma": "cursed",
+              "pos_tag": "ADJ",
+              "definition": "An adjective: cursed",
+              "translations": {
+                "es": "cursed_es",
+                "fr": "cursed_fr",
+                "de": "cursed_de",
+                "it": "cursed_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My name is Yuji Itadori, and I accidentally swallowed a cursed finger.",
+              "audio_url": null
+            },
+            {
+              "word": "finger",
+              "lemma": "finger",
+              "pos_tag": "NOUN",
+              "definition": "A noun: finger",
+              "translations": {
+                "es": "finger_es",
+                "fr": "finger_fr",
+                "de": "finger_de",
+                "it": "finger_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My name is Yuji Itadori, and I accidentally swallowed a cursed finger.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "c593d390-1ecc-4a1f-ade4-4b004c1f8e7b",
+          "start_time": 8.5,
+          "end_time": 12.0,
+          "text": "Now I'm enrolled at Tokyo Jujutsu High School.",
+          "words": [
+            {
+              "word": "enrolled",
+              "lemma": "enrol",
+              "pos_tag": "VERB",
+              "definition": "A verb: enrolled",
+              "translations": {
+                "es": "enrolled_es",
+                "fr": "enrolled_fr",
+                "de": "enrolled_de",
+                "it": "enrolled_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Now I'm enrolled at Tokyo Jujutsu High School.",
+              "audio_url": null
+            },
+            {
+              "word": "tokyo",
+              "lemma": "tokyo",
+              "pos_tag": "PROPN",
+              "definition": "A word: tokyo",
+              "translations": {
+                "es": "tokyo_es",
+                "fr": "tokyo_fr",
+                "de": "tokyo_de",
+                "it": "tokyo_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Now I'm enrolled at Tokyo Jujutsu High School.",
+              "audio_url": null
+            },
+            {
+              "word": "jujutsu",
+              "lemma": "jujutsu",
+              "pos_tag": "PROPN",
+              "definition": "A word: jujutsu",
+              "translations": {
+                "es": "jujutsu_es",
+                "fr": "jujutsu_fr",
+                "de": "jujutsu_de",
+                "it": "jujutsu_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Now I'm enrolled at Tokyo Jujutsu High School.",
+              "audio_url": null
+            },
+            {
+              "word": "high",
+              "lemma": "high",
+              "pos_tag": "PROPN",
+              "definition": "A word: high",
+              "translations": {
+                "es": "high_es",
+                "fr": "high_fr",
+                "de": "high_de",
+                "it": "high_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Now I'm enrolled at Tokyo Jujutsu High School.",
+              "audio_url": null
+            },
+            {
+              "word": "school",
+              "lemma": "school",
+              "pos_tag": "PROPN",
+              "definition": "A word: school",
+              "translations": {
+                "es": "school_es",
+                "fr": "school_fr",
+                "de": "school_de",
+                "it": "school_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Now I'm enrolled at Tokyo Jujutsu High School.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "f61c7e97-422b-4554-bb7b-c27b02b6dbbc",
+          "start_time": 12.5,
+          "end_time": 16.0,
+          "text": "Under the guidance of Satoru Gojo, the strongest sorcerer.",
+          "words": [
+            {
+              "word": "guidance",
+              "lemma": "guidance",
+              "pos_tag": "NOUN",
+              "definition": "A noun: guidance",
+              "translations": {
+                "es": "guidance_es",
+                "fr": "guidance_fr",
+                "de": "guidance_de",
+                "it": "guidance_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Under the guidance of Satoru Gojo, the strongest sorcerer.",
+              "audio_url": null
+            },
+            {
+              "word": "satoru",
+              "lemma": "satoru",
+              "pos_tag": "PROPN",
+              "definition": "A word: satoru",
+              "translations": {
+                "es": "satoru_es",
+                "fr": "satoru_fr",
+                "de": "satoru_de",
+                "it": "satoru_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Under the guidance of Satoru Gojo, the strongest sorcerer.",
+              "audio_url": null
+            },
+            {
+              "word": "gojo",
+              "lemma": "gojo",
+              "pos_tag": "PROPN",
+              "definition": "A word: gojo",
+              "translations": {
+                "es": "gojo_es",
+                "fr": "gojo_fr",
+                "de": "gojo_de",
+                "it": "gojo_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Under the guidance of Satoru Gojo, the strongest sorcerer.",
+              "audio_url": null
+            },
+            {
+              "word": "strongest",
+              "lemma": "strong",
+              "pos_tag": "ADJ",
+              "definition": "An adjective: strongest",
+              "translations": {
+                "es": "strongest_es",
+                "fr": "strongest_fr",
+                "de": "strongest_de",
+                "it": "strongest_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Under the guidance of Satoru Gojo, the strongest sorcerer.",
+              "audio_url": null
+            },
+            {
+              "word": "sorcerer",
+              "lemma": "sorcerer",
+              "pos_tag": "NOUN",
+              "definition": "A noun: sorcerer",
+              "translations": {
+                "es": "sorcerer_es",
+                "fr": "sorcerer_fr",
+                "de": "sorcerer_de",
+                "it": "sorcerer_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Under the guidance of Satoru Gojo, the strongest sorcerer.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "10a44736-e428-48ef-ab45-f5a90de49436",
+          "start_time": 16.5,
+          "end_time": 20.0,
+          "text": "I must learn to control the powerful curse within me.",
+          "words": [
+            {
+              "word": "learn",
+              "lemma": "learn",
+              "pos_tag": "VERB",
+              "definition": "A verb: learn",
+              "translations": {
+                "es": "learn_es",
+                "fr": "learn_fr",
+                "de": "learn_de",
+                "it": "learn_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "I must learn to control the powerful curse within me.",
+              "audio_url": null
+            },
+            {
+              "word": "control",
+              "lemma": "control",
+              "pos_tag": "VERB",
+              "definition": "A verb: control",
+              "translations": {
+                "es": "control_es",
+                "fr": "control_fr",
+                "de": "control_de",
+                "it": "control_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "I must learn to control the powerful curse within me.",
+              "audio_url": null
+            },
+            {
+              "word": "powerful",
+              "lemma": "powerful",
+              "pos_tag": "ADJ",
+              "definition": "An adjective: powerful",
+              "translations": {
+                "es": "powerful_es",
+                "fr": "powerful_fr",
+                "de": "powerful_de",
+                "it": "powerful_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "I must learn to control the powerful curse within me.",
+              "audio_url": null
+            },
+            {
+              "word": "curse",
+              "lemma": "curse",
+              "pos_tag": "NOUN",
+              "definition": "A noun: curse",
+              "translations": {
+                "es": "curse_es",
+                "fr": "curse_fr",
+                "de": "curse_de",
+                "it": "curse_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "I must learn to control the powerful curse within me.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "75443405-a7e3-40f3-b26f-77ae261e9da7",
+          "start_time": 20.5,
+          "end_time": 24.0,
+          "text": "The King of Curses, Ryomen Sukuna, resides in my body.",
+          "words": [
+            {
+              "word": "king",
+              "lemma": "king",
+              "pos_tag": "PROPN",
+              "definition": "A word: king",
+              "translations": {
+                "es": "king_es",
+                "fr": "king_fr",
+                "de": "king_de",
+                "it": "king_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "The King of Curses, Ryomen Sukuna, resides in my body.",
+              "audio_url": null
+            },
+            {
+              "word": "curses",
+              "lemma": "curses",
+              "pos_tag": "PROPN",
+              "definition": "A word: curses",
+              "translations": {
+                "es": "curses_es",
+                "fr": "curses_fr",
+                "de": "curses_de",
+                "it": "curses_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "The King of Curses, Ryomen Sukuna, resides in my body.",
+              "audio_url": null
+            },
+            {
+              "word": "ryomen",
+              "lemma": "ryomen",
+              "pos_tag": "PROPN",
+              "definition": "A word: ryomen",
+              "translations": {
+                "es": "ryomen_es",
+                "fr": "ryomen_fr",
+                "de": "ryomen_de",
+                "it": "ryomen_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "The King of Curses, Ryomen Sukuna, resides in my body.",
+              "audio_url": null
+            },
+            {
+              "word": "sukuna",
+              "lemma": "sukuna",
+              "pos_tag": "PROPN",
+              "definition": "A word: sukuna",
+              "translations": {
+                "es": "sukuna_es",
+                "fr": "sukuna_fr",
+                "de": "sukuna_de",
+                "it": "sukuna_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "The King of Curses, Ryomen Sukuna, resides in my body.",
+              "audio_url": null
+            },
+            {
+              "word": "resides",
+              "lemma": "reside",
+              "pos_tag": "VERB",
+              "definition": "A verb: resides",
+              "translations": {
+                "es": "resides_es",
+                "fr": "resides_fr",
+                "de": "resides_de",
+                "it": "resides_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "The King of Curses, Ryomen Sukuna, resides in my body.",
+              "audio_url": null
+            },
+            {
+              "word": "body",
+              "lemma": "body",
+              "pos_tag": "NOUN",
+              "definition": "A noun: body",
+              "translations": {
+                "es": "body_es",
+                "fr": "body_fr",
+                "de": "body_de",
+                "it": "body_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "The King of Curses, Ryomen Sukuna, resides in my body.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "b6d7447b-507b-463e-aeb1-55acd4434118",
+          "start_time": 24.5,
+          "end_time": 28.0,
+          "text": "My mission is to collect all twenty fingers and exorcise him.",
+          "words": [
+            {
+              "word": "mission",
+              "lemma": "mission",
+              "pos_tag": "NOUN",
+              "definition": "A noun: mission",
+              "translations": {
+                "es": "mission_es",
+                "fr": "mission_fr",
+                "de": "mission_de",
+                "it": "mission_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My mission is to collect all twenty fingers and exorcise him.",
+              "audio_url": null
+            },
+            {
+              "word": "collect",
+              "lemma": "collect",
+              "pos_tag": "VERB",
+              "definition": "A verb: collect",
+              "translations": {
+                "es": "collect_es",
+                "fr": "collect_fr",
+                "de": "collect_de",
+                "it": "collect_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My mission is to collect all twenty fingers and exorcise him.",
+              "audio_url": null
+            },
+            {
+              "word": "fingers",
+              "lemma": "finger",
+              "pos_tag": "NOUN",
+              "definition": "A noun: fingers",
+              "translations": {
+                "es": "fingers_es",
+                "fr": "fingers_fr",
+                "de": "fingers_de",
+                "it": "fingers_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My mission is to collect all twenty fingers and exorcise him.",
+              "audio_url": null
+            },
+            {
+              "word": "exorcise",
+              "lemma": "exorcise",
+              "pos_tag": "VERB",
+              "definition": "A verb: exorcise",
+              "translations": {
+                "es": "exorcise_es",
+                "fr": "exorcise_fr",
+                "de": "exorcise_de",
+                "it": "exorcise_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My mission is to collect all twenty fingers and exorcise him.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        }
+      ],
+      "vocabulary_words": [
+        {
+          "word": "curses",
+          "lemma": "curse",
+          "pos_tag": "NOUN",
+          "definition": "A noun: curses",
+          "translations": {
+            "es": "curses_es",
+            "fr": "curses_fr",
+            "de": "curses_de",
+            "it": "curses_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Curses are born from human negative emotions.",
+          "audio_url": null
+        },
+        {
+          "word": "born",
+          "lemma": "bear",
+          "pos_tag": "VERB",
+          "definition": "A verb: born",
+          "translations": {
+            "es": "born_es",
+            "fr": "born_fr",
+            "de": "born_de",
+            "it": "born_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Curses are born from human negative emotions.",
+          "audio_url": null
+        },
+        {
+          "word": "human",
+          "lemma": "human",
+          "pos_tag": "ADJ",
+          "definition": "An adjective: human",
+          "translations": {
+            "es": "human_es",
+            "fr": "human_fr",
+            "de": "human_de",
+            "it": "human_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Curses are born from human negative emotions.",
+          "audio_url": null
+        },
+        {
+          "word": "negative",
+          "lemma": "negative",
+          "pos_tag": "ADJ",
+          "definition": "An adjective: negative",
+          "translations": {
+            "es": "negative_es",
+            "fr": "negative_fr",
+            "de": "negative_de",
+            "it": "negative_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Curses are born from human negative emotions.",
+          "audio_url": null
+        },
+        {
+          "word": "emotions",
+          "lemma": "emotion",
+          "pos_tag": "NOUN",
+          "definition": "A noun: emotions",
+          "translations": {
+            "es": "emotions_es",
+            "fr": "emotions_fr",
+            "de": "emotions_de",
+            "it": "emotions_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Curses are born from human negative emotions.",
+          "audio_url": null
+        },
+        {
+          "word": "yuji",
+          "lemma": "yuji",
+          "pos_tag": "PROPN",
+          "definition": "A word: yuji",
+          "translations": {
+            "es": "yuji_es",
+            "fr": "yuji_fr",
+            "de": "yuji_de",
+            "it": "yuji_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Yuji Itadori, and I accidentally swallowed a cursed finger.",
+          "audio_url": null
+        },
+        {
+          "word": "itadori",
+          "lemma": "itadori",
+          "pos_tag": "PROPN",
+          "definition": "A word: itadori",
+          "translations": {
+            "es": "itadori_es",
+            "fr": "itadori_fr",
+            "de": "itadori_de",
+            "it": "itadori_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Yuji Itadori, and I accidentally swallowed a cursed finger.",
+          "audio_url": null
+        },
+        {
+          "word": "accidentally",
+          "lemma": "accidentally",
+          "pos_tag": "ADV",
+          "definition": "An adverb: accidentally",
+          "translations": {
+            "es": "accidentally_es",
+            "fr": "accidentally_fr",
+            "de": "accidentally_de",
+            "it": "accidentally_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Yuji Itadori, and I accidentally swallowed a cursed finger.",
+          "audio_url": null
+        },
+        {
+          "word": "swallowed",
+          "lemma": "swallow",
+          "pos_tag": "VERB",
+          "definition": "A verb: swallowed",
+          "translations": {
+            "es": "swallowed_es",
+            "fr": "swallowed_fr",
+            "de": "swallowed_de",
+            "it": "swallowed_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Yuji Itadori, and I accidentally swallowed a cursed finger.",
+          "audio_url": null
+        },
+        {
+          "word": "cursed",
+          "lemma": "cursed",
+          "pos_tag": "ADJ",
+          "definition": "An adjective: cursed",
+          "translations": {
+            "es": "cursed_es",
+            "fr": "cursed_fr",
+            "de": "cursed_de",
+            "it": "cursed_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Yuji Itadori, and I accidentally swallowed a cursed finger.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    }
+  ],
+  "vocabulary_count": 10,
+  "created_at": "2025-06-10T17:52:31.171371"
+}

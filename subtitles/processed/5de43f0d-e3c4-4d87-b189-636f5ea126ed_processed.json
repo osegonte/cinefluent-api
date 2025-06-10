@@ -1,0 +1,1493 @@
+{
+  "movie_id": "5de43f0d-e3c4-4d87-b189-636f5ea126ed",
+  "total_cues": 7,
+  "total_segments": 1,
+  "avg_difficulty": 2.9642857142857144,
+  "duration": 28.0,
+  "cues": [
+    {
+      "id": "45d1d878-cabc-4129-8c6a-c7caf41a43b5",
+      "start_time": 2.0,
+      "end_time": 4.0,
+      "text": "That day, humanity received a grim reminder.",
+      "words": [
+        {
+          "word": "day",
+          "lemma": "day",
+          "pos_tag": "NOUN",
+          "definition": "A noun: day",
+          "translations": {
+            "es": "day_es",
+            "fr": "day_fr",
+            "de": "day_de",
+            "it": "day_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "That day, humanity received a grim reminder.",
+          "audio_url": null
+        },
+        {
+          "word": "humanity",
+          "lemma": "humanity",
+          "pos_tag": "NOUN",
+          "definition": "A noun: humanity",
+          "translations": {
+            "es": "humanity_es",
+            "fr": "humanity_fr",
+            "de": "humanity_de",
+            "it": "humanity_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "That day, humanity received a grim reminder.",
+          "audio_url": null
+        },
+        {
+          "word": "received",
+          "lemma": "receive",
+          "pos_tag": "VERB",
+          "definition": "A verb: received",
+          "translations": {
+            "es": "received_es",
+            "fr": "received_fr",
+            "de": "received_de",
+            "it": "received_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "That day, humanity received a grim reminder.",
+          "audio_url": null
+        },
+        {
+          "word": "grim",
+          "lemma": "grim",
+          "pos_tag": "ADJ",
+          "definition": "An adjective: grim",
+          "translations": {
+            "es": "grim_es",
+            "fr": "grim_fr",
+            "de": "grim_de",
+            "it": "grim_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "That day, humanity received a grim reminder.",
+          "audio_url": null
+        },
+        {
+          "word": "reminder",
+          "lemma": "reminder",
+          "pos_tag": "NOUN",
+          "definition": "A noun: reminder",
+          "translations": {
+            "es": "reminder_es",
+            "fr": "reminder_fr",
+            "de": "reminder_de",
+            "it": "reminder_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "That day, humanity received a grim reminder.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "66b94feb-e739-4040-b7f2-67d17d166167",
+      "start_time": 4.5,
+      "end_time": 8.0,
+      "text": "We lived in fear of the Titans, and were disgraced to live in these cages we called walls.",
+      "words": [
+        {
+          "word": "lived",
+          "lemma": "live",
+          "pos_tag": "VERB",
+          "definition": "A verb: lived",
+          "translations": {
+            "es": "lived_es",
+            "fr": "lived_fr",
+            "de": "lived_de",
+            "it": "lived_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "We lived in fear of the Titans, and were disgraced to live in these cages we called walls.",
+          "audio_url": null
+        },
+        {
+          "word": "fear",
+          "lemma": "fear",
+          "pos_tag": "NOUN",
+          "definition": "A noun: fear",
+          "translations": {
+            "es": "fear_es",
+            "fr": "fear_fr",
+            "de": "fear_de",
+            "it": "fear_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "We lived in fear of the Titans, and were disgraced to live in these cages we called walls.",
+          "audio_url": null
+        },
+        {
+          "word": "titans",
+          "lemma": "titans",
+          "pos_tag": "PROPN",
+          "definition": "A word: titans",
+          "translations": {
+            "es": "titans_es",
+            "fr": "titans_fr",
+            "de": "titans_de",
+            "it": "titans_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "We lived in fear of the Titans, and were disgraced to live in these cages we called walls.",
+          "audio_url": null
+        },
+        {
+          "word": "disgraced",
+          "lemma": "disgrace",
+          "pos_tag": "VERB",
+          "definition": "A verb: disgraced",
+          "translations": {
+            "es": "disgraced_es",
+            "fr": "disgraced_fr",
+            "de": "disgraced_de",
+            "it": "disgraced_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "We lived in fear of the Titans, and were disgraced to live in these cages we called walls.",
+          "audio_url": null
+        },
+        {
+          "word": "live",
+          "lemma": "live",
+          "pos_tag": "VERB",
+          "definition": "A verb: live",
+          "translations": {
+            "es": "live_es",
+            "fr": "live_fr",
+            "de": "live_de",
+            "it": "live_it"
+          },
+          "difficulty_level": "beginner",
+          "frequency_rank": 85,
+          "context": "We lived in fear of the Titans, and were disgraced to live in these cages we called walls.",
+          "audio_url": null
+        },
+        {
+          "word": "cages",
+          "lemma": "cage",
+          "pos_tag": "NOUN",
+          "definition": "A noun: cages",
+          "translations": {
+            "es": "cages_es",
+            "fr": "cages_fr",
+            "de": "cages_de",
+            "it": "cages_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "We lived in fear of the Titans, and were disgraced to live in these cages we called walls.",
+          "audio_url": null
+        },
+        {
+          "word": "called",
+          "lemma": "call",
+          "pos_tag": "VERB",
+          "definition": "A verb: called",
+          "translations": {
+            "es": "called_es",
+            "fr": "called_fr",
+            "de": "called_de",
+            "it": "called_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "We lived in fear of the Titans, and were disgraced to live in these cages we called walls.",
+          "audio_url": null
+        },
+        {
+          "word": "walls",
+          "lemma": "wall",
+          "pos_tag": "NOUN",
+          "definition": "A noun: walls",
+          "translations": {
+            "es": "walls_es",
+            "fr": "walls_fr",
+            "de": "walls_de",
+            "it": "walls_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "We lived in fear of the Titans, and were disgraced to live in these cages we called walls.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 2.75
+    },
+    {
+      "id": "8385c81c-a5fe-4322-9311-95a42f3993b9",
+      "start_time": 8.5,
+      "end_time": 12.0,
+      "text": "My name is Eren Yeager, and I witnessed the fall of Wall Maria.",
+      "words": [
+        {
+          "word": "eren",
+          "lemma": "eren",
+          "pos_tag": "PROPN",
+          "definition": "A word: eren",
+          "translations": {
+            "es": "eren_es",
+            "fr": "eren_fr",
+            "de": "eren_de",
+            "it": "eren_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Eren Yeager, and I witnessed the fall of Wall Maria.",
+          "audio_url": null
+        },
+        {
+          "word": "yeager",
+          "lemma": "yeager",
+          "pos_tag": "PROPN",
+          "definition": "A word: yeager",
+          "translations": {
+            "es": "yeager_es",
+            "fr": "yeager_fr",
+            "de": "yeager_de",
+            "it": "yeager_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Eren Yeager, and I witnessed the fall of Wall Maria.",
+          "audio_url": null
+        },
+        {
+          "word": "witnessed",
+          "lemma": "witness",
+          "pos_tag": "VERB",
+          "definition": "A verb: witnessed",
+          "translations": {
+            "es": "witnessed_es",
+            "fr": "witnessed_fr",
+            "de": "witnessed_de",
+            "it": "witnessed_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Eren Yeager, and I witnessed the fall of Wall Maria.",
+          "audio_url": null
+        },
+        {
+          "word": "fall",
+          "lemma": "fall",
+          "pos_tag": "NOUN",
+          "definition": "A noun: fall",
+          "translations": {
+            "es": "fall_es",
+            "fr": "fall_fr",
+            "de": "fall_de",
+            "it": "fall_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Eren Yeager, and I witnessed the fall of Wall Maria.",
+          "audio_url": null
+        },
+        {
+          "word": "wall",
+          "lemma": "wall",
+          "pos_tag": "PROPN",
+          "definition": "A word: wall",
+          "translations": {
+            "es": "wall_es",
+            "fr": "wall_fr",
+            "de": "wall_de",
+            "it": "wall_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Eren Yeager, and I witnessed the fall of Wall Maria.",
+          "audio_url": null
+        },
+        {
+          "word": "maria",
+          "lemma": "maria",
+          "pos_tag": "PROPN",
+          "definition": "A word: maria",
+          "translations": {
+            "es": "maria_es",
+            "fr": "maria_fr",
+            "de": "maria_de",
+            "it": "maria_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "My name is Eren Yeager, and I witnessed the fall of Wall Maria.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "98f3fe1d-4ab5-4a88-92fb-b43b2601bc1d",
+      "start_time": 12.5,
+      "end_time": 16.0,
+      "text": "The Colossal Titan appeared out of nowhere, breaching our defenses.",
+      "words": [
+        {
+          "word": "colossal",
+          "lemma": "colossal",
+          "pos_tag": "PROPN",
+          "definition": "A word: colossal",
+          "translations": {
+            "es": "colossal_es",
+            "fr": "colossal_fr",
+            "de": "colossal_de",
+            "it": "colossal_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "The Colossal Titan appeared out of nowhere, breaching our defenses.",
+          "audio_url": null
+        },
+        {
+          "word": "titan",
+          "lemma": "titan",
+          "pos_tag": "PROPN",
+          "definition": "A word: titan",
+          "translations": {
+            "es": "titan_es",
+            "fr": "titan_fr",
+            "de": "titan_de",
+            "it": "titan_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "The Colossal Titan appeared out of nowhere, breaching our defenses.",
+          "audio_url": null
+        },
+        {
+          "word": "appeared",
+          "lemma": "appear",
+          "pos_tag": "VERB",
+          "definition": "A verb: appeared",
+          "translations": {
+            "es": "appeared_es",
+            "fr": "appeared_fr",
+            "de": "appeared_de",
+            "it": "appeared_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "The Colossal Titan appeared out of nowhere, breaching our defenses.",
+          "audio_url": null
+        },
+        {
+          "word": "breaching",
+          "lemma": "breach",
+          "pos_tag": "VERB",
+          "definition": "A verb: breaching",
+          "translations": {
+            "es": "breaching_es",
+            "fr": "breaching_fr",
+            "de": "breaching_de",
+            "it": "breaching_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "The Colossal Titan appeared out of nowhere, breaching our defenses.",
+          "audio_url": null
+        },
+        {
+          "word": "defenses",
+          "lemma": "defense",
+          "pos_tag": "NOUN",
+          "definition": "A noun: defenses",
+          "translations": {
+            "es": "defenses_es",
+            "fr": "defenses_fr",
+            "de": "defenses_de",
+            "it": "defenses_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "The Colossal Titan appeared out of nowhere, breaching our defenses.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "1ff8f1c0-22f5-4ed1-81ce-068402dce707",
+      "start_time": 16.5,
+      "end_time": 20.0,
+      "text": "I vowed to eliminate every last Titan from this world.",
+      "words": [
+        {
+          "word": "vowed",
+          "lemma": "vow",
+          "pos_tag": "VERB",
+          "definition": "A verb: vowed",
+          "translations": {
+            "es": "vowed_es",
+            "fr": "vowed_fr",
+            "de": "vowed_de",
+            "it": "vowed_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "I vowed to eliminate every last Titan from this world.",
+          "audio_url": null
+        },
+        {
+          "word": "eliminate",
+          "lemma": "eliminate",
+          "pos_tag": "VERB",
+          "definition": "A verb: eliminate",
+          "translations": {
+            "es": "eliminate_es",
+            "fr": "eliminate_fr",
+            "de": "eliminate_de",
+            "it": "eliminate_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "I vowed to eliminate every last Titan from this world.",
+          "audio_url": null
+        },
+        {
+          "word": "titan",
+          "lemma": "titan",
+          "pos_tag": "PROPN",
+          "definition": "A word: titan",
+          "translations": {
+            "es": "titan_es",
+            "fr": "titan_fr",
+            "de": "titan_de",
+            "it": "titan_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "I vowed to eliminate every last Titan from this world.",
+          "audio_url": null
+        },
+        {
+          "word": "world",
+          "lemma": "world",
+          "pos_tag": "NOUN",
+          "definition": "A noun: world",
+          "translations": {
+            "es": "world_es",
+            "fr": "world_fr",
+            "de": "world_de",
+            "it": "world_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "I vowed to eliminate every last Titan from this world.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "f684b0e3-ed86-4c40-8f0a-7fcd52ae31ce",
+      "start_time": 20.5,
+      "end_time": 24.0,
+      "text": "Joining the Survey Corps was my path to vengeance.",
+      "words": [
+        {
+          "word": "joining",
+          "lemma": "join",
+          "pos_tag": "VERB",
+          "definition": "A verb: joining",
+          "translations": {
+            "es": "joining_es",
+            "fr": "joining_fr",
+            "de": "joining_de",
+            "it": "joining_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Joining the Survey Corps was my path to vengeance.",
+          "audio_url": null
+        },
+        {
+          "word": "survey",
+          "lemma": "survey",
+          "pos_tag": "PROPN",
+          "definition": "A word: survey",
+          "translations": {
+            "es": "survey_es",
+            "fr": "survey_fr",
+            "de": "survey_de",
+            "it": "survey_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Joining the Survey Corps was my path to vengeance.",
+          "audio_url": null
+        },
+        {
+          "word": "corps",
+          "lemma": "corps",
+          "pos_tag": "PROPN",
+          "definition": "A word: corps",
+          "translations": {
+            "es": "corps_es",
+            "fr": "corps_fr",
+            "de": "corps_de",
+            "it": "corps_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Joining the Survey Corps was my path to vengeance.",
+          "audio_url": null
+        },
+        {
+          "word": "path",
+          "lemma": "path",
+          "pos_tag": "NOUN",
+          "definition": "A noun: path",
+          "translations": {
+            "es": "path_es",
+            "fr": "path_fr",
+            "de": "path_de",
+            "it": "path_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Joining the Survey Corps was my path to vengeance.",
+          "audio_url": null
+        },
+        {
+          "word": "vengeance",
+          "lemma": "vengeance",
+          "pos_tag": "NOUN",
+          "definition": "A noun: vengeance",
+          "translations": {
+            "es": "vengeance_es",
+            "fr": "vengeance_fr",
+            "de": "vengeance_de",
+            "it": "vengeance_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "Joining the Survey Corps was my path to vengeance.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "9a75a20b-c8e1-474e-a00b-a4d6113c9f62",
+      "start_time": 24.5,
+      "end_time": 28.0,
+      "text": "But the truth about Titans was more complex than we imagined.",
+      "words": [
+        {
+          "word": "truth",
+          "lemma": "truth",
+          "pos_tag": "NOUN",
+          "definition": "A noun: truth",
+          "translations": {
+            "es": "truth_es",
+            "fr": "truth_fr",
+            "de": "truth_de",
+            "it": "truth_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "But the truth about Titans was more complex than we imagined.",
+          "audio_url": null
+        },
+        {
+          "word": "titans",
+          "lemma": "titans",
+          "pos_tag": "PROPN",
+          "definition": "A word: titans",
+          "translations": {
+            "es": "titans_es",
+            "fr": "titans_fr",
+            "de": "titans_de",
+            "it": "titans_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "But the truth about Titans was more complex than we imagined.",
+          "audio_url": null
+        },
+        {
+          "word": "complex",
+          "lemma": "complex",
+          "pos_tag": "ADJ",
+          "definition": "An adjective: complex",
+          "translations": {
+            "es": "complex_es",
+            "fr": "complex_fr",
+            "de": "complex_de",
+            "it": "complex_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "But the truth about Titans was more complex than we imagined.",
+          "audio_url": null
+        },
+        {
+          "word": "imagined",
+          "lemma": "imagine",
+          "pos_tag": "VERB",
+          "definition": "A verb: imagined",
+          "translations": {
+            "es": "imagined_es",
+            "fr": "imagined_fr",
+            "de": "imagined_de",
+            "it": "imagined_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "But the truth about Titans was more complex than we imagined.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    }
+  ],
+  "segments": [
+    {
+      "id": "5e52bd82-1ff7-433a-bece-141530d9f378",
+      "start_time": 2.0,
+      "end_time": 28.0,
+      "cues": [
+        {
+          "id": "45d1d878-cabc-4129-8c6a-c7caf41a43b5",
+          "start_time": 2.0,
+          "end_time": 4.0,
+          "text": "That day, humanity received a grim reminder.",
+          "words": [
+            {
+              "word": "day",
+              "lemma": "day",
+              "pos_tag": "NOUN",
+              "definition": "A noun: day",
+              "translations": {
+                "es": "day_es",
+                "fr": "day_fr",
+                "de": "day_de",
+                "it": "day_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "That day, humanity received a grim reminder.",
+              "audio_url": null
+            },
+            {
+              "word": "humanity",
+              "lemma": "humanity",
+              "pos_tag": "NOUN",
+              "definition": "A noun: humanity",
+              "translations": {
+                "es": "humanity_es",
+                "fr": "humanity_fr",
+                "de": "humanity_de",
+                "it": "humanity_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "That day, humanity received a grim reminder.",
+              "audio_url": null
+            },
+            {
+              "word": "received",
+              "lemma": "receive",
+              "pos_tag": "VERB",
+              "definition": "A verb: received",
+              "translations": {
+                "es": "received_es",
+                "fr": "received_fr",
+                "de": "received_de",
+                "it": "received_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "That day, humanity received a grim reminder.",
+              "audio_url": null
+            },
+            {
+              "word": "grim",
+              "lemma": "grim",
+              "pos_tag": "ADJ",
+              "definition": "An adjective: grim",
+              "translations": {
+                "es": "grim_es",
+                "fr": "grim_fr",
+                "de": "grim_de",
+                "it": "grim_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "That day, humanity received a grim reminder.",
+              "audio_url": null
+            },
+            {
+              "word": "reminder",
+              "lemma": "reminder",
+              "pos_tag": "NOUN",
+              "definition": "A noun: reminder",
+              "translations": {
+                "es": "reminder_es",
+                "fr": "reminder_fr",
+                "de": "reminder_de",
+                "it": "reminder_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "That day, humanity received a grim reminder.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "66b94feb-e739-4040-b7f2-67d17d166167",
+          "start_time": 4.5,
+          "end_time": 8.0,
+          "text": "We lived in fear of the Titans, and were disgraced to live in these cages we called walls.",
+          "words": [
+            {
+              "word": "lived",
+              "lemma": "live",
+              "pos_tag": "VERB",
+              "definition": "A verb: lived",
+              "translations": {
+                "es": "lived_es",
+                "fr": "lived_fr",
+                "de": "lived_de",
+                "it": "lived_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "We lived in fear of the Titans, and were disgraced to live in these cages we called walls.",
+              "audio_url": null
+            },
+            {
+              "word": "fear",
+              "lemma": "fear",
+              "pos_tag": "NOUN",
+              "definition": "A noun: fear",
+              "translations": {
+                "es": "fear_es",
+                "fr": "fear_fr",
+                "de": "fear_de",
+                "it": "fear_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "We lived in fear of the Titans, and were disgraced to live in these cages we called walls.",
+              "audio_url": null
+            },
+            {
+              "word": "titans",
+              "lemma": "titans",
+              "pos_tag": "PROPN",
+              "definition": "A word: titans",
+              "translations": {
+                "es": "titans_es",
+                "fr": "titans_fr",
+                "de": "titans_de",
+                "it": "titans_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "We lived in fear of the Titans, and were disgraced to live in these cages we called walls.",
+              "audio_url": null
+            },
+            {
+              "word": "disgraced",
+              "lemma": "disgrace",
+              "pos_tag": "VERB",
+              "definition": "A verb: disgraced",
+              "translations": {
+                "es": "disgraced_es",
+                "fr": "disgraced_fr",
+                "de": "disgraced_de",
+                "it": "disgraced_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "We lived in fear of the Titans, and were disgraced to live in these cages we called walls.",
+              "audio_url": null
+            },
+            {
+              "word": "live",
+              "lemma": "live",
+              "pos_tag": "VERB",
+              "definition": "A verb: live",
+              "translations": {
+                "es": "live_es",
+                "fr": "live_fr",
+                "de": "live_de",
+                "it": "live_it"
+              },
+              "difficulty_level": "beginner",
+              "frequency_rank": 85,
+              "context": "We lived in fear of the Titans, and were disgraced to live in these cages we called walls.",
+              "audio_url": null
+            },
+            {
+              "word": "cages",
+              "lemma": "cage",
+              "pos_tag": "NOUN",
+              "definition": "A noun: cages",
+              "translations": {
+                "es": "cages_es",
+                "fr": "cages_fr",
+                "de": "cages_de",
+                "it": "cages_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "We lived in fear of the Titans, and were disgraced to live in these cages we called walls.",
+              "audio_url": null
+            },
+            {
+              "word": "called",
+              "lemma": "call",
+              "pos_tag": "VERB",
+              "definition": "A verb: called",
+              "translations": {
+                "es": "called_es",
+                "fr": "called_fr",
+                "de": "called_de",
+                "it": "called_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "We lived in fear of the Titans, and were disgraced to live in these cages we called walls.",
+              "audio_url": null
+            },
+            {
+              "word": "walls",
+              "lemma": "wall",
+              "pos_tag": "NOUN",
+              "definition": "A noun: walls",
+              "translations": {
+                "es": "walls_es",
+                "fr": "walls_fr",
+                "de": "walls_de",
+                "it": "walls_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "We lived in fear of the Titans, and were disgraced to live in these cages we called walls.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 2.75
+        },
+        {
+          "id": "8385c81c-a5fe-4322-9311-95a42f3993b9",
+          "start_time": 8.5,
+          "end_time": 12.0,
+          "text": "My name is Eren Yeager, and I witnessed the fall of Wall Maria.",
+          "words": [
+            {
+              "word": "eren",
+              "lemma": "eren",
+              "pos_tag": "PROPN",
+              "definition": "A word: eren",
+              "translations": {
+                "es": "eren_es",
+                "fr": "eren_fr",
+                "de": "eren_de",
+                "it": "eren_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My name is Eren Yeager, and I witnessed the fall of Wall Maria.",
+              "audio_url": null
+            },
+            {
+              "word": "yeager",
+              "lemma": "yeager",
+              "pos_tag": "PROPN",
+              "definition": "A word: yeager",
+              "translations": {
+                "es": "yeager_es",
+                "fr": "yeager_fr",
+                "de": "yeager_de",
+                "it": "yeager_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My name is Eren Yeager, and I witnessed the fall of Wall Maria.",
+              "audio_url": null
+            },
+            {
+              "word": "witnessed",
+              "lemma": "witness",
+              "pos_tag": "VERB",
+              "definition": "A verb: witnessed",
+              "translations": {
+                "es": "witnessed_es",
+                "fr": "witnessed_fr",
+                "de": "witnessed_de",
+                "it": "witnessed_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My name is Eren Yeager, and I witnessed the fall of Wall Maria.",
+              "audio_url": null
+            },
+            {
+              "word": "fall",
+              "lemma": "fall",
+              "pos_tag": "NOUN",
+              "definition": "A noun: fall",
+              "translations": {
+                "es": "fall_es",
+                "fr": "fall_fr",
+                "de": "fall_de",
+                "it": "fall_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My name is Eren Yeager, and I witnessed the fall of Wall Maria.",
+              "audio_url": null
+            },
+            {
+              "word": "wall",
+              "lemma": "wall",
+              "pos_tag": "PROPN",
+              "definition": "A word: wall",
+              "translations": {
+                "es": "wall_es",
+                "fr": "wall_fr",
+                "de": "wall_de",
+                "it": "wall_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My name is Eren Yeager, and I witnessed the fall of Wall Maria.",
+              "audio_url": null
+            },
+            {
+              "word": "maria",
+              "lemma": "maria",
+              "pos_tag": "PROPN",
+              "definition": "A word: maria",
+              "translations": {
+                "es": "maria_es",
+                "fr": "maria_fr",
+                "de": "maria_de",
+                "it": "maria_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "My name is Eren Yeager, and I witnessed the fall of Wall Maria.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "98f3fe1d-4ab5-4a88-92fb-b43b2601bc1d",
+          "start_time": 12.5,
+          "end_time": 16.0,
+          "text": "The Colossal Titan appeared out of nowhere, breaching our defenses.",
+          "words": [
+            {
+              "word": "colossal",
+              "lemma": "colossal",
+              "pos_tag": "PROPN",
+              "definition": "A word: colossal",
+              "translations": {
+                "es": "colossal_es",
+                "fr": "colossal_fr",
+                "de": "colossal_de",
+                "it": "colossal_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "The Colossal Titan appeared out of nowhere, breaching our defenses.",
+              "audio_url": null
+            },
+            {
+              "word": "titan",
+              "lemma": "titan",
+              "pos_tag": "PROPN",
+              "definition": "A word: titan",
+              "translations": {
+                "es": "titan_es",
+                "fr": "titan_fr",
+                "de": "titan_de",
+                "it": "titan_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "The Colossal Titan appeared out of nowhere, breaching our defenses.",
+              "audio_url": null
+            },
+            {
+              "word": "appeared",
+              "lemma": "appear",
+              "pos_tag": "VERB",
+              "definition": "A verb: appeared",
+              "translations": {
+                "es": "appeared_es",
+                "fr": "appeared_fr",
+                "de": "appeared_de",
+                "it": "appeared_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "The Colossal Titan appeared out of nowhere, breaching our defenses.",
+              "audio_url": null
+            },
+            {
+              "word": "breaching",
+              "lemma": "breach",
+              "pos_tag": "VERB",
+              "definition": "A verb: breaching",
+              "translations": {
+                "es": "breaching_es",
+                "fr": "breaching_fr",
+                "de": "breaching_de",
+                "it": "breaching_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "The Colossal Titan appeared out of nowhere, breaching our defenses.",
+              "audio_url": null
+            },
+            {
+              "word": "defenses",
+              "lemma": "defense",
+              "pos_tag": "NOUN",
+              "definition": "A noun: defenses",
+              "translations": {
+                "es": "defenses_es",
+                "fr": "defenses_fr",
+                "de": "defenses_de",
+                "it": "defenses_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "The Colossal Titan appeared out of nowhere, breaching our defenses.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "1ff8f1c0-22f5-4ed1-81ce-068402dce707",
+          "start_time": 16.5,
+          "end_time": 20.0,
+          "text": "I vowed to eliminate every last Titan from this world.",
+          "words": [
+            {
+              "word": "vowed",
+              "lemma": "vow",
+              "pos_tag": "VERB",
+              "definition": "A verb: vowed",
+              "translations": {
+                "es": "vowed_es",
+                "fr": "vowed_fr",
+                "de": "vowed_de",
+                "it": "vowed_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "I vowed to eliminate every last Titan from this world.",
+              "audio_url": null
+            },
+            {
+              "word": "eliminate",
+              "lemma": "eliminate",
+              "pos_tag": "VERB",
+              "definition": "A verb: eliminate",
+              "translations": {
+                "es": "eliminate_es",
+                "fr": "eliminate_fr",
+                "de": "eliminate_de",
+                "it": "eliminate_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "I vowed to eliminate every last Titan from this world.",
+              "audio_url": null
+            },
+            {
+              "word": "titan",
+              "lemma": "titan",
+              "pos_tag": "PROPN",
+              "definition": "A word: titan",
+              "translations": {
+                "es": "titan_es",
+                "fr": "titan_fr",
+                "de": "titan_de",
+                "it": "titan_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "I vowed to eliminate every last Titan from this world.",
+              "audio_url": null
+            },
+            {
+              "word": "world",
+              "lemma": "world",
+              "pos_tag": "NOUN",
+              "definition": "A noun: world",
+              "translations": {
+                "es": "world_es",
+                "fr": "world_fr",
+                "de": "world_de",
+                "it": "world_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "I vowed to eliminate every last Titan from this world.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "f684b0e3-ed86-4c40-8f0a-7fcd52ae31ce",
+          "start_time": 20.5,
+          "end_time": 24.0,
+          "text": "Joining the Survey Corps was my path to vengeance.",
+          "words": [
+            {
+              "word": "joining",
+              "lemma": "join",
+              "pos_tag": "VERB",
+              "definition": "A verb: joining",
+              "translations": {
+                "es": "joining_es",
+                "fr": "joining_fr",
+                "de": "joining_de",
+                "it": "joining_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Joining the Survey Corps was my path to vengeance.",
+              "audio_url": null
+            },
+            {
+              "word": "survey",
+              "lemma": "survey",
+              "pos_tag": "PROPN",
+              "definition": "A word: survey",
+              "translations": {
+                "es": "survey_es",
+                "fr": "survey_fr",
+                "de": "survey_de",
+                "it": "survey_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Joining the Survey Corps was my path to vengeance.",
+              "audio_url": null
+            },
+            {
+              "word": "corps",
+              "lemma": "corps",
+              "pos_tag": "PROPN",
+              "definition": "A word: corps",
+              "translations": {
+                "es": "corps_es",
+                "fr": "corps_fr",
+                "de": "corps_de",
+                "it": "corps_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Joining the Survey Corps was my path to vengeance.",
+              "audio_url": null
+            },
+            {
+              "word": "path",
+              "lemma": "path",
+              "pos_tag": "NOUN",
+              "definition": "A noun: path",
+              "translations": {
+                "es": "path_es",
+                "fr": "path_fr",
+                "de": "path_de",
+                "it": "path_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Joining the Survey Corps was my path to vengeance.",
+              "audio_url": null
+            },
+            {
+              "word": "vengeance",
+              "lemma": "vengeance",
+              "pos_tag": "NOUN",
+              "definition": "A noun: vengeance",
+              "translations": {
+                "es": "vengeance_es",
+                "fr": "vengeance_fr",
+                "de": "vengeance_de",
+                "it": "vengeance_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "Joining the Survey Corps was my path to vengeance.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "9a75a20b-c8e1-474e-a00b-a4d6113c9f62",
+          "start_time": 24.5,
+          "end_time": 28.0,
+          "text": "But the truth about Titans was more complex than we imagined.",
+          "words": [
+            {
+              "word": "truth",
+              "lemma": "truth",
+              "pos_tag": "NOUN",
+              "definition": "A noun: truth",
+              "translations": {
+                "es": "truth_es",
+                "fr": "truth_fr",
+                "de": "truth_de",
+                "it": "truth_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "But the truth about Titans was more complex than we imagined.",
+              "audio_url": null
+            },
+            {
+              "word": "titans",
+              "lemma": "titans",
+              "pos_tag": "PROPN",
+              "definition": "A word: titans",
+              "translations": {
+                "es": "titans_es",
+                "fr": "titans_fr",
+                "de": "titans_de",
+                "it": "titans_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "But the truth about Titans was more complex than we imagined.",
+              "audio_url": null
+            },
+            {
+              "word": "complex",
+              "lemma": "complex",
+              "pos_tag": "ADJ",
+              "definition": "An adjective: complex",
+              "translations": {
+                "es": "complex_es",
+                "fr": "complex_fr",
+                "de": "complex_de",
+                "it": "complex_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "But the truth about Titans was more complex than we imagined.",
+              "audio_url": null
+            },
+            {
+              "word": "imagined",
+              "lemma": "imagine",
+              "pos_tag": "VERB",
+              "definition": "A verb: imagined",
+              "translations": {
+                "es": "imagined_es",
+                "fr": "imagined_fr",
+                "de": "imagined_de",
+                "it": "imagined_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "But the truth about Titans was more complex than we imagined.",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        }
+      ],
+      "vocabulary_words": [
+        {
+          "word": "day",
+          "lemma": "day",
+          "pos_tag": "NOUN",
+          "definition": "A noun: day",
+          "translations": {
+            "es": "day_es",
+            "fr": "day_fr",
+            "de": "day_de",
+            "it": "day_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "That day, humanity received a grim reminder.",
+          "audio_url": null
+        },
+        {
+          "word": "humanity",
+          "lemma": "humanity",
+          "pos_tag": "NOUN",
+          "definition": "A noun: humanity",
+          "translations": {
+            "es": "humanity_es",
+            "fr": "humanity_fr",
+            "de": "humanity_de",
+            "it": "humanity_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "That day, humanity received a grim reminder.",
+          "audio_url": null
+        },
+        {
+          "word": "received",
+          "lemma": "receive",
+          "pos_tag": "VERB",
+          "definition": "A verb: received",
+          "translations": {
+            "es": "received_es",
+            "fr": "received_fr",
+            "de": "received_de",
+            "it": "received_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "That day, humanity received a grim reminder.",
+          "audio_url": null
+        },
+        {
+          "word": "grim",
+          "lemma": "grim",
+          "pos_tag": "ADJ",
+          "definition": "An adjective: grim",
+          "translations": {
+            "es": "grim_es",
+            "fr": "grim_fr",
+            "de": "grim_de",
+            "it": "grim_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "That day, humanity received a grim reminder.",
+          "audio_url": null
+        },
+        {
+          "word": "reminder",
+          "lemma": "reminder",
+          "pos_tag": "NOUN",
+          "definition": "A noun: reminder",
+          "translations": {
+            "es": "reminder_es",
+            "fr": "reminder_fr",
+            "de": "reminder_de",
+            "it": "reminder_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "That day, humanity received a grim reminder.",
+          "audio_url": null
+        },
+        {
+          "word": "lived",
+          "lemma": "live",
+          "pos_tag": "VERB",
+          "definition": "A verb: lived",
+          "translations": {
+            "es": "lived_es",
+            "fr": "lived_fr",
+            "de": "lived_de",
+            "it": "lived_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "We lived in fear of the Titans, and were disgraced to live in these cages we called walls.",
+          "audio_url": null
+        },
+        {
+          "word": "fear",
+          "lemma": "fear",
+          "pos_tag": "NOUN",
+          "definition": "A noun: fear",
+          "translations": {
+            "es": "fear_es",
+            "fr": "fear_fr",
+            "de": "fear_de",
+            "it": "fear_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "We lived in fear of the Titans, and were disgraced to live in these cages we called walls.",
+          "audio_url": null
+        },
+        {
+          "word": "titans",
+          "lemma": "titans",
+          "pos_tag": "PROPN",
+          "definition": "A word: titans",
+          "translations": {
+            "es": "titans_es",
+            "fr": "titans_fr",
+            "de": "titans_de",
+            "it": "titans_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "We lived in fear of the Titans, and were disgraced to live in these cages we called walls.",
+          "audio_url": null
+        },
+        {
+          "word": "disgraced",
+          "lemma": "disgrace",
+          "pos_tag": "VERB",
+          "definition": "A verb: disgraced",
+          "translations": {
+            "es": "disgraced_es",
+            "fr": "disgraced_fr",
+            "de": "disgraced_de",
+            "it": "disgraced_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "We lived in fear of the Titans, and were disgraced to live in these cages we called walls.",
+          "audio_url": null
+        },
+        {
+          "word": "cages",
+          "lemma": "cage",
+          "pos_tag": "NOUN",
+          "definition": "A noun: cages",
+          "translations": {
+            "es": "cages_es",
+            "fr": "cages_fr",
+            "de": "cages_de",
+            "it": "cages_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "We lived in fear of the Titans, and were disgraced to live in these cages we called walls.",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 2.9642857142857144
+    }
+  ],
+  "vocabulary_count": 10,
+  "created_at": "2025-06-10T17:52:31.673112"
+}

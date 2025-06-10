@@ -1,0 +1,353 @@
+{
+  "movie_id": "ee403b5c-2340-474d-a53f-028e3f8b6014",
+  "total_cues": 5,
+  "total_segments": 1,
+  "avg_difficulty": 3.0,
+  "duration": 20.0,
+  "cues": [
+    {
+      "id": "b412f7db-fde2-465e-a121-f56ecc0dc3a9",
+      "start_time": 1.0,
+      "end_time": 4.0,
+      "text": "僕のヒーローアカデミアへようこそ。",
+      "words": [
+        {
+          "word": "僕のヒーローアカデミアへようこそ",
+          "lemma": "僕のヒーローアカデミアへようこそ",
+          "pos_tag": "NOUN",
+          "definition": "A noun: 僕のヒーローアカデミアへようこそ",
+          "translations": {
+            "es": "僕のヒーローアカデミアへようこそ_es",
+            "fr": "僕のヒーローアカデミアへようこそ_fr",
+            "de": "僕のヒーローアカデミアへようこそ_de",
+            "it": "僕のヒーローアカデミアへようこそ_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "僕のヒーローアカデミアへようこそ。",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "bfc2ddeb-5f7a-4d47-a6cf-7fffb5f06f16",
+      "start_time": 4.5,
+      "end_time": 8.0,
+      "text": "僕の名前は緑谷出久です。",
+      "words": [
+        {
+          "word": "僕の名前は緑谷出久です",
+          "lemma": "僕の名前は緑谷出久です",
+          "pos_tag": "NOUN",
+          "definition": "A noun: 僕の名前は緑谷出久です",
+          "translations": {
+            "es": "僕の名前は緑谷出久です_es",
+            "fr": "僕の名前は緑谷出久です_fr",
+            "de": "僕の名前は緑谷出久です_de",
+            "it": "僕の名前は緑谷出久です_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "僕の名前は緑谷出久です。",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "c10a29dd-200e-43c9-86b3-2757c62ad1aa",
+      "start_time": 8.5,
+      "end_time": 12.0,
+      "text": "オールマイトのような最高のヒーローになりたいんです。",
+      "words": [
+        {
+          "word": "オールマイトのような最高のヒーローになりたいんです",
+          "lemma": "オールマイトのような最高のヒーローになりたいんです",
+          "pos_tag": "NOUN",
+          "definition": "A noun: オールマイトのような最高のヒーローになりたいんです",
+          "translations": {
+            "es": "オールマイトのような最高のヒーローになりたいんです_es",
+            "fr": "オールマイトのような最高のヒーローになりたいんです_fr",
+            "de": "オールマイトのような最高のヒーローになりたいんです_de",
+            "it": "オールマイトのような最高のヒーローになりたいんです_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "オールマイトのような最高のヒーローになりたいんです。",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "56a0ce19-5bf6-4222-bc23-d3ca2fbe3481",
+      "start_time": 12.5,
+      "end_time": 16.0,
+      "text": "でも一つ問題があります。僕は無個性で生まれました。",
+      "words": [
+        {
+          "word": "でも一つ問題があります。僕は無個性で生まれました",
+          "lemma": "でも一つ問題があります。僕は無個性で生まれました",
+          "pos_tag": "X",
+          "definition": "A word: でも一つ問題があります。僕は無個性で生まれました",
+          "translations": {
+            "es": "でも一つ問題があります。僕は無個性で生まれました_es",
+            "fr": "でも一つ問題があります。僕は無個性で生まれました_fr",
+            "de": "でも一つ問題があります。僕は無個性で生まれました_de",
+            "it": "でも一つ問題があります。僕は無個性で生まれました_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "でも一つ問題があります。僕は無個性で生まれました。",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    },
+    {
+      "id": "295d4747-2769-4ad5-ae32-950d0121f9a5",
+      "start_time": 16.5,
+      "end_time": 20.0,
+      "text": "八十パーセントの人が個性を持つ世界で、僕は普通です。",
+      "words": [
+        {
+          "word": "八十パーセントの人が個性を持つ世界で、僕は普通です",
+          "lemma": "八十パーセントの人が個性を持つ世界で、僕は普通です",
+          "pos_tag": "NOUN",
+          "definition": "A noun: 八十パーセントの人が個性を持つ世界で、僕は普通です",
+          "translations": {
+            "es": "八十パーセントの人が個性を持つ世界で、僕は普通です_es",
+            "fr": "八十パーセントの人が個性を持つ世界で、僕は普通です_fr",
+            "de": "八十パーセントの人が個性を持つ世界で、僕は普通です_de",
+            "it": "八十パーセントの人が個性を持つ世界で、僕は普通です_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "八十パーセントの人が個性を持つ世界で、僕は普通です。",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    }
+  ],
+  "segments": [
+    {
+      "id": "80531348-9a27-4533-abd8-2e685bf8012d",
+      "start_time": 1.0,
+      "end_time": 20.0,
+      "cues": [
+        {
+          "id": "b412f7db-fde2-465e-a121-f56ecc0dc3a9",
+          "start_time": 1.0,
+          "end_time": 4.0,
+          "text": "僕のヒーローアカデミアへようこそ。",
+          "words": [
+            {
+              "word": "僕のヒーローアカデミアへようこそ",
+              "lemma": "僕のヒーローアカデミアへようこそ",
+              "pos_tag": "NOUN",
+              "definition": "A noun: 僕のヒーローアカデミアへようこそ",
+              "translations": {
+                "es": "僕のヒーローアカデミアへようこそ_es",
+                "fr": "僕のヒーローアカデミアへようこそ_fr",
+                "de": "僕のヒーローアカデミアへようこそ_de",
+                "it": "僕のヒーローアカデミアへようこそ_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "僕のヒーローアカデミアへようこそ。",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "bfc2ddeb-5f7a-4d47-a6cf-7fffb5f06f16",
+          "start_time": 4.5,
+          "end_time": 8.0,
+          "text": "僕の名前は緑谷出久です。",
+          "words": [
+            {
+              "word": "僕の名前は緑谷出久です",
+              "lemma": "僕の名前は緑谷出久です",
+              "pos_tag": "NOUN",
+              "definition": "A noun: 僕の名前は緑谷出久です",
+              "translations": {
+                "es": "僕の名前は緑谷出久です_es",
+                "fr": "僕の名前は緑谷出久です_fr",
+                "de": "僕の名前は緑谷出久です_de",
+                "it": "僕の名前は緑谷出久です_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "僕の名前は緑谷出久です。",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "c10a29dd-200e-43c9-86b3-2757c62ad1aa",
+          "start_time": 8.5,
+          "end_time": 12.0,
+          "text": "オールマイトのような最高のヒーローになりたいんです。",
+          "words": [
+            {
+              "word": "オールマイトのような最高のヒーローになりたいんです",
+              "lemma": "オールマイトのような最高のヒーローになりたいんです",
+              "pos_tag": "NOUN",
+              "definition": "A noun: オールマイトのような最高のヒーローになりたいんです",
+              "translations": {
+                "es": "オールマイトのような最高のヒーローになりたいんです_es",
+                "fr": "オールマイトのような最高のヒーローになりたいんです_fr",
+                "de": "オールマイトのような最高のヒーローになりたいんです_de",
+                "it": "オールマイトのような最高のヒーローになりたいんです_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "オールマイトのような最高のヒーローになりたいんです。",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "56a0ce19-5bf6-4222-bc23-d3ca2fbe3481",
+          "start_time": 12.5,
+          "end_time": 16.0,
+          "text": "でも一つ問題があります。僕は無個性で生まれました。",
+          "words": [
+            {
+              "word": "でも一つ問題があります。僕は無個性で生まれました",
+              "lemma": "でも一つ問題があります。僕は無個性で生まれました",
+              "pos_tag": "X",
+              "definition": "A word: でも一つ問題があります。僕は無個性で生まれました",
+              "translations": {
+                "es": "でも一つ問題があります。僕は無個性で生まれました_es",
+                "fr": "でも一つ問題があります。僕は無個性で生まれました_fr",
+                "de": "でも一つ問題があります。僕は無個性で生まれました_de",
+                "it": "でも一つ問題があります。僕は無個性で生まれました_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "でも一つ問題があります。僕は無個性で生まれました。",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        },
+        {
+          "id": "295d4747-2769-4ad5-ae32-950d0121f9a5",
+          "start_time": 16.5,
+          "end_time": 20.0,
+          "text": "八十パーセントの人が個性を持つ世界で、僕は普通です。",
+          "words": [
+            {
+              "word": "八十パーセントの人が個性を持つ世界で、僕は普通です",
+              "lemma": "八十パーセントの人が個性を持つ世界で、僕は普通です",
+              "pos_tag": "NOUN",
+              "definition": "A noun: 八十パーセントの人が個性を持つ世界で、僕は普通です",
+              "translations": {
+                "es": "八十パーセントの人が個性を持つ世界で、僕は普通です_es",
+                "fr": "八十パーセントの人が個性を持つ世界で、僕は普通です_fr",
+                "de": "八十パーセントの人が個性を持つ世界で、僕は普通です_de",
+                "it": "八十パーセントの人が個性を持つ世界で、僕は普通です_it"
+              },
+              "difficulty_level": "advanced",
+              "frequency_rank": 10000,
+              "context": "八十パーセントの人が個性を持つ世界で、僕は普通です。",
+              "audio_url": null
+            }
+          ],
+          "difficulty_score": 3.0
+        }
+      ],
+      "vocabulary_words": [
+        {
+          "word": "僕のヒーローアカデミアへようこそ",
+          "lemma": "僕のヒーローアカデミアへようこそ",
+          "pos_tag": "NOUN",
+          "definition": "A noun: 僕のヒーローアカデミアへようこそ",
+          "translations": {
+            "es": "僕のヒーローアカデミアへようこそ_es",
+            "fr": "僕のヒーローアカデミアへようこそ_fr",
+            "de": "僕のヒーローアカデミアへようこそ_de",
+            "it": "僕のヒーローアカデミアへようこそ_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "僕のヒーローアカデミアへようこそ。",
+          "audio_url": null
+        },
+        {
+          "word": "僕の名前は緑谷出久です",
+          "lemma": "僕の名前は緑谷出久です",
+          "pos_tag": "NOUN",
+          "definition": "A noun: 僕の名前は緑谷出久です",
+          "translations": {
+            "es": "僕の名前は緑谷出久です_es",
+            "fr": "僕の名前は緑谷出久です_fr",
+            "de": "僕の名前は緑谷出久です_de",
+            "it": "僕の名前は緑谷出久です_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "僕の名前は緑谷出久です。",
+          "audio_url": null
+        },
+        {
+          "word": "オールマイトのような最高のヒーローになりたいんです",
+          "lemma": "オールマイトのような最高のヒーローになりたいんです",
+          "pos_tag": "NOUN",
+          "definition": "A noun: オールマイトのような最高のヒーローになりたいんです",
+          "translations": {
+            "es": "オールマイトのような最高のヒーローになりたいんです_es",
+            "fr": "オールマイトのような最高のヒーローになりたいんです_fr",
+            "de": "オールマイトのような最高のヒーローになりたいんです_de",
+            "it": "オールマイトのような最高のヒーローになりたいんです_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "オールマイトのような最高のヒーローになりたいんです。",
+          "audio_url": null
+        },
+        {
+          "word": "でも一つ問題があります。僕は無個性で生まれました",
+          "lemma": "でも一つ問題があります。僕は無個性で生まれました",
+          "pos_tag": "X",
+          "definition": "A word: でも一つ問題があります。僕は無個性で生まれました",
+          "translations": {
+            "es": "でも一つ問題があります。僕は無個性で生まれました_es",
+            "fr": "でも一つ問題があります。僕は無個性で生まれました_fr",
+            "de": "でも一つ問題があります。僕は無個性で生まれました_de",
+            "it": "でも一つ問題があります。僕は無個性で生まれました_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "でも一つ問題があります。僕は無個性で生まれました。",
+          "audio_url": null
+        },
+        {
+          "word": "八十パーセントの人が個性を持つ世界で、僕は普通です",
+          "lemma": "八十パーセントの人が個性を持つ世界で、僕は普通です",
+          "pos_tag": "NOUN",
+          "definition": "A noun: 八十パーセントの人が個性を持つ世界で、僕は普通です",
+          "translations": {
+            "es": "八十パーセントの人が個性を持つ世界で、僕は普通です_es",
+            "fr": "八十パーセントの人が個性を持つ世界で、僕は普通です_fr",
+            "de": "八十パーセントの人が個性を持つ世界で、僕は普通です_de",
+            "it": "八十パーセントの人が個性を持つ世界で、僕は普通です_it"
+          },
+          "difficulty_level": "advanced",
+          "frequency_rank": 10000,
+          "context": "八十パーセントの人が個性を持つ世界で、僕は普通です。",
+          "audio_url": null
+        }
+      ],
+      "difficulty_score": 3.0
+    }
+  ],
+  "vocabulary_count": 5,
+  "created_at": "2025-06-10T17:52:30.643731"
+}

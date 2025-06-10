@@ -47,3 +47,39 @@ htmlcov/
 
 # Railway
 .railway/
+# Development and setup scripts (cleanup)
+setup_*.sh
+fix_*.sh
+test_*.sh
+verify_*.sh
+cleanup_*.sh
+run_tests_*.sh
+
+# Virtual environment
+venv/
+.venv/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+/tmp/
+
+# Test outputs
+htmlcov/
+.coverage
+.pytest_cache/
+
+# Logs
+*.log
+logs/
+

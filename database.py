@@ -54,6 +54,21 @@ if not all([SUPABASE_URL, SUPABASE_ANON_KEY, SUPABASE_SERVICE_KEY]):
         print("❌ Missing required environment variables")
         print("Available env vars:", [k for k in os.environ.keys() if 'SUPABASE' in k or 'DATABASE' in k])
         raise ValueError("Missing required environment variables")
+required_vars = {
+    'SUPABASE_URL': SUPABASE_URL,
+    'SUPABASE_ANON_KEY': SUPABASE_ANON_KEY, 
+    'SUPABASE_SERVICE_KEY': SUPABASE_SERVICE_KEY,
+    'SUPABASE_JWT_SECRET': SUPABASE_JWT_SECRET
+}
+
+missing_vars = [name for name, value in required_vars.items() if not value or not value.strip()]
+if missing_vars:
+    raise ValueError(
+        f"Missing required environment variables: {', '.join(missing_vars)}. "
+        f"Please check your .env file or Railway environment configuration."
+    )
+
+print(f"✅ Environment validation passed - {len(required_vars)} vars loaded")
 
 # Only import supabase after we confirm env vars are loaded
 try:

@@ -108,3 +108,29 @@ htmlcov/
 # OS
 .DS_Store
 Thumbs.db
+
+# Streamlined architecture
+archive_*/
+*.log
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Development
+main_streamlined.py
+requirements_streamlined.txt
+README_STREAMLINED.md
+PROJECT_STRUCTURE_STREAMLINED.md
+
+# Streamlined architecture
+archive_*/
+*.log
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Development
+main_streamlined.py
+requirements_streamlined.txt
+README_STREAMLINED.md
+PROJECT_STRUCTURE_STREAMLINED.md
